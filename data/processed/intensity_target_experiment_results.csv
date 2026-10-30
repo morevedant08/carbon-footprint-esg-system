@@ -1,0 +1,5 @@
+segment,n_companies,absolute_r2,intensity_r2,r2_delta,absolute_mae,intensity_mae,mae_delta
+Quartile: Small,141,0.2122,0.2316,0.0194,1.6977,1.7179,0.0202
+Quartile: Mid-Small,141,0.0166,0.0653,0.0487,1.4185,1.3845,-0.034
+Quartile: Mid-Large,140,0.234,0.2054,-0.0287,1.2115,1.2154,0.0039
+Quartile: Large,141,-0.2656,-0.5819,-0.3163,1.5042,1.6491,0.1449

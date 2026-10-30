@@ -1,0 +1,19 @@
+segment_type,segment,r2,n_companies
+Company Size (Revenue Quartile),Mid-Small,0.484,142
+Company Size (Revenue Quartile),Small,0.413,143
+Company Size (Revenue Quartile),Large,0.313,142
+Company Size (Revenue Quartile),Mid-Large,0.29,142
+Jurisdiction,France,0.661,41
+Jurisdiction,Germany,0.64,40
+Jurisdiction,Other,0.527,378
+Jurisdiction,Japan,0.513,291
+Jurisdiction,United Kingdom of Great Britain and Northern Ireland,0.469,86
+Jurisdiction,India,0.413,43
+Jurisdiction,Republic of Korea,0.389,50
+Jurisdiction,United States of America,0.252,100
+Jurisdiction,Brazil,0.193,40
+Sector,Renewable Resources & Alternative Energy,0.596,31
+Sector,Transportation,0.514,174
+Sector,Infrastructure,0.512,319
+Sector,Resource Transformation,0.435,375
+Sector,Extractives & Minerals Processing,0.333,170

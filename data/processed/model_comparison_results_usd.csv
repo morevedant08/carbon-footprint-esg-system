@@ -1,0 +1,4 @@
+Model,Test R2,Test MAE,CV R2 mean,CV R2 std
+Baseline (Linear Regression),0.4658,1.5832,0.4991,0.0619
+Random Forest (tuned),0.4266,1.5973,0.4885,0.0715
+XGBoost (tuned),0.4522,1.5881,0.4965,0.0535

@@ -1,0 +1,201 @@
+Transaction_ID,Origin_Facility,Destination_City,Vehicle_Type,Distance_KM,Package_Weight_KG,Carbon_Emission_kgCO2e,factor_based_emission_kg,difference_kg,pct_difference
+TRX-7030A577,Jakarta Fulfillment Center,South Alexander,Motorcycle (Courier),25.5,8.9,2.209,2.856351913555378,-0.65,-22.7
+TRX-7CEE040D,Makassar Port,New Kevintown,Motorcycle (Courier),21.7,7.2,1.868,2.4306994715353607,-0.56,-23.1
+TRX-723CABEE,Medan Distribution,Jordanton,Electric Van (EV),27.1,28.9,1.319,1.3965841655078717,-0.08,-5.6
+TRX-8CB91C19,Surabaya Warehouse,Erinside,Diesel Van (Euro 4),134.2,19.3,48.941,42.51793680433512,6.42,15.1
+TRX-71DECA9C,Jakarta Fulfillment Center,Mahoneyton,Cargo Bicycle,4.2,17.0,0.0,0.0,0.0,
+TRX-F3517099,Bandung Hub,Lake Antonioton,Drone Delivery,13.0,23.4,0.125,0.10687356230665383,0.02,17.0
+TRX-3C98D81C,Jakarta Fulfillment Center,Stephaniemouth,Diesel Van (Euro 6),25.1,24.3,4.509,5.391540200837692,-0.88,-16.4
+TRX-00B0667A,Bandung Hub,Barrettstad,Electric Van (EV),25.7,16.4,1.38,1.3244359060351403,0.06,4.2
+TRX-E14AE6FF,Bandung Hub,Port Jonathan,Drone Delivery,10.0,23.1,0.093,0.08221043254357988,0.01,13.1
+TRX-F1600D31,Medan Distribution,North Nicholebury,Cargo Bicycle,12.8,28.3,0.0,0.0,0.0,
+TRX-8822DC54,Jakarta Fulfillment Center,South Theodorechester,Motorcycle (Courier),17.1,11.4,1.443,1.9154359890900772,-0.47,-24.7
+TRX-3700C369,Surabaya Warehouse,Snyderland,Electric Van (EV),46.5,20.9,2.46,2.3963529039157208,0.06,2.7
+TRX-D155521B,Medan Distribution,Lake Lisa,Diesel Van (Euro 6),23.4,25.7,3.98,5.026376123490119,-1.05,-20.8
+TRX-0E86BD08,Semarang Depot,Stephenview,Motorcycle (Courier),16.7,21.3,1.659,1.8706304688774436,-0.21,-11.3
+TRX-7BEB3E01,Semarang Depot,East Kayla,Diesel Van (Euro 4),90.7,29.1,23.773,28.736042236611,-4.96,-17.3
+TRX-C8065128,Semarang Depot,South Brandonton,Electric Van (EV),12.2,17.4,0.676,0.628720546833802,0.05,7.5
+TRX-6A9CB218,Jakarta Fulfillment Center,West Ana,Motorcycle (Courier),38.8,12.3,4.632,4.346135460625438,0.29,6.6
+TRX-47046DA7,Semarang Depot,Wardshire,Electric Van (EV),32.9,27.7,1.728,1.6954840976091874,0.03,1.9
+TRX-958C1846,Bandung Hub,West Rachael,Motorcycle (Courier),28.6,10.4,2.289,3.2035946952032868,-0.91,-28.5
+TRX-ACA52D55,Jakarta Fulfillment Center,Lake Ronald,Drone Delivery,10.8,9.6,0.071,0.08878726714706626,-0.02,-20.0
+TRX-E4A50898,Semarang Depot,Port Shane,Cargo Bicycle,10.9,29.2,0.0,0.0,0.0,
+TRX-AD31C71E,Semarang Depot,East Brandon,Electric Van (EV),105.5,19.5,5.397,5.436886695980829,-0.04,-0.7
+TRX-73E9851E,Jakarta Fulfillment Center,Wilcoxtown,Motorcycle (Courier),25.0,23.4,2.532,2.8003450132895864,-0.27,-9.6
+TRX-57617CE0,Bandung Hub,West Sarahstad,Diesel Van (Euro 6),69.4,9.1,21.342,14.90728645171856,6.43,43.2
+TRX-CE2EE206,Medan Distribution,Ashleymouth,Drone Delivery,7.3,11.8,0.048,0.060013615756813306,-0.01,-20.0
+TRX-415B4C0B,Surabaya Warehouse,South Kristenchester,Diesel Van (Euro 6),122.4,8.2,37.976,26.29181356902524,11.68,44.4
+TRX-A0CC2702,Semarang Depot,Rhodesside,Drone Delivery,3.7,19.5,0.03,0.030417860041124553,-0.0,-1.4
+TRX-7564466F,Jakarta Fulfillment Center,Meganview,Electric Van (EV),136.9,13.4,6.936,7.05506908701209,-0.12,-1.7
+TRX-A2B88A82,Semarang Depot,Fritzfurt,Electric Van (EV),19.3,24.0,0.961,0.994615291302654,-0.03,-3.4
+TRX-B4644412,Surabaya Warehouse,Mooreport,Diesel Van (Euro 6),21.1,29.2,6.487,4.5323306070786975,1.95,43.1
+TRX-8A466D16,Jakarta Fulfillment Center,Lake Jean,Diesel Van (Euro 4),92.3,7.8,32.463,29.242962496573263,3.22,11.0
+TRX-F056009D,Surabaya Warehouse,Jeffreyport,Motorcycle (Courier),33.9,5.9,5.473,3.797267838020679,1.68,44.1
+TRX-67121375,Semarang Depot,Port Jasmine,Electric Van (EV),19.1,21.7,1.046,0.9843083970922638,0.06,6.3
+TRX-C21D9AA9,Makassar Port,Martinezton,Diesel Van (Euro 6),94.7,24.7,17.701,20.3417871322442,-2.64,-13.0
+TRX-7AECC798,Surabaya Warehouse,Catherinetown,Diesel Van (Euro 6),47.6,29.3,9.661,10.224594165732038,-0.56,-5.5
+TRX-4EB6AA7F,Makassar Port,North Andrea,Motorcycle (Courier),23.0,17.0,2.159,2.5763174122264196,-0.42,-16.2
+TRX-DA69770E,Bandung Hub,Lake Laura,Heavy Truck,740.2,1975.2,606.378,766.4005482972035,-160.02,-20.9
+TRX-063D6DD0,Makassar Port,West Alexandraborough,Heavy Truck,289.9,723.4,401.586,300.1614684563081,101.42,33.8
+TRX-4654C170,Makassar Port,New Johnberg,Electric Van (EV),117.4,11.8,6.065,6.050146901499046,0.01,0.2
+TRX-83815C22,Semarang Depot,New Anthonyburgh,Heavy Truck,692.3,4093.7,638.074,716.8050521293623,-78.73,-11.0
+TRX-5E4ED6AE,Medan Distribution,Rileytown,Motorcycle (Courier),11.0,18.0,1.102,1.232151805847418,-0.13,-10.6
+TRX-C1955919,Medan Distribution,North Danielside,Motorcycle (Courier),17.8,27.6,1.974,1.9938456494621857,-0.02,-1.0
+TRX-995A3CBD,Surabaya Warehouse,Wrightborough,Diesel Van (Euro 4),89.8,9.4,31.25,28.45089959038222,2.8,9.8
+TRX-751E79FE,Makassar Port,West Gwendolynville,Diesel Van (Euro 4),83.0,15.2,18.915,26.29648848554259,-7.38,-28.1
+TRX-7FA1CEB4,Semarang Depot,Port Michele,Heavy Truck,735.5,1991.0,665.933,761.5341843725928,-95.6,-12.6
+TRX-97C640AF,Bandung Hub,Smithmouth,Drone Delivery,7.9,21.5,0.074,0.0649462417094281,0.01,13.9
+TRX-A947DDC5,Bandung Hub,Mooreburgh,Cargo Bicycle,13.5,4.7,0.0,0.0,0.0,
+TRX-2FF28DC1,Surabaya Warehouse,Darrenshire,Drone Delivery,3.8,14.6,0.031,0.03123996436656035,-0.0,-0.8
+TRX-971DA815,Medan Distribution,Petersstad,Diesel Van (Euro 6),72.0,27.7,13.684,15.465772687661905,-1.78,-11.5
+TRX-E758369F,Makassar Port,Wallacefort,Heavy Truck,490.5,3763.4,410.177,507.8620223450126,-97.69,-19.2
+TRX-8CC8018D,Bandung Hub,Amandachester,Diesel Van (Euro 6),111.5,22.8,26.81,23.950467426031977,2.86,11.9
+TRX-A95D9333,Semarang Depot,West Walter,Motorcycle (Courier),14.2,5.5,1.702,1.5905959675484849,0.11,7.0
+TRX-B6C287F3,Makassar Port,South Emilychester,Motorcycle (Courier),20.4,19.8,1.856,2.285081530844302,-0.43,-18.8
+TRX-FDDBA9FE,Jakarta Fulfillment Center,Pricefurt,Heavy Truck,338.2,3729.6,317.22,350.1711232560311,-32.95,-9.4
+TRX-4CC06D7B,Makassar Port,West Larrychester,Motorcycle (Courier),38.1,23.7,4.801,4.26772580025333,0.53,12.5
+TRX-80EA225A,Surabaya Warehouse,North Dominiqueton,Drone Delivery,2.3,23.3,0.022,0.018908399485023368,0.0,16.4
+TRX-84AB51A8,Jakarta Fulfillment Center,Montoyaland,Diesel Van (Euro 6),127.9,20.4,22.104,27.473226760443858,-5.37,-19.5
+TRX-8F76D70B,Medan Distribution,Ramirezfort,Diesel Van (Euro 4),118.0,15.4,42.957,37.385369172217175,5.57,14.9
+TRX-F7328613,Bandung Hub,Josephfort,Drone Delivery,3.2,28.9,0.033,0.026307338413945558,0.01,25.4
+TRX-7D329C39,Surabaya Warehouse,Wheelerbury,Heavy Truck,507.8,1694.2,477.619,525.7743831738989,-48.16,-9.2
+TRX-823BCDC1,Jakarta Fulfillment Center,East Travischester,Diesel Van (Euro 6),72.1,22.5,12.341,15.48725292750588,-3.15,-20.3
+TRX-DFE085AF,Semarang Depot,Coleton,Heavy Truck,124.2,3582.2,100.21,128.59625519928758,-28.39,-22.1
+TRX-45EF56CA,Semarang Depot,Andrewborough,Electric Van (EV),107.0,8.5,5.185,5.514188402558755,-0.33,-6.0
+TRX-AEA98B65,Bandung Hub,North Chadville,Motorcycle (Courier),25.3,12.0,2.434,2.8339491534490615,-0.4,-14.1
+TRX-FD8CD647,Semarang Depot,Jonestown,Motorcycle (Courier),11.1,17.4,1.163,1.2433531859005762,-0.08,-6.5
+TRX-A4943787,Surabaya Warehouse,Port Laurie,Electric Van (EV),100.3,3.8,5.463,5.1689074465106835,0.29,5.7
+TRX-229FF26B,Makassar Port,Petersside,Drone Delivery,1.0,22.4,0.009,0.008221043254357987,0.0,9.5
+TRX-35960372,Bandung Hub,East Madison,Heavy Truck,726.9,4885.6,887.13,752.6297737871348,134.5,17.9
+TRX-8EAD2A9A,Semarang Depot,Kerrside,Drone Delivery,5.4,22.7,0.05,0.04439363357353313,0.01,12.6
+TRX-445A56E8,Jakarta Fulfillment Center,New Jenniferberg,Diesel Van (Euro 4),25.4,3.6,6.708,8.047359126900984,-1.34,-16.6
+TRX-BEF117B9,Bandung Hub,New Melissa,Cargo Bicycle,10.8,12.7,0.0,0.0,0.0,
+TRX-97FAF9FB,Makassar Port,Camposside,Drone Delivery,8.4,7.6,0.056,0.0690567633366071,-0.01,-18.9
+TRX-94AF90A3,Semarang Depot,Port Jamesfort,Heavy Truck,270.4,4051.9,230.739,279.97123515207215,-49.23,-17.6
+TRX-7DD2326C,Makassar Port,Schmidtland,Diesel Van (Euro 6),26.4,2.6,6.683,5.670783318809365,1.01,17.8
+TRX-FBAD4583,Bandung Hub,Port Michael,Electric Van (EV),47.4,27.9,2.489,2.4427339278624767,0.05,1.9
+TRX-A62113CE,Jakarta Fulfillment Center,North Sierraberg,Electric Van (EV),31.0,2.7,1.563,1.5975686026104805,-0.03,-2.2
+TRX-3748805E,Jakarta Fulfillment Center,South Evelynport,Diesel Van (Euro 6),113.5,22.6,26.095,24.380072222911476,1.71,7.0
+TRX-4B7ECF99,Medan Distribution,Warrenshire,Cargo Bicycle,7.0,17.4,0.0,0.0,0.0,
+TRX-7FAA0C77,Makassar Port,New Nancyfort,Diesel Van (Euro 6),125.5,10.4,40.4,26.95770100418846,13.44,49.9
+TRX-ED6B1A92,Medan Distribution,Copelandburgh,Diesel Van (Euro 6),69.0,2.9,16.119,14.82136549234266,1.3,8.8
+TRX-257AB04F,Jakarta Fulfillment Center,North Allison,Electric Van (EV),33.3,6.3,1.676,1.7160978860299676,-0.04,-2.3
+TRX-970F0CF4,Makassar Port,Jessicaview,Motorcycle (Courier),32.3,15.7,3.212,3.618045757170145,-0.41,-11.2
+TRX-B089CAC0,Semarang Depot,Lake Haley,Electric Van (EV),113.7,17.3,5.393,5.859469358606827,-0.47,-8.0
+TRX-4BA2681E,Jakarta Fulfillment Center,East Zacharystad,Motorcycle (Courier),19.0,5.6,1.81,2.1282622101000856,-0.32,-15.0
+TRX-024DEAC1,Makassar Port,Port Preston,Electric Van (EV),93.8,17.7,4.603,4.833933384673002,-0.23,-4.8
+TRX-209644D1,Bandung Hub,West Robert,Diesel Van (Euro 6),64.8,21.0,16.199,13.919195418895715,2.28,16.4
+TRX-E2F8FFCA,Makassar Port,Stonetown,Diesel Van (Euro 6),87.3,21.4,28.332,18.75224938379006,9.58,51.1
+TRX-AE0361AF,Makassar Port,West Sharonstad,Drone Delivery,7.5,21.0,0.071,0.0616578244076849,0.01,15.2
+TRX-88C1A1B8,Jakarta Fulfillment Center,New Amanda,Motorcycle (Courier),9.1,24.1,1.031,1.0193255848374094,0.01,1.1
+TRX-22BBC2E0,Medan Distribution,Roberttown,Drone Delivery,9.0,6.8,0.063,0.07398938928922189,-0.01,-14.9
+TRX-BE9819D5,Semarang Depot,Lake Roger,Motorcycle (Courier),26.7,22.2,2.845,2.990768474193278,-0.15,-4.9
+TRX-21B8199B,Medan Distribution,Ashleyburgh,Drone Delivery,5.6,4.1,0.032,0.046037842224404726,-0.01,-30.5
+TRX-85F08E7C,Semarang Depot,Aaronbury,Diesel Van (Euro 4),88.4,8.1,43.55,28.00734436291524,15.54,55.5
+TRX-4A95644C,Medan Distribution,Rileymouth,Diesel Van (Euro 4),132.4,29.0,32.231,41.94765151187758,-9.72,-23.2
+TRX-7279929A,Semarang Depot,Timothyberg,Diesel Van (Euro 4),57.9,1.0,13.641,18.34417690738453,-4.7,-25.6
+TRX-9E9E0294,Medan Distribution,Carrollchester,Drone Delivery,9.4,15.5,0.083,0.07727780659096507,0.01,7.4
+TRX-FC7FD3B0,Medan Distribution,Port Michaelville,Heavy Truck,392.0,1302.3,322.554,405.8754592441283,-83.32,-20.5
+TRX-8648C6B4,Medan Distribution,Parkermouth,Drone Delivery,11.8,12.0,0.086,0.09700831040142426,-0.01,-11.3
+TRX-EED6E56E,Semarang Depot,Roweland,Motorcycle (Courier),31.8,25.6,5.029,3.562038856904354,1.47,41.2
+TRX-341A2ADC,Semarang Depot,Saratown,Diesel Van (Euro 4),46.5,4.8,20.301,14.732370055153378,5.57,37.8
+TRX-98549A55,Semarang Depot,South Kimberlyport,Diesel Van (Euro 4),15.7,8.3,4.347,4.974155050879743,-0.63,-12.6
+TRX-84213F83,Makassar Port,Port Rhonda,Heavy Truck,132.8,2797.1,104.933,137.5006657847455,-32.57,-23.7
+TRX-F3EF9A05,Medan Distribution,Patrickchester,Electric Van (EV),129.3,29.7,7.551,6.663407107017263,0.89,13.3
+TRX-45650AA2,Makassar Port,New Andrew,Drone Delivery,6.9,27.8,0.079,0.05672519845507011,0.02,39.3
+TRX-FA80903D,Jakarta Fulfillment Center,North Heathertown,Heavy Truck,458.5,1755.3,407.973,474.7293317944715,-66.76,-14.1
+TRX-D8AEC41D,Semarang Depot,Nealfort,Cargo Bicycle,10.0,8.5,0.0,0.0,0.0,
+TRX-AD049B30,Makassar Port,West David,Electric Van (EV),99.3,19.2,4.846,5.117372975458733,-0.27,-5.3
+TRX-C7318C42,Makassar Port,New Heidi,Diesel Van (Euro 4),47.4,8.9,20.54,15.017512701382152,5.52,36.8
+TRX-A5A7917A,Semarang Depot,West James,Heavy Truck,571.8,4832.0,686.462,592.0397642749809,94.42,15.9
+TRX-9E5187E3,Makassar Port,Williamsside,Drone Delivery,9.9,25.3,0.117,0.08138832821814407,0.04,43.8
+TRX-A9BFC3D8,Semarang Depot,Jonesfort,Heavy Truck,535.1,4816.2,702.24,554.0407097998292,148.2,26.7
+TRX-1573920E,Medan Distribution,West Jessica,Diesel Van (Euro 6),85.2,3.7,17.356,18.30116434706659,-0.95,-5.2
+TRX-428A6B9B,Semarang Depot,North Steven,Drone Delivery,8.7,7.1,0.054,0.07152307631291448,-0.02,-24.5
+TRX-7AB05473,Makassar Port,East Sandrastad,Electric Van (EV),21.9,16.3,1.185,1.1286049160377265,0.06,5.0
+TRX-866570C8,Bandung Hub,West Lauren,Diesel Van (Euro 6),12.8,26.2,2.288,2.7494707000287835,-0.46,-16.8
+TRX-CF128EAD,Surabaya Warehouse,Lake Hannahstad,Diesel Van (Euro 6),50.7,7.0,14.779,10.890481600895258,3.89,35.7
+TRX-0E6D0012,Semarang Depot,Crawfordtown,Electric Van (EV),109.2,19.3,5.908,5.627564238873047,0.28,5.0
+TRX-8A063036,Semarang Depot,Andrewfort,Motorcycle (Courier),20.2,19.9,1.99,2.2626787707379856,-0.27,-12.1
+TRX-62FDF2F5,Jakarta Fulfillment Center,Nguyenborough,Heavy Truck,675.4,4864.4,583.702,699.3068499323577,-115.6,-16.5
+TRX-7486DD6B,Jakarta Fulfillment Center,South Raymond,Heavy Truck,483.7,2207.3,454.045,500.82132560302256,-46.78,-9.3
+TRX-80F99608,Bandung Hub,Timothyborough,Diesel Van (Euro 6),91.8,24.7,16.166,19.718860176768928,-3.55,-18.0
+TRX-4B9F8D78,Semarang Depot,New Ericton,Drone Delivery,5.8,10.4,0.045,0.04768205087527632,-0.0,-5.6
+TRX-1E9EB27E,Bandung Hub,Kevinview,Motorcycle (Courier),15.0,3.9,1.503,1.6802070079737519,-0.18,-10.5
+TRX-D6A8E4C7,Makassar Port,West Monicaview,Motorcycle (Courier),33.9,26.2,3.37,3.797267838020679,-0.43,-11.3
+TRX-392FDCF4,Bandung Hub,West Michelle,Cargo Bicycle,3.7,21.0,0.0,0.0,0.0,
+TRX-568768C9,Jakarta Fulfillment Center,Mcphersonshire,Drone Delivery,11.7,14.1,0.093,0.09618620607598843,-0.0,-3.3
+TRX-22D532CB,Bandung Hub,Hernandezport,Cargo Bicycle,8.2,19.0,0.0,0.0,0.0,
+TRX-8B515259,Medan Distribution,Sandersfurt,Cargo Bicycle,12.1,12.0,0.0,0.0,0.0,
+TRX-C348A2DD,Medan Distribution,Thompsonview,Diesel Van (Euro 6),12.8,24.0,3.057,2.7494707000287835,0.31,11.2
+TRX-6A1AE257,Surabaya Warehouse,Munozmouth,Cargo Bicycle,3.0,12.4,0.0,0.0,0.0,
+TRX-73125B5F,Bandung Hub,East Jacob,Cargo Bicycle,3.8,3.5,0.0,0.0,0.0,
+TRX-A561F48F,Jakarta Fulfillment Center,West Edwardstad,Heavy Truck,278.8,3137.0,271.959,288.6685664215892,-16.71,-5.8
+TRX-CF27C2F0,Jakarta Fulfillment Center,West Josephville,Heavy Truck,488.7,2049.2,441.655,505.9983085015446,-64.34,-12.7
+TRX-90ADD0B3,Semarang Depot,Lindsaymouth,Electric Van (EV),110.0,10.8,5.266,5.668791815714608,-0.4,-7.1
+TRX-9D8A2F84,Surabaya Warehouse,Christopherhaven,Electric Van (EV),114.8,6.1,5.409,5.916157276763973,-0.51,-8.6
+TRX-15FD0E1C,Surabaya Warehouse,North Robertport,Diesel Van (Euro 4),117.5,17.3,41.522,37.226956590978965,4.3,11.5
+TRX-D61D8B2A,Surabaya Warehouse,Lake Nicholas,Heavy Truck,606.8,1273.7,497.166,628.2786445646353,-131.11,-20.9
+TRX-6741F843,Jakarta Fulfillment Center,West Jose,Drone Delivery,9.8,23.8,0.097,0.08056622389270827,0.02,20.4
+TRX-628C3469,Semarang Depot,Mistyshire,Drone Delivery,7.7,29.1,0.078,0.0633020330585565,0.01,23.2
+TRX-F70D628D,Surabaya Warehouse,Lake Paulfurt,Diesel Van (Euro 4),117.6,14.3,54.114,37.25863910722661,16.86,45.2
+TRX-9CBA08A4,Surabaya Warehouse,Lake Aaronport,Electric Van (EV),137.5,2.3,6.656,7.08598976964326,-0.43,-6.1
+TRX-64D87639,Bandung Hub,Lake Paige,Cargo Bicycle,3.8,16.4,0.0,0.0,0.0,
+TRX-6D9F4CA4,Surabaya Warehouse,Conwaymouth,Heavy Truck,728.6,1396.7,589.473,754.3899479726324,-164.92,-21.9
+TRX-1BB9DAC5,Semarang Depot,Careyport,Electric Van (EV),90.4,3.8,4.612,4.658716183096369,-0.05,-1.0
+TRX-47DD83E4,Jakarta Fulfillment Center,Adrienneville,Electric Van (EV),95.7,20.0,4.742,4.931848879671709,-0.19,-3.8
+TRX-631F15DE,Makassar Port,Harrisville,Motorcycle (Courier),21.1,16.9,1.878,2.363491191216411,-0.49,-20.5
+TRX-667942CF,Makassar Port,Evansside,Electric Van (EV),75.2,1.2,3.349,3.875392223106714,-0.53,-13.6
+TRX-EC975FBD,Medan Distribution,Weaverton,Motorcycle (Courier),16.2,22.9,1.423,1.8146235686116519,-0.39,-21.6
+TRX-0B83C97E,Semarang Depot,Whiteburgh,Electric Van (EV),38.8,2.5,1.975,1.999537476815698,-0.02,-1.2
+TRX-D501FC39,Semarang Depot,Joyhaven,Heavy Truck,731.5,1769.0,792.079,757.3925980537751,34.69,4.6
+TRX-FBCE3C00,Semarang Depot,Brooksview,Electric Van (EV),95.5,26.5,5.418,4.921541985461319,0.5,10.1
+TRX-AB2E0355,Bandung Hub,Michaelbury,Electric Van (EV),23.1,4.1,1.199,1.1904462813000678,0.01,0.7
+TRX-8E9E8454,Bandung Hub,West Johnfort,Motorcycle (Courier),35.3,5.2,3.966,3.954087158764896,0.01,0.3
+TRX-4C3A5CCE,Semarang Depot,Port Kristen,Motorcycle (Courier),19.5,0.6,1.485,2.1842691103658773,-0.7,-32.0
+TRX-FDA87307,Jakarta Fulfillment Center,Robinsonmouth,Cargo Bicycle,4.6,17.6,0.0,0.0,0.0,
+TRX-B2F31A8A,Surabaya Warehouse,Port Chelsea,Motorcycle (Courier),11.2,4.3,1.173,1.2545545659537347,-0.08,-6.5
+TRX-80EEECA9,Medan Distribution,New Christian,Cargo Bicycle,2.3,18.3,0.0,0.0,0.0,
+TRX-29F22353,Semarang Depot,South Thomasview,Heavy Truck,603.8,1486.7,499.436,625.1724548255221,-125.74,-20.1
+TRX-0C101B4B,Semarang Depot,Moniquemouth,Diesel Van (Euro 6),82.7,28.6,24.261,17.764158350967218,6.5,36.6
+TRX-49832147,Jakarta Fulfillment Center,West Jason,Diesel Van (Euro 4),146.4,17.3,55.801,46.38320378654741,9.42,20.3
+TRX-834BA2C5,Surabaya Warehouse,Port Jacob,Diesel Van (Euro 6),113.5,10.7,23.55,24.380072222911476,-0.83,-3.4
+TRX-60B713EB,Semarang Depot,West Marilyn,Drone Delivery,7.4,23.0,0.073,0.060835720082249106,0.01,20.0
+TRX-8BD21EB1,Bandung Hub,Lake Julian,Electric Van (EV),21.8,10.6,1.018,1.1234514689325314,-0.11,-9.4
+TRX-C2B71CC4,Jakarta Fulfillment Center,Toddburgh,Cargo Bicycle,3.9,27.4,0.0,0.0,0.0,
+TRX-6DC5DBD8,Semarang Depot,New Jeffreyview,Diesel Van (Euro 4),91.4,22.9,42.024,28.957819850344492,13.07,45.1
+TRX-4466FD7F,Medan Distribution,North Markstad,Diesel Van (Euro 6),82.0,27.4,23.013,17.613796672059394,5.4,30.7
+TRX-7A41F42A,Bandung Hub,South Brandonborough,Diesel Van (Euro 6),57.2,3.2,11.816,12.286697190753625,-0.47,-3.8
+TRX-9DD7658D,Bandung Hub,Craigside,Motorcycle (Courier),36.0,25.6,3.659,4.0324968191370045,-0.37,-9.3
+TRX-9025B643,Bandung Hub,North James,Diesel Van (Euro 6),122.1,24.3,21.518,26.227372849493314,-4.71,-18.0
+TRX-98074B02,Semarang Depot,Traceymouth,Motorcycle (Courier),30.3,5.8,2.734,3.394018156106979,-0.66,-19.4
+TRX-EF4F3261,Jakarta Fulfillment Center,Reginahaven,Electric Van (EV),94.1,8.0,4.837,4.8493937259885875,-0.01,-0.3
+TRX-7FA0B4CC,Bandung Hub,Aaronmouth,Diesel Van (Euro 4),111.4,14.0,26.497,35.29432309987283,-8.8,-24.9
+TRX-CE6B0B79,Surabaya Warehouse,Port Johnny,Cargo Bicycle,5.6,28.8,0.0,0.0,0.0,
+TRX-DEC52F14,Bandung Hub,Shaneshire,Diesel Van (Euro 6),87.4,23.7,13.43,18.773729623634036,-5.34,-28.5
+TRX-45C8AE89,Bandung Hub,West Kristenfurt,Heavy Truck,442.9,1117.5,335.786,458.5771451510827,-122.79,-26.8
+TRX-0A257C81,Makassar Port,Marshallville,Diesel Van (Euro 6),114.7,6.2,27.847,24.637835101039176,3.21,13.0
+TRX-E72D5D1F,Surabaya Warehouse,Lake Jennifer,Heavy Truck,102.4,4947.2,79.209,106.02460976173148,-26.82,-25.3
+TRX-1B59502C,Semarang Depot,Webbton,Diesel Van (Euro 6),119.6,28.9,22.873,25.690366853393943,-2.82,-11.0
+TRX-3FE0A19C,Jakarta Fulfillment Center,South Tanyaport,Electric Van (EV),148.7,1.0,7.685,7.663175845425111,0.02,0.3
+TRX-EA46273C,Semarang Depot,South Stevenburgh,Motorcycle (Courier),6.6,20.1,0.653,0.7392910835084507,-0.09,-11.7
+TRX-3DD58DE8,Medan Distribution,Wongville,Motorcycle (Courier),8.8,4.5,0.686,0.9857214446779344,-0.3,-30.4
+TRX-46773FF2,Surabaya Warehouse,Weeksfort,Electric Van (EV),34.9,14.9,1.63,1.7985530397130893,-0.17,-9.4
+TRX-AD855624,Medan Distribution,South Margaretfort,Motorcycle (Courier),7.5,1.8,0.627,0.8401035039868759,-0.21,-25.4
+TRX-56753467,Makassar Port,North Danielville,Heavy Truck,249.7,3542.2,228.126,258.53852595219087,-30.41,-11.8
+TRX-A7AC837A,Bandung Hub,East Michael,Motorcycle (Courier),33.3,5.7,3.955,3.7300595577017286,0.22,6.0
+TRX-23BD4E74,Surabaya Warehouse,West Marieside,Electric Van (EV),109.8,21.2,5.001,5.6584849215042174,-0.66,-11.6
+TRX-59BCF570,Jakarta Fulfillment Center,West Madison,Electric Van (EV),96.6,3.4,5.061,4.978229903618464,0.08,1.7
+TRX-7A1B2F0A,Makassar Port,Markfurt,Diesel Van (Euro 6),72.7,13.0,14.65,15.61613436656973,-0.97,-6.2
+TRX-15144C6F,Jakarta Fulfillment Center,North Robertborough,Electric Van (EV),42.7,25.2,2.011,2.200521913918307,-0.19,-8.6
+TRX-112302ED,Bandung Hub,Petersfurt,Diesel Van (Euro 4),109.9,5.6,26.595,34.8190853561582,-8.22,-23.6
+TRX-689507B8,Surabaya Warehouse,Fernandezport,Motorcycle (Courier),6.1,2.5,0.521,0.683284183242659,-0.16,-23.8
+TRX-9CEE46F6,Semarang Depot,Rodriguezhaven,Heavy Truck,219.4,3078.9,199.203,227.16600958714733,-27.96,-12.3
+TRX-6C685929,Surabaya Warehouse,West Tina,Motorcycle (Courier),13.3,8.0,1.046,1.48978354707006,-0.44,-29.8
+TRX-2ED569A2,Bandung Hub,Port Brad,Diesel Van (Euro 6),31.0,27.0,5.654,6.6588743516322095,-1.0,-15.1
+TRX-327BE65E,Medan Distribution,Ferrellstad,Drone Delivery,13.0,22.9,0.134,0.10687356230665383,0.03,25.4
+TRX-4F5E08C8,Jakarta Fulfillment Center,Michaelmouth,Diesel Van (Euro 4),75.9,9.9,21.903,24.04702983196003,-2.14,-8.9
+TRX-BF797910,Semarang Depot,Littlemouth,Electric Van (EV),10.4,15.2,0.515,0.5359584989402902,-0.02,-3.9
+TRX-83A28734,Jakarta Fulfillment Center,Jessehaven,Motorcycle (Courier),25.7,26.4,2.684,2.8787546736616947,-0.19,-6.8
+TRX-51494179,Bandung Hub,Port Yeseniabury,Diesel Van (Euro 4),61.2,7.1,17.65,19.389699943556703,-1.74,-9.0
+TRX-72363606,Semarang Depot,New Elizabethfurt,Electric Van (EV),126.8,8.3,6.516,6.534570929387384,-0.02,-0.3

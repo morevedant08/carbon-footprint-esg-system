@@ -1,0 +1,6 @@
+row_index,company_name,jurisdiction,ticker_before,financial_currency_before,revenue_local_before,revenue_usd_before,employees_before,market_cap_before,ebitda_before,has_financials_before,blanking_reason
+446,Horizon Global Corporation,United States of America,MOOIF,CAD,4506.0,3217.973418,,342534.0,,0,"Wrong ticker MOOIF ($3,217 revenue from Canadian penny stock match for US firm)"
+804,MOBICO GROUP PLC,United Kingdom of Great Britain and Northern Ireland,1213.HK,HKD,271116000.0,34575423.480000004,325.0,12753000.0,498387.24,1,Wrong ticker 1213.HK (HKD financials for a UK firm)
+196,CKD Corp,Japan,063160.KS,KRW,125043113984.0,94282507.943936,519.0,58695701.495808,12966765.52704,1,Wrong ticker 063160.KS (KRW financials for a Japanese firm)
+729,Asia Cement Corporation,China,183190.KS,KRW,1042926075904.0,786366261.231616,,279898265.35424,128515935.10912,0,Wrong ticker 183190.KS (KRW financials for a China firm)
+896,Titan,Belgium,002531.SZ,CNY,5119059456.0,766568915.4170879,1467.0,1759776622.522368,164386866.11865598,1,Wrong ticker 002531.SZ (CNY financials from Shenzhen-listed firm for a Belgian company)

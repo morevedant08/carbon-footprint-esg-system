@@ -1,0 +1,21 @@
+company_name,jurisdiction,sics_sector,actual_scope3,predicted_scope3,pct_error
+Hyundai Motor Co,Republic of Korea,Transportation,105790785.0,22554052.0,-78.7
+Hanwha Aerospace Co Ltd,Republic of Korea,Resource Transformation,580898.0,800005.0,37.7
+HD Hyundai Heavy Industries,Republic of Korea,Resource Transformation,51907478.0,12094005.0,-76.7
+Toyota Motor Corporation,Japan,Transportation,570489269.0,208013867.0,-63.5
+Enel Americas S.A.,Chile,Infrastructure,9504170.0,16471124.0,73.3
+Hanwha Ocean,Republic of Korea,Resource Transformation,20606296.0,5296821.0,-74.3
+"HD Hyundai Electric Co., Ltd",Republic of Korea,Resource Transformation,213012547.0,3590792.0,-98.3
+"Hitachi, Ltd.",Japan,Resource Transformation,267669000.0,140563761.0,-47.5
+Doosan Corp,Republic of Korea,Resource Transformation,4217.0,408688.0,9591.4
+SK Innovation Co Ltd,Republic of Korea,Extractives & Minerals Processing,132134684.0,21939391.0,-83.4
+"HMM CO., LTD",Republic of Korea,Transportation,1520758.0,2883938.0,89.6
+Hyundai Rotem Company,Republic of Korea,Resource Transformation,8269300.0,796440.0,-90.4
+"POSCO FUTURE M Co., Ltd",Republic of Korea,Extractives & Minerals Processing,8575548.0,5873766.0,-31.5
+"Mitsui & Co., Ltd.",Japan,Extractives & Minerals Processing,34980314.0,26963080.0,-22.9
+Mitsubishi Electric Corporation,Japan,Resource Transformation,182427497.0,99117938.0,-45.7
+PT Pakuwon Jati Tbk,Indonesia,Infrastructure,2233661.0,674774.0,-69.8
+"Hankook Tire & Technology Co., Ltd.",Republic of Korea,Transportation,29169645.0,17176125.0,-41.1
+Hanwha Solutions,Republic of Korea,Resource Transformation,7611642.0,15912477.0,109.1
+TOYOTA TSUSHO CORPORATION,Japan,Resource Transformation,623655.0,4668030.0,648.5
+"Sumitomo Electric Industries, Ltd.",Japan,Transportation,21676000.0,67560982.0,211.7

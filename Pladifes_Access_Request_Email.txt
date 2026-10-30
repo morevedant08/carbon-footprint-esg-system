@@ -1,0 +1,27 @@
+Subject: Data Access Inquiry — Student Research Project on Scope 3 Emissions Prediction (COGEM Database)
+
+Dear Pladifes / Institut Louis Bachelier Data Team,
+
+My name is [Your Name], and I am a second-year student in AI & Data Science at [Your College/University Name]. I am writing to ask about access to the COGEM database for an academic research project I am developing on machine learning-based prediction of Scope 3 greenhouse gas emissions.
+
+Project summary:
+I am building a system that predicts Scope 3 emissions for companies using firm-level features (Scope 1/2 emissions, sector, jurisdiction, and financial indicators such as revenue and employee count), trained on real, verified corporate disclosures. So far, I have built and validated the full pipeline — data cleaning, a documented data-quality correction methodology, a seven-model comparison (including XGBoost and LightGBM), segment-level reliability analysis, and a working API/dashboard — using approximately 1,000 companies sourced from the NZDPU/Climate Data Utility platform (CDP and ADEME disclosure providers).
+
+I am reaching out because I understand Pladifes:
+1. Runs a Call for Projects offering free COGEM database access to selected academic research projects, and
+2. Also offers on-demand access to the full database for academic researchers outside that call cycle.
+
+I would be grateful to know:
+- Whether a Call for Projects is currently open, and if so, how to apply
+- If not, whether on-demand academic access is available for a student research project of this scope, and what the process/requirements would be
+- Whether there is a reduced-cost or reduced-scope option suitable for an individual student researcher (rather than a funded lab/institution), if the standard access route is not applicable
+
+I am happy to share further detail on my methodology and current results if useful for evaluating this request.
+
+Thank you for your time and for making this resource available to the research community.
+
+Best regards,
+[Your Name]
+[Your Email]
+[Your College/University Name]
+[Your Program: AI & Data Science, Second Year]

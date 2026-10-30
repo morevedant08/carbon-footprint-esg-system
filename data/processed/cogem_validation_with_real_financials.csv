@@ -1,0 +1,14 @@
+company_name,sics_sector,revenue,cogem_actual_scope3,our_predicted_scope3,times_off,pct_error
+BP PLC,Extractives & Minerals Processing,215465000960.0,637791762,30479283.0,20.93,-95.2
+Bayerische Motoren Werke AG,Transportation,128033996800.0,102042384,10578212.0,9.65,-89.6
+Chevron Corp,Extractives & Minerals Processing,209383997440.0,431985147,13530984.0,31.93,-96.9
+Exxon Mobil Corp,Extractives & Minerals Processing,361060007936.0,680674867,18980679.0,35.86,-97.2
+Ford Motor Co,Transportation,187972993024.0,94698561,14783014.0,6.41,-84.4
+General Motors Co,Transportation,186952007680.0,118971492,17742529.0,6.71,-85.1
+Glencore PLC,Extractives & Minerals Processing,304568991744.0,125749554,16134004.0,7.79,-87.2
+Marathon Petroleum Corp,Extractives & Minerals Processing,154145996800.0,109885311,5433433.0,20.22,-95.1
+Shell PLC,Extractives & Minerals Processing,296600993792.0,680033908,15839802.0,42.93,-97.7
+TotalEnergies SE,Extractives & Minerals Processing,196381999104.0,593041789,15118999.0,39.22,-97.5
+Toyota Motor Corp,Transportation,51957024686080.0,156423656,50768810.0,3.08,-67.5
+Uniper SE,Infrastructure,,32390330,28462427.0,1.14,-12.1
+Volkswagen AG,Transportation,321651015680.0,139812486,19194705.0,7.28,-86.3

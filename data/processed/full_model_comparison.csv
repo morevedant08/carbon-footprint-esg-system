@@ -1,0 +1,8 @@
+Model,Test R2,Test MAE,CV R2 mean,CV R2 std,Train time (s)
+Gradient Boosting (sklearn),0.4616,1.5883,0.4975,0.0573,1.91
+Ridge Regression,0.4676,1.613,0.4959,0.0668,0.07
+Linear Regression,0.467,1.6143,0.4956,0.0668,0.08
+LightGBM,0.4582,1.6012,0.4911,0.0616,0.42
+Extra Trees,0.4476,1.6114,0.4907,0.0517,1.51
+XGBoost,0.4628,1.5941,0.4883,0.0488,0.38
+Random Forest,0.4367,1.6233,0.4826,0.0684,2.63

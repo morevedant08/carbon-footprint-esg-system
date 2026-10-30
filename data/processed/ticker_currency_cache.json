@@ -1,0 +1,4881 @@
+{
+  "5949.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 328375992320,
+    "marketCap": 56491147264,
+    "ebitda": 27682000896
+  },
+  "DBG.PA": {
+    "financialCurrency": "EUR",
+    "currency": "EUR",
+    "totalRevenue": 3468900096,
+    "marketCap": 1195638912,
+    "ebitda": 239100000
+  },
+  "JPTXF": {
+    "financialCurrency": "JPY",
+    "currency": "USD",
+    "totalRevenue": 322606006272,
+    "marketCap": 3407468544,
+    "ebitda": 74752999424
+  },
+  "JPNRF": {
+    "financialCurrency": "JPY",
+    "currency": "USD",
+    "totalRevenue": 2090289987584,
+    "marketCap": 7393036800,
+    "ebitda": 343082991616
+  },
+  "JREIF": {
+    "financialCurrency": "JPY",
+    "currency": "USD",
+    "totalRevenue": 83537911808,
+    "marketCap": 5602529792,
+    "ebitda": 52398911488
+  },
+  "6745.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 107325997056,
+    "marketCap": 150105620480,
+    "ebitda": 14245749760
+  },
+  "59JA.F": {
+    "financialCurrency": "JPY",
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": 4243757312,
+    "ebitda": null
+  },
+  "MCHIF": {
+    "financialCurrency": "JPY",
+    "currency": "USD",
+    "totalRevenue": 249079005184,
+    "marketCap": 1608403840,
+    "ebitda": 42834001920
+  },
+  "6810.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 136823996416,
+    "marketCap": 91047239680,
+    "ebitda": 14066750464
+  },
+  "ENGI.PA": {
+    "financialCurrency": "EUR",
+    "currency": "EUR",
+    "totalRevenue": 70584999936,
+    "marketCap": 57951268864,
+    "ebitda": 13463000064
+  },
+  "MKMLF": {
+    "financialCurrency": "JPY",
+    "currency": "USD",
+    "totalRevenue": 275556990976,
+    "marketCap": 2099817984,
+    "ebitda": 37666750464
+  },
+  "4028.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 151625007104,
+    "marketCap": 98914656256,
+    "ebitda": 20711000064
+  },
+  "7261.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 5104107782144,
+    "marketCap": 684602687488,
+    "ebitda": 253365993472
+  },
+  "7215.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 74664001536,
+    "marketCap": 3788660224,
+    "ebitda": 5966249984
+  },
+  "7254.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 57538998272,
+    "marketCap": 16819904512,
+    "ebitda": 8329999872
+  },
+  "8132.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 307980009472,
+    "marketCap": 77064151040,
+    "ebitda": 8093250048
+  },
+  "6908.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 61960998912,
+    "marketCap": 55532539904,
+    "ebitda": 12291000320
+  },
+  "JISLJALEQS.NS": {
+    "financialCurrency": "INR",
+    "currency": "INR",
+    "totalRevenue": 63622397952,
+    "marketCap": 17281501184,
+    "ebitda": 8236375040
+  },
+  "UUL.XC": {
+    "financialCurrency": "GBP",
+    "currency": "GBp",
+    "totalRevenue": 2616300032,
+    "marketCap": 10228326400,
+    "ebitda": 1597500032
+  },
+  "IOLCP.BO": {
+    "financialCurrency": "INR",
+    "currency": "INR",
+    "totalRevenue": 25236299776,
+    "marketCap": 47962394624,
+    "ebitda": 3114550016
+  },
+  "YMATF": {
+    "financialCurrency": "JPY",
+    "currency": "USD",
+    "totalRevenue": 300203016192,
+    "marketCap": 4839066112,
+    "ebitda": 54129750016
+  },
+  "TTCAF": {
+    "financialCurrency": "JPY",
+    "currency": "USD",
+    "totalRevenue": 452463001600,
+    "marketCap": 1471582464,
+    "ebitda": 25276999680
+  },
+  "6371.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 315610988544,
+    "marketCap": 264962899968,
+    "ebitda": 39110000640
+  },
+  "SRF.NS": {
+    "financialCurrency": "INR",
+    "currency": "INR",
+    "totalRevenue": 182651600896,
+    "marketCap": 684697911296,
+    "ebitda": 43023998976
+  },
+  "JMATL.XC": {
+    "financialCurrency": "GBP",
+    "currency": "GBp",
+    "totalRevenue": 12572999680,
+    "marketCap": 4044515328,
+    "ebitda": 399000000
+  },
+  "ERXCF": {
+    "financialCurrency": "JPY",
+    "currency": "USD",
+    "totalRevenue": 180662992896,
+    "marketCap": 340094848,
+    "ebitda": 9356000256
+  },
+  "BIRET.BO": {
+    "financialCurrency": "INR",
+    "currency": "INR",
+    "totalRevenue": 33741760512,
+    "marketCap": 250682130432,
+    "ebitda": 24497453056
+  },
+  "7821.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 71389003776,
+    "marketCap": 136973074432,
+    "ebitda": 15736999936
+  },
+  "NTPC.NS": {
+    "financialCurrency": "INR",
+    "currency": "INR",
+    "totalRevenue": 1910612426752,
+    "marketCap": 2889606758400,
+    "ebitda": 589559955456
+  },
+  "JKCEMENT.NS": {
+    "financialCurrency": "INR",
+    "currency": "INR",
+    "totalRevenue": 144160505856,
+    "marketCap": 375060070400,
+    "ebitda": 23223775232
+  },
+  "6471.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 971521982464,
+    "marketCap": 483840589824,
+    "ebitda": 104337997824
+  },
+  "ULTRACEMCO.BO": {
+    "financialCurrency": "INR",
+    "currency": "INR",
+    "totalRevenue": 955724201984,
+    "marketCap": 3254119038976,
+    "ebitda": 179828998144
+  },
+  "SFRL.XC": {
+    "financialCurrency": "GBP",
+    "currency": "GBp",
+    "totalRevenue": 454254016,
+    "marketCap": 115944304,
+    "ebitda": 19762000
+  },
+  "VJC.DU": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "UBE.SG": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "1951.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 804837982208,
+    "marketCap": 522267230208,
+    "ebitda": 73233997824
+  },
+  "MUG.F": {
+    "financialCurrency": "JPY",
+    "currency": "EUR",
+    "totalRevenue": 783970009088,
+    "marketCap": 3861449472,
+    "ebitda": 101281251328
+  },
+  "6222.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 30638999552,
+    "marketCap": 30324135936,
+    "ebitda": -1842000000
+  },
+  "6651.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 199477002240,
+    "marketCap": 158766809088,
+    "ebitda": 23235999744
+  },
+  "5711.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 2009655934976,
+    "marketCap": 558776713216,
+    "ebitda": 143948496896
+  },
+  "9119.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 134195003392,
+    "marketCap": 170871521280,
+    "ebitda": 28220499968
+  },
+  "3291.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 1563326021632,
+    "marketCap": 595491422208,
+    "ebitda": 124792250368
+  },
+  "4968.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 84518002688,
+    "marketCap": 39617941504,
+    "ebitda": 8952999936
+  },
+  "6988.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 1053650976768,
+    "marketCap": 2360317050880,
+    "ebitda": 256204996608
+  },
+  "5019.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 8541917151232,
+    "marketCap": 1845862989824,
+    "ebitda": 604662267904
+  },
+  "3864.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 156614000640,
+    "marketCap": 54234525696,
+    "ebitda": 7183750144
+  },
+  "1515.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 220990996480,
+    "marketCap": 203787436032,
+    "ebitda": 27510249472
+  },
+  "APARINDS.NS": {
+    "financialCurrency": "INR",
+    "currency": "INR",
+    "totalRevenue": 243890192384,
+    "marketCap": 602082312192,
+    "ebitda": 21842974720
+  },
+  "2337.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 81497997312,
+    "marketCap": 164634198016,
+    "ebitda": 24810000384
+  },
+  "APOLLOTYRE.NS": {
+    "financialCurrency": "INR",
+    "currency": "INR",
+    "totalRevenue": 293076303872,
+    "marketCap": 243006111744,
+    "ebitda": 36846092288
+  },
+  "8031.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 15042844033024,
+    "marketCap": 14016162299904,
+    "ebitda": 775447969792
+  },
+  "9069.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 930924986368,
+    "marketCap": 395693883392,
+    "ebitda": 75022499840
+  },
+  "5192.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 95175000064,
+    "marketCap": 117318262784,
+    "ebitda": 14143250432
+  },
+  "6754.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 126425997312,
+    "marketCap": 347817050112,
+    "ebitda": 24002000896
+  },
+  "4183.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 1713449992192,
+    "marketCap": 745851256832,
+    "ebitda": 208044998656
+  },
+  "GB0009390070.SG": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "GHCL.BO": {
+    "financialCurrency": "INR",
+    "currency": "INR",
+    "totalRevenue": 30551699456,
+    "marketCap": 34544259072,
+    "ebitda": 7338399744
+  },
+  "8801.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 2524360998912,
+    "marketCap": 4259034693632,
+    "ebitda": 494775992320
+  },
+  "5706.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 791088988160,
+    "marketCap": 1189191745536,
+    "ebitda": 170634756096
+  },
+  "3481.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 16924189696,
+    "marketCap": 158896177152,
+    "ebitda": 11934481408
+  },
+  "1803.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 2098831949824,
+    "marketCap": 1366697181184,
+    "ebitda": 154221248512
+  },
+  "8802.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 1886878957568,
+    "marketCap": 4646673317888,
+    "ebitda": 502003236864
+  },
+  "3407.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 3162341113856,
+    "marketCap": 2101052309504,
+    "ebitda": 460487000064
+  },
+  "1813.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 85382995968,
+    "marketCap": 41073532928,
+    "ebitda": 10435999744
+  },
+  "VK.PA": {
+    "financialCurrency": "USD",
+    "currency": "EUR",
+    "totalRevenue": 4185176064,
+    "marketCap": 4827191808,
+    "ebitda": 882812992
+  },
+  "96L.F": {
+    "financialCurrency": "JPY",
+    "currency": "EUR",
+    "totalRevenue": 1241612943360,
+    "marketCap": 3238535424,
+    "ebitda": 115640000512
+  },
+  "7864.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 223161008128,
+    "marketCap": 190704320512,
+    "ebitda": 29237000192
+  },
+  "NPNVF": {
+    "financialCurrency": "JPY",
+    "currency": "USD",
+    "totalRevenue": 61797998592,
+    "marketCap": 405583552,
+    "ebitda": 11141499904
+  },
+  "7247.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 105838002176,
+    "marketCap": 11970530304,
+    "ebitda": 9608250368
+  },
+  "FUWAF": {
+    "financialCurrency": "JPY",
+    "currency": "USD",
+    "totalRevenue": 1379066052608,
+    "marketCap": 16820599808,
+    "ebitda": 124577751040
+  },
+  "2ES.SG": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "7280.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 354288992256,
+    "marketCap": 58353209344,
+    "ebitda": 36047998976
+  },
+  "1926.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 138217996288,
+    "marketCap": 156697772032,
+    "ebitda": 20978499584
+  },
+  "4188.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 3827582107648,
+    "marketCap": 1510181568512,
+    "ebitda": 364258000896
+  },
+  "VEDL.NS": {
+    "financialCurrency": "INR",
+    "currency": "INR",
+    "totalRevenue": 848060022784,
+    "marketCap": 884437614592,
+    "ebitda": 317887512576
+  },
+  "NMEHF": {
+    "financialCurrency": "JPY",
+    "currency": "USD",
+    "totalRevenue": 912149970944,
+    "marketCap": 4527309312,
+    "ebitda": 156708503552
+  },
+  "GALAXYSURF.NS": {
+    "financialCurrency": "INR",
+    "currency": "INR",
+    "totalRevenue": 57522601984,
+    "marketCap": 78766276608,
+    "ebitda": 5809625088
+  },
+  "ASIANPAINT.BO": {
+    "financialCurrency": "INR",
+    "currency": "INR",
+    "totalRevenue": 346495287296,
+    "marketCap": 2209559871488,
+    "ebitda": 58500173824
+  },
+  "SHREECEM.BO": {
+    "financialCurrency": "INR",
+    "currency": "INR",
+    "totalRevenue": 201466494976,
+    "marketCap": 820820836352,
+    "ebitda": 45476200448
+  },
+  "5698.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 44430000128,
+    "marketCap": 18272163840,
+    "ebitda": 4572000256
+  },
+  "NKP.XD": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "TBURF": {
+    "financialCurrency": "JPY",
+    "currency": "USD",
+    "totalRevenue": 663114022912,
+    "marketCap": 3664257280,
+    "ebitda": 129504501760
+  },
+  "1860.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 669757014016,
+    "marketCap": 424669118464,
+    "ebitda": 53288751104
+  },
+  "4025.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 44496998400,
+    "marketCap": 46578319360,
+    "ebitda": 5173000192
+  },
+  "TATAPOWER.NS": {
+    "financialCurrency": "INR",
+    "currency": "INR",
+    "totalRevenue": 634447790080,
+    "marketCap": 1112297701376,
+    "ebitda": 131750346752
+  },
+  "3433.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 59996999680,
+    "marketCap": 157770448896,
+    "ebitda": 18027499520
+  },
+  "COV.PA": {
+    "financialCurrency": "EUR",
+    "currency": "EUR",
+    "totalRevenue": 1171600000,
+    "marketCap": 4849713152,
+    "ebitda": 993500032
+  },
+  "4100.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 28092999680,
+    "marketCap": 9363884032,
+    "ebitda": 1882499968
+  },
+  "9533.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 634463977472,
+    "marketCap": 424733474816,
+    "ebitda": 57962000384
+  },
+  "1861.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 482346008576,
+    "marketCap": 205796278272,
+    "ebitda": 30132000768
+  },
+  "TATACHEM.NS": {
+    "financialCurrency": "INR",
+    "currency": "INR",
+    "totalRevenue": 151200006144,
+    "marketCap": 146943410176,
+    "ebitda": 15257499648
+  },
+  "6905.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 27785000960,
+    "marketCap": 52939665408,
+    "ebitda": 1727413248
+  },
+  "6768.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 127471001600,
+    "marketCap": 65332768768,
+    "ebitda": 9666499584
+  },
+  "6995.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 657288986624,
+    "marketCap": 260992843776,
+    "ebitda": 59434000384
+  },
+  "7201.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 12265185083392,
+    "marketCap": 939478024192,
+    "ebitda": 484616994816
+  },
+  "4043.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 353301987328,
+    "marketCap": 270585741312,
+    "ebitda": 58376499200
+  },
+  "9041.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 1783142940672,
+    "marketCap": 654680719360,
+    "ebitda": 176036249600
+  },
+  "5602.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 129762000896,
+    "marketCap": 97400455168,
+    "ebitda": 12223250432
+  },
+  "6976.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 364428001280,
+    "marketCap": 1107363233792,
+    "ebitda": 71000498176
+  },
+  "TKECY": {
+    "financialCurrency": "JPY",
+    "currency": "USD",
+    "totalRevenue": 6384649240576,
+    "marketCap": 5048511488,
+    "ebitda": 633137987584
+  },
+  "6370.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 415373000704,
+    "marketCap": 726204022784,
+    "ebitda": 99015999488
+  },
+  "TKK1.SG": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "1878.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 1986609020928,
+    "marketCap": 1059807494144,
+    "ebitda": 162382004224
+  },
+  "6644.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 101856002048,
+    "marketCap": 58087034880,
+    "ebitda": 10501499904
+  },
+  "NUAG.TO": {
+    "financialCurrency": "USD",
+    "currency": "CAD",
+    "totalRevenue": null,
+    "marketCap": 1479167360,
+    "ebitda": -4917558
+  },
+  "9793.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 73219997696,
+    "marketCap": 163398582272,
+    "ebitda": 19252000768
+  },
+  "DALBHARAT.BO": {
+    "financialCurrency": "INR",
+    "currency": "INR",
+    "totalRevenue": 150580002816,
+    "marketCap": 299177082880,
+    "ebitda": 28534999040
+  },
+  "4116.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 127169003520,
+    "marketCap": 85494128640,
+    "ebitda": 13530999808
+  },
+  "5702.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 353983987712,
+    "marketCap": 62128467968,
+    "ebitda": 13436000256
+  },
+  "6383.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 689747984384,
+    "marketCap": 1933191806976,
+    "ebitda": 118921003008
+  },
+  "DAIYF": {
+    "financialCurrency": "JPY",
+    "currency": "USD",
+    "totalRevenue": 96866000896,
+    "marketCap": 234222592,
+    "ebitda": 8241249792
+  },
+  "DEEPAKNTR.NS": {
+    "financialCurrency": "INR",
+    "currency": "INR",
+    "totalRevenue": 85747900416,
+    "marketCap": 197333450752,
+    "ebitda": 13316525056
+  },
+  "4061.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 387157000192,
+    "marketCap": 257607843840,
+    "ebitda": 64410001408
+  },
+  "1815.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 175883993088,
+    "marketCap": 59707846656,
+    "ebitda": 6356749824
+  },
+  "KMTUY": {
+    "financialCurrency": "JPY",
+    "currency": "USD",
+    "totalRevenue": 4266370007040,
+    "marketCap": 37728858112,
+    "ebitda": 747195990016
+  },
+  "KNOIF": {
+    "financialCurrency": "JPY",
+    "currency": "USD",
+    "totalRevenue": 355271999488,
+    "marketCap": 1073143168,
+    "ebitda": 33086750720
+  },
+  "1786.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 65739001856,
+    "marketCap": 42062770176,
+    "ebitda": 5924749824
+  },
+  "5406.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 2445874036736,
+    "marketCap": 798024204288,
+    "ebitda": 232755249152
+  },
+  "ORIENTCEM.BO": {
+    "financialCurrency": "INR",
+    "currency": "INR",
+    "totalRevenue": 25311234048,
+    "marketCap": 23833346048,
+    "ebitda": 5212815872
+  },
+  "KYSEY": {
+    "financialCurrency": "JPY",
+    "currency": "USD",
+    "totalRevenue": 2281567944704,
+    "marketCap": 6027921408,
+    "ebitda": 496562012160
+  },
+  "7226.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 166538002432,
+    "marketCap": 81710604288,
+    "ebitda": 15355750400
+  },
+  "6368.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 181727002624,
+    "marketCap": 520290271232,
+    "ebitda": 39303000064
+  },
+  "SURDF": {
+    "financialCurrency": "JPY",
+    "currency": "USD",
+    "totalRevenue": 1045476999168,
+    "marketCap": 18994169856,
+    "ebitda": 376916246528
+  },
+  "7012.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 2366402985984,
+    "marketCap": 1888725893120,
+    "ebitda": 215598006272
+  },
+  "EMBASSY.BO": {
+    "financialCurrency": "INR",
+    "currency": "INR",
+    "totalRevenue": 48526999552,
+    "marketCap": 401698422784,
+    "ebitda": 36994248704
+  },
+  "KTCG.VI": {
+    "financialCurrency": "EUR",
+    "currency": "EUR",
+    "totalRevenue": 435369216,
+    "marketCap": 54340000,
+    "ebitda": -55734368
+  },
+  "4613.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 602968031232,
+    "marketCap": 522751344640,
+    "ebitda": 77297745920
+  },
+  "5232.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 228210999296,
+    "marketCap": 160627179520,
+    "ebitda": 39248498688
+  },
+  "HZS.F": {
+    "financialCurrency": "JPY",
+    "currency": "EUR",
+    "totalRevenue": 661526020096,
+    "marketCap": 972488192,
+    "ebitda": null
+  },
+  "S19.SG": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "9007.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 422202998784,
+    "marketCap": 599450779648,
+    "ebitda": 98465996800
+  },
+  "5423.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 267159994368,
+    "marketCap": 166719963136,
+    "ebitda": 8547500032
+  },
+  "4005.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 2380573966336,
+    "marketCap": 941567246336,
+    "ebitda": 329028009984
+  },
+  "1812.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 3057746968576,
+    "marketCap": 2191603269632,
+    "ebitda": 275852001280
+  },
+  "FUH.SG": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "JTEKY": {
+    "financialCurrency": "JPY",
+    "currency": "USD",
+    "totalRevenue": 1962128965632,
+    "marketCap": 4244424192,
+    "ebitda": 106237001728
+  },
+  "5988.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 62713999360,
+    "marketCap": 38289936384,
+    "ebitda": 5811749888
+  },
+  "4203.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 337409998848,
+    "marketCap": 666789150720,
+    "ebitda": 55717998592
+  },
+  "JSWSTEEL.BO": {
+    "financialCurrency": "INR",
+    "currency": "INR",
+    "totalRevenue": 1896870051840,
+    "marketCap": 2897441193984,
+    "ebitda": 346572488704
+  },
+  "1802.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 2685924016128,
+    "marketCap": 2005552201728,
+    "ebitda": 246128001024
+  },
+  "4008.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 153181995008,
+    "marketCap": 92627722240,
+    "ebitda": 21046749184
+  },
+  "STLTECH.NS": {
+    "financialCurrency": "INR",
+    "currency": "INR",
+    "totalRevenue": 56429998080,
+    "marketCap": 424945582080,
+    "ebitda": 7797499904
+  },
+  "4369.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 26212999168,
+    "marketCap": 95930286080,
+    "ebitda": 8837000192
+  },
+  "JSWCEMENT.NS": {
+    "financialCurrency": "INR",
+    "currency": "INR",
+    "totalRevenue": 69968502784,
+    "marketCap": 158235148288,
+    "ebitda": 13110375424
+  },
+  "5233.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 909169000448,
+    "marketCap": 449364164608,
+    "ebitda": 148980498432
+  },
+  "KIERF": {
+    "financialCurrency": "GBP",
+    "currency": "USD",
+    "totalRevenue": 4352500224,
+    "marketCap": 1737505664,
+    "ebitda": 133700000
+  },
+  "LSU2.SG": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "063160.KS": {
+    "financialCurrency": "KRW",
+    "currency": "KRW",
+    "totalRevenue": 159934578688,
+    "marketCap": 68574486528,
+    "ebitda": -7397002752
+  },
+  "PEGRF": {
+    "financialCurrency": "GBP",
+    "currency": "USD",
+    "totalRevenue": 1290400000,
+    "marketCap": 2825404672,
+    "ebitda": 504900000
+  },
+  "LTODL.XC": {
+    "financialCurrency": "INR",
+    "currency": "USD",
+    "totalRevenue": 2969008078848,
+    "marketCap": 52827947008,
+    "ebitda": 347545108480
+  },
+  "OMN.JO": {
+    "financialCurrency": "ZAR",
+    "currency": "ZAc",
+    "totalRevenue": 24199999488,
+    "marketCap": 18879776768,
+    "ebitda": 2371000064
+  },
+  "5992.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 112121004032,
+    "marketCap": 93202825216,
+    "ebitda": 7606249984
+  },
+  "CHUEF": {
+    "financialCurrency": "JPY",
+    "currency": "USD",
+    "totalRevenue": 3571572015104,
+    "marketCap": 12577214464,
+    "ebitda": 309707735040
+  },
+  "SUNFLAG.BO": {
+    "financialCurrency": "INR",
+    "currency": "INR",
+    "totalRevenue": 37713301504,
+    "marketCap": 67654381568,
+    "ebitda": 4323500032
+  },
+  "7213.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 26480001024,
+    "marketCap": 9571398656,
+    "ebitda": 2909499904
+  },
+  "8934.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 118699999232,
+    "marketCap": 124146483200,
+    "ebitda": 29937250304
+  },
+  "1925.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 5693101834240,
+    "marketCap": 2852983144448,
+    "ebitda": 769303248896
+  },
+  "1928.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 4148158005248,
+    "marketCap": 2272005455872,
+    "ebitda": 410177011712
+  },
+  "3309.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 41728999424,
+    "marketCap": 290948382720,
+    "ebitda": 29007998976
+  },
+  "HINDZINC.BO": {
+    "financialCurrency": "INR",
+    "currency": "INR",
+    "totalRevenue": 355119988736,
+    "marketCap": 2099983548416,
+    "ebitda": 192462503936
+  },
+  "ADANIPOWER.NS": {
+    "financialCurrency": "INR",
+    "currency": "INR",
+    "totalRevenue": 590332624896,
+    "marketCap": 3510585786368,
+    "ebitda": 219879030784
+  },
+  "5018.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 37631000576,
+    "marketCap": 26713206784,
+    "ebitda": 5104000000
+  },
+  "NLLRF": {
+    "financialCurrency": "JPY",
+    "currency": "USD",
+    "totalRevenue": 64284000256,
+    "marketCap": 571530368,
+    "ebitda": 18253500416
+  },
+  "9324.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 79485001728,
+    "marketCap": 74930388992,
+    "ebitda": 9424000000
+  },
+  "6506.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 567524982784,
+    "marketCap": 1043465043968,
+    "ebitda": 68712001536
+  },
+  "ADDHY": {
+    "financialCurrency": "SEK",
+    "currency": "USD",
+    "totalRevenue": null,
+    "marketCap": 8405015552,
+    "ebitda": 3808999936
+  },
+  "3863.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 1214443028480,
+    "marketCap": 147594887168,
+    "ebitda": 84697751552
+  },
+  "NIFCF": {
+    "financialCurrency": null,
+    "currency": "USD",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "6480.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 67939999744,
+    "marketCap": 101172174848,
+    "ebitda": 9377250304
+  },
+  "5911.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 151626006528,
+    "marketCap": 113668702208,
+    "ebitda": 18166499328
+  },
+  "6779.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 57232998400,
+    "marketCap": 58104053760,
+    "ebitda": 7976000000
+  },
+  "6305.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 1428471021568,
+    "marketCap": 1091552542720,
+    "ebitda": 240116006912
+  },
+  "5393.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 261820006400,
+    "marketCap": 618517757952,
+    "ebitda": 46391001088
+  },
+  "GRAPHITE.NS": {
+    "financialCurrency": "INR",
+    "currency": "INR",
+    "totalRevenue": 30287200256,
+    "marketCap": 134623551488,
+    "ebitda": 3026949888
+  },
+  "7294.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 179450003456,
+    "marketCap": 17714239488,
+    "ebitda": 9833749504
+  },
+  "6996.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 174837006336,
+    "marketCap": 138560913408,
+    "ebitda": 16400000000
+  },
+  "5933.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 63907999744,
+    "marketCap": 19876780032,
+    "ebitda": 4952999936
+  },
+  "6800.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 95003000832,
+    "marketCap": 77878288384,
+    "ebitda": 10501749760
+  },
+  "4114.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 419969007616,
+    "marketCap": 374832857088,
+    "ebitda": 57480998912
+  },
+  "YOKEF": {
+    "financialCurrency": "JPY",
+    "currency": "USD",
+    "totalRevenue": 615965982720,
+    "marketCap": 9025804288,
+    "ebitda": 108438749184
+  },
+  "SWD.MU": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "4997.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 115775995904,
+    "marketCap": 82790023168,
+    "ebitda": 14668499968
+  },
+  "HLCLL.XC": {
+    "financialCurrency": "GBP",
+    "currency": "GBp",
+    "totalRevenue": 33709000,
+    "marketCap": 228463472,
+    "ebitda": 10377000
+  },
+  "9065.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 632182996992,
+    "marketCap": 409056608256,
+    "ebitda": 64765501440
+  },
+  "WI2.DU": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "HAVELLS.BO": {
+    "financialCurrency": "INR",
+    "currency": "INR",
+    "totalRevenue": 223661293568,
+    "marketCap": 647329021952,
+    "ebitda": 21554774016
+  },
+  "WKPL.XC": {
+    "financialCurrency": "GBP",
+    "currency": "GBp",
+    "totalRevenue": 181400000,
+    "marketCap": 638013376,
+    "ebitda": 93500000
+  },
+  "HAZAF": {
+    "financialCurrency": "JPY",
+    "currency": "USD",
+    "totalRevenue": 451168993280,
+    "marketCap": 1218981504,
+    "ebitda": 38510501888
+  },
+  "9B3.F": {
+    "financialCurrency": "JPY",
+    "currency": "EUR",
+    "totalRevenue": 133856944128,
+    "marketCap": 601685184,
+    "ebitda": 17216018432
+  },
+  "WYGPY": {
+    "financialCurrency": "AUD",
+    "currency": "USD",
+    "totalRevenue": 10698000384,
+    "marketCap": 3189297664,
+    "ebitda": 590000000
+  },
+  "HSSKY": {
+    "financialCurrency": "JPY",
+    "currency": "USD",
+    "totalRevenue": 1299377946624,
+    "marketCap": 4727689216,
+    "ebitda": 117682503680
+  },
+  "1870.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 159841992704,
+    "marketCap": 89947471872,
+    "ebitda": 12609500160
+  },
+  "4206.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 263377993728,
+    "marketCap": 275249135616,
+    "ebitda": null
+  },
+  "7283.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 334838005760,
+    "marketCap": 117068193792,
+    "ebitda": 33930999808
+  },
+  "4410.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 106728996864,
+    "marketCap": 25015144448,
+    "ebitda": 6875749888
+  },
+  "8803.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 48753000448,
+    "marketCap": 152027660288,
+    "ebitda": 20595249152
+  },
+  "4471.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 134547996672,
+    "marketCap": 35659845632,
+    "ebitda": 22307000320
+  },
+  "HBGRY": {
+    "financialCurrency": "EUR",
+    "currency": "USD",
+    "totalRevenue": 2231000064,
+    "marketCap": 454073056,
+    "ebitda": 80000000
+  },
+  "N9L.F": {
+    "financialCurrency": "JPY",
+    "currency": "EUR",
+    "totalRevenue": 614710968320,
+    "marketCap": 911549056,
+    "ebitda": 52193001472
+  },
+  "9064.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 1871654944768,
+    "marketCap": 649345302528,
+    "ebitda": 84764999680
+  },
+  "RBTEF": {
+    "financialCurrency": "EUR",
+    "currency": "USD",
+    "totalRevenue": 841662976,
+    "marketCap": 1809921024,
+    "ebitda": 158971008
+  },
+  "NSC.DU": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "9101.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 2550418898944,
+    "marketCap": 2876951756800,
+    "ebitda": 342653501440
+  },
+  "7433.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 195378003968,
+    "marketCap": 101154193408,
+    "ebitda": 9516999680
+  },
+  "NGK.SG": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "NGI.SG": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "SEIBF": {
+    "financialCurrency": "JPY",
+    "currency": "USD",
+    "totalRevenue": 535449010176,
+    "marketCap": 4549782528,
+    "ebitda": 111249752064
+  },
+  "6989.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 44530999296,
+    "marketCap": 17423951872,
+    "ebitda": 3272000000
+  },
+  "AMBUJACEM.NS": {
+    "financialCurrency": "INR",
+    "currency": "INR",
+    "totalRevenue": 398666792960,
+    "marketCap": 891800846336,
+    "ebitda": 62299123712
+  },
+  "RNW": {
+    "financialCurrency": "INR",
+    "currency": "USD",
+    "totalRevenue": 137779003392,
+    "marketCap": 2508180736,
+    "ebitda": 90096001024
+  },
+  "SEOTF": {
+    "financialCurrency": "JPY",
+    "currency": "USD",
+    "totalRevenue": 827159019520,
+    "marketCap": 2575776768,
+    "ebitda": 69891997696
+  },
+  "GODREJIND.NS": {
+    "financialCurrency": "INR",
+    "currency": "INR",
+    "totalRevenue": 246912696320,
+    "marketCap": 311823007744,
+    "ebitda": 37897973760
+  },
+  "4204.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 1337104007168,
+    "marketCap": 1044430716928,
+    "ebitda": 169402007552
+  },
+  "5902.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 92716998656,
+    "marketCap": 32213729280,
+    "ebitda": 10910249984
+  },
+  "204320.KS": {
+    "financialCurrency": "KRW",
+    "currency": "KRW",
+    "totalRevenue": 9589833596928,
+    "marketCap": 1753848479744,
+    "ebitda": 739022012416
+  },
+  "AARTIIND.NS": {
+    "financialCurrency": "INR",
+    "currency": "INR",
+    "totalRevenue": 89980002304,
+    "marketCap": 155090075648,
+    "ebitda": 12955950080
+  },
+  "O1TI34.SA": {
+    "financialCurrency": "USD",
+    "currency": "BRL",
+    "totalRevenue": 14910999552,
+    "marketCap": 143588474880,
+    "ebitda": 2640000000
+  },
+  "6349.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 119170998272,
+    "marketCap": 101347942400,
+    "ebitda": 11967500288
+  },
+  "ELKO.OL": {
+    "financialCurrency": null,
+    "currency": "NOK",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "5110.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 1254667059200,
+    "marketCap": 510841978880,
+    "ebitda": 182280994816
+  },
+  "4HEI.TI": {
+    "financialCurrency": null,
+    "currency": null,
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "HO.PA": {
+    "financialCurrency": "EUR",
+    "currency": "EUR",
+    "totalRevenue": 22820499456,
+    "marketCap": 46889951232,
+    "ebitda": 3067800064
+  },
+  "ZIL2.SG": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "ELTEL.ST": {
+    "financialCurrency": "EUR",
+    "currency": "SEK",
+    "totalRevenue": 838000000,
+    "marketCap": 2554809344,
+    "ebitda": 29700000
+  },
+  "KRRYF": {
+    "financialCurrency": "HKD",
+    "currency": "USD",
+    "totalRevenue": 58975551488,
+    "marketCap": 994086208,
+    "ebitda": 3207294976
+  },
+  "ELIAF": {
+    "financialCurrency": "EUR",
+    "currency": "USD",
+    "totalRevenue": 4833299968,
+    "marketCap": 15102768128,
+    "ebitda": 2630700032
+  },
+  "ELMTY": {
+    "financialCurrency": "USD",
+    "currency": "USD",
+    "totalRevenue": 624899968,
+    "marketCap": 1325833856,
+    "ebitda": 159900000
+  },
+  "Y2Y.F": {
+    "financialCurrency": "SEK",
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": 16537698,
+    "ebitda": 8106000
+  },
+  "9248.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 46480998400,
+    "marketCap": 13715055616,
+    "ebitda": 4661499904
+  },
+  "ESLT.TA": {
+    "financialCurrency": "USD",
+    "currency": "ILA",
+    "totalRevenue": 8546071040,
+    "marketCap": 106292961280,
+    "ebitda": 983289984
+  },
+  "POFCF": {
+    "financialCurrency": "USD",
+    "currency": "USD",
+    "totalRevenue": 2504999936,
+    "marketCap": 5255,
+    "ebitda": -374000000
+  },
+  "5211.KL": {
+    "financialCurrency": "MYR",
+    "currency": "MYR",
+    "totalRevenue": 10347541504,
+    "marketCap": 28528973824,
+    "ebitda": 10412169216
+  },
+  "SUUN.MX": {
+    "financialCurrency": "CAD",
+    "currency": "MXN",
+    "totalRevenue": 56570998784,
+    "marketCap": 1660873998336,
+    "ebitda": 19504001024
+  },
+  "9107.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 1060288004096,
+    "marketCap": 1953843380224,
+    "ebitda": 137094496256
+  },
+  "ENOE.XD": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "049720.KQ": {
+    "financialCurrency": "KRW",
+    "currency": "KRW",
+    "totalRevenue": 177669783552,
+    "marketCap": 126466637824,
+    "ebitda": 23580297216
+  },
+  "TTEK": {
+    "financialCurrency": "USD",
+    "currency": "USD",
+    "totalRevenue": 4358675968,
+    "marketCap": 9468522496,
+    "ebitda": 654688000
+  },
+  "DVW1.F": {
+    "financialCurrency": "USD",
+    "currency": "EUR",
+    "totalRevenue": 1055062976,
+    "marketCap": 2541218304,
+    "ebitda": 675017984
+  },
+  "355.MU": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "CMPC.SN": {
+    "financialCurrency": "USD",
+    "currency": "CLP",
+    "totalRevenue": 7487926784,
+    "marketCap": 2395000012800,
+    "ebitda": 800070016
+  },
+  "RUMOF": {
+    "financialCurrency": "BRL",
+    "currency": "USD",
+    "totalRevenue": 14392211456,
+    "marketCap": 7055210496,
+    "ebitda": 7518930944
+  },
+  "KCR.HE": {
+    "financialCurrency": "EUR",
+    "currency": "EUR",
+    "totalRevenue": 4079099904,
+    "marketCap": 6283275776,
+    "ebitda": 609200000
+  },
+  "5020.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 12303327035392,
+    "marketCap": 3758039236608,
+    "ebitda": 1120421937152
+  },
+  "SG9.SG": {
+    "financialCurrency": "GBP",
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "011200.KS": {
+    "financialCurrency": "KRW",
+    "currency": "KRW",
+    "totalRevenue": 11534713487360,
+    "marketCap": 21364339638272,
+    "ebitda": 2510676033536
+  },
+  "ENEV3.SA": {
+    "financialCurrency": "BRL",
+    "currency": "BRL",
+    "totalRevenue": 19136661504,
+    "marketCap": 60453146624,
+    "ebitda": 6085488128
+  },
+  "ENUN.F": {
+    "financialCurrency": "EUR",
+    "currency": "EUR",
+    "totalRevenue": 9317999616,
+    "marketCap": 7760836608,
+    "ebitda": 627000000
+  },
+  "PMOIF": {
+    "financialCurrency": "USD",
+    "currency": "USD",
+    "totalRevenue": 11397999616,
+    "marketCap": 6126691840,
+    "ebitda": 7392000000
+  },
+  "STF.PA": {
+    "financialCurrency": "EUR",
+    "currency": "EUR",
+    "totalRevenue": 5332553216,
+    "marketCap": 1504021760,
+    "ebitda": 400212000
+  },
+  "7TE1.MU": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "SBLK": {
+    "financialCurrency": "USD",
+    "currency": "USD",
+    "totalRevenue": 1203005056,
+    "marketCap": 3363748608,
+    "ebitda": 497808992
+  },
+  "ENELAMCO.CL": {
+    "financialCurrency": "USD",
+    "currency": "COP",
+    "totalRevenue": 15389531136,
+    "marketCap": 29969709268992,
+    "ebitda": 3740622080
+  },
+  "HP91.F": {
+    "financialCurrency": "USD",
+    "currency": "EUR",
+    "totalRevenue": 812790016,
+    "marketCap": 1058817280,
+    "ebitda": 317056992
+  },
+  "HEADL.XC": {
+    "financialCurrency": "GBP",
+    "currency": "GBp",
+    "totalRevenue": 498700000,
+    "marketCap": 8226437,
+    "ebitda": -32600000
+  },
+  "ENG.VI": {
+    "financialCurrency": "EUR",
+    "currency": "EUR",
+    "totalRevenue": 930401024,
+    "marketCap": 4529185792,
+    "ebitda": 425716992
+  },
+  "267260.KS": {
+    "financialCurrency": "KRW",
+    "currency": "KRW",
+    "totalRevenue": 4336923967488,
+    "marketCap": 16916570701824,
+    "ebitda": 1191320485888
+  },
+  "ENB": {
+    "financialCurrency": "CAD",
+    "currency": "USD",
+    "totalRevenue": 83490996224,
+    "marketCap": 107318820864,
+    "ebitda": 17383000064
+  },
+  "KNEBVH.XD": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "1942.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 734497996800,
+    "marketCap": 1011985940480,
+    "ebitda": 96528998400
+  },
+  "329180.KS": {
+    "financialCurrency": "KRW",
+    "currency": "KRW",
+    "totalRevenue": 21859479322624,
+    "marketCap": 32004496162816,
+    "ebitda": 3454965383168
+  },
+  "1ELE.MI": {
+    "financialCurrency": "EUR",
+    "currency": "EUR",
+    "totalRevenue": 21126000640,
+    "marketCap": null,
+    "ebitda": 5772000256
+  },
+  "CC.MX": {
+    "financialCurrency": "USD",
+    "currency": "MXN",
+    "totalRevenue": 5797000192,
+    "marketCap": 41236725760,
+    "ebitda": 485000000
+  },
+  "ENL.SG": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "5802.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 5292326125568,
+    "marketCap": 5716809613312,
+    "ebitda": 665695485952
+  },
+  "PWC.SG": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "EDPU.XD": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "DLNL.XC": {
+    "financialCurrency": "GBP",
+    "currency": "GBp",
+    "totalRevenue": 411900000,
+    "marketCap": 2112955136,
+    "ebitda": 161000000
+  },
+  "KLBN4.SA": {
+    "financialCurrency": "BRL",
+    "currency": "BRL",
+    "totalRevenue": 20688439296,
+    "marketCap": 22142367744,
+    "ebitda": 6664628224
+  },
+  "DRRKF": {
+    "financialCurrency": "CHF",
+    "currency": "USD",
+    "totalRevenue": 2792399872,
+    "marketCap": 3297886976,
+    "ebitda": 404600000
+  },
+  "007340.KS": {
+    "financialCurrency": "KRW",
+    "currency": "KRW",
+    "totalRevenue": 4154329661440,
+    "marketCap": 2124841222144,
+    "ebitda": 716723257344
+  },
+  "000150.KS": {
+    "financialCurrency": "KRW",
+    "currency": "KRW",
+    "totalRevenue": 20783973793792,
+    "marketCap": 16423795556352,
+    "ebitda": 2132959035392
+  },
+  "1435.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 28287000576,
+    "marketCap": 14217119744,
+    "ebitda": 2260999936
+  },
+  "DNERF": {
+    "financialCurrency": "AUD",
+    "currency": "USD",
+    "totalRevenue": 9704800256,
+    "marketCap": 1958464768,
+    "ebitda": 570200000
+  },
+  "SAABBS.XC": {
+    "financialCurrency": "SEK",
+    "currency": "SEK",
+    "totalRevenue": 88185004032,
+    "marketCap": 346820444160,
+    "ebitda": 10826000384
+  },
+  "120110.KS": {
+    "financialCurrency": "KRW",
+    "currency": "KRW",
+    "totalRevenue": 4977237426176,
+    "marketCap": 1361970855936,
+    "ebitda": 453810028544
+  },
+  "4633.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 273302994944,
+    "marketCap": 131189309440,
+    "ebitda": 23152001024
+  },
+  "RTE.SG": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "HOLN.SW": {
+    "financialCurrency": "CHF",
+    "currency": "CHF",
+    "totalRevenue": 15777999872,
+    "marketCap": 36948758528,
+    "ebitda": 2988000000
+  },
+  "DFDDF": {
+    "financialCurrency": "DKK",
+    "currency": "USD",
+    "totalRevenue": 31538999296,
+    "marketCap": 1161350144,
+    "ebitda": 2851000064
+  },
+  "TRP.TO": {
+    "financialCurrency": "CAD",
+    "currency": "CAD",
+    "totalRevenue": 15690000384,
+    "marketCap": 90967089152,
+    "ebitda": 9941999616
+  },
+  "TNISF": {
+    "financialCurrency": "EUR",
+    "currency": "USD",
+    "totalRevenue": 6782598144,
+    "marketCap": 1470726912,
+    "ebitda": 270300992
+  },
+  "LIP.XC": {
+    "financialCurrency": "EUR",
+    "currency": "EUR",
+    "totalRevenue": 1749200000,
+    "marketCap": 9972313088,
+    "ebitda": 1151200000
+  },
+  "KBYPF": {
+    "financialCurrency": "JPY",
+    "currency": "USD",
+    "totalRevenue": 167473004544,
+    "marketCap": 2934145536,
+    "ebitda": 19559999488
+  },
+  "DSCVL.XC": {
+    "financialCurrency": "GBP",
+    "currency": "GBp",
+    "totalRevenue": 443300000,
+    "marketCap": 767257088,
+    "ebitda": 65900000
+  },
+  "SCYRE.XC": {
+    "financialCurrency": "EUR",
+    "currency": "EUR",
+    "totalRevenue": 4859822080,
+    "marketCap": 3374821376,
+    "ebitda": 1298190976
+  },
+  "DHLD.XD": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "KCC.OL": {
+    "financialCurrency": "USD",
+    "currency": "NOK",
+    "totalRevenue": 278775008,
+    "marketCap": 5955514880,
+    "ebitda": 110224000
+  },
+  "OC": {
+    "financialCurrency": "USD",
+    "currency": "USD",
+    "totalRevenue": 9847000064,
+    "marketCap": 9029731328,
+    "ebitda": 1934000000
+  },
+  "PCAL.XC": {
+    "financialCurrency": "GBP",
+    "currency": "GBp",
+    "totalRevenue": 9175000,
+    "marketCap": 38704932,
+    "ebitda": null
+  },
+  "SYIEY": {
+    "financialCurrency": "EUR",
+    "currency": "USD",
+    "totalRevenue": 4914876928,
+    "marketCap": 15611104256,
+    "ebitda": 725139008
+  },
+  "6277.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 80607002624,
+    "marketCap": 92090703872,
+    "ebitda": 6669000192
+  },
+  "6141.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 573502980096,
+    "marketCap": 413275226112,
+    "ebitda": 46409998336
+  },
+  "DRXL.XC": {
+    "financialCurrency": "GBP",
+    "currency": "GBp",
+    "totalRevenue": 5224900096,
+    "marketCap": 2680265472,
+    "ebitda": 755000000
+  },
+  "9020.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 3142050906112,
+    "marketCap": 4095131516928,
+    "ebitda": 859379007488
+  },
+  "EJTTF": {
+    "financialCurrency": "GBP",
+    "currency": "USD",
+    "totalRevenue": 10526000128,
+    "marketCap": 6645508096,
+    "ebitda": 832000000
+  },
+  "6361.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 1000277016576,
+    "marketCap": 1729134985216,
+    "ebitda": 155517992960
+  },
+  "1ECL.MI": {
+    "financialCurrency": "USD",
+    "currency": "EUR",
+    "totalRevenue": 16842500096,
+    "marketCap": 68456243200,
+    "ebitda": 4135699968
+  },
+  "0087.HK": {
+    "financialCurrency": "HKD",
+    "currency": "HKD",
+    "totalRevenue": 94138998784,
+    "marketCap": 54455087104,
+    "ebitda": 14725000192
+  },
+  "PBA": {
+    "financialCurrency": "CAD",
+    "currency": "USD",
+    "totalRevenue": 7961999872,
+    "marketCap": 29275480064,
+    "ebitda": 3500999936
+  },
+  "HKT.SG": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "HERM.XC": {
+    "financialCurrency": "EUR",
+    "currency": "EUR",
+    "totalRevenue": 12672600064,
+    "marketCap": 5269682688,
+    "ebitda": 1414099968
+  },
+  "KEYS.MX": {
+    "financialCurrency": "USD",
+    "currency": "MXN",
+    "totalRevenue": 6582000128,
+    "marketCap": 1153748697088,
+    "ebitda": 1698000000
+  },
+  "RYD.SG": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "298050.KS": {
+    "financialCurrency": "KRW",
+    "currency": "KRW",
+    "totalRevenue": 3368179466240,
+    "marketCap": 636600582144,
+    "ebitda": 392150122496
+  },
+  "SCABS.XC": {
+    "financialCurrency": "SEK",
+    "currency": "SEK",
+    "totalRevenue": 22877999104,
+    "marketCap": 87599661056,
+    "ebitda": 3244000000
+  },
+  "KEY.TO": {
+    "financialCurrency": "CAD",
+    "currency": "CAD",
+    "totalRevenue": 7188823040,
+    "marketCap": 16115800064,
+    "ebitda": 1169249024
+  },
+  "SZKMY": {
+    "financialCurrency": "JPY",
+    "currency": "USD",
+    "totalRevenue": 6600965750784,
+    "marketCap": 25437476864,
+    "ebitda": 908326010880
+  },
+  "RO41.SG": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "SYYNY": {
+    "financialCurrency": "BRL",
+    "currency": "USD",
+    "totalRevenue": 337080000,
+    "marketCap": 116009776,
+    "ebitda": 161120000
+  },
+  "HSHPF": {
+    "financialCurrency": "USD",
+    "currency": "USD",
+    "totalRevenue": 1198313472,
+    "marketCap": 3091252224,
+    "ebitda": 228667008
+  },
+  "KRYPY": {
+    "financialCurrency": "HKD",
+    "currency": "USD",
+    "totalRevenue": 17066000384,
+    "marketCap": 3245634048,
+    "ebitda": 4233999872
+  },
+  "HXPLF": {
+    "financialCurrency": "SEK",
+    "currency": "USD",
+    "totalRevenue": null,
+    "marketCap": 3337572864,
+    "ebitda": 3176999936
+  },
+  "ALDEL.PA": {
+    "financialCurrency": "EUR",
+    "currency": "EUR",
+    "totalRevenue": 382343008,
+    "marketCap": 76961128,
+    "ebitda": 57663000
+  },
+  "DSV.CO": {
+    "financialCurrency": "DKK",
+    "currency": "DKK",
+    "totalRevenue": 299491000320,
+    "marketCap": 327715848192,
+    "ebitda": 27056001024
+  },
+  "1HON.MI": {
+    "financialCurrency": "USD",
+    "currency": "EUR",
+    "totalRevenue": 37743001600,
+    "marketCap": 60655980544,
+    "ebitda": 8908000256
+  },
+  "9939.TW": {
+    "financialCurrency": "TWD",
+    "currency": "TWD",
+    "totalRevenue": 29389879296,
+    "marketCap": 37564882944,
+    "ebitda": 6765793792
+  },
+  "K.TO": {
+    "financialCurrency": "USD",
+    "currency": "CAD",
+    "totalRevenue": 8470900224,
+    "marketCap": 37093748736,
+    "ebitda": 5385099776
+  },
+  "DTE": {
+    "financialCurrency": "USD",
+    "currency": "USD",
+    "totalRevenue": 16465000448,
+    "marketCap": 27444733952,
+    "ebitda": 3616999936
+  },
+  "MOOIF": {
+    "financialCurrency": "CAD",
+    "currency": "USD",
+    "totalRevenue": 158,
+    "marketCap": 34253,
+    "ebitda": null
+  },
+  "ENID.XD": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "TNC": {
+    "financialCurrency": "USD",
+    "currency": "USD",
+    "totalRevenue": 1216800000,
+    "marketCap": 1129686912,
+    "ebitda": 105800000
+  },
+  "KRX.IR": {
+    "financialCurrency": "EUR",
+    "currency": "EUR",
+    "totalRevenue": 9540599808,
+    "marketCap": 16085246976,
+    "ebitda": 1199399936
+  },
+  "ICPVF": {
+    "financialCurrency": "AUD",
+    "currency": "USD",
+    "totalRevenue": 3905400064,
+    "marketCap": 4711711232,
+    "ebitda": 853600000
+  },
+  "OUT1V.HE": {
+    "financialCurrency": "EUR",
+    "currency": "EUR",
+    "totalRevenue": 5490999808,
+    "marketCap": 2186249984,
+    "ebitda": 113000000
+  },
+  "2049.TW": {
+    "financialCurrency": "TWD",
+    "currency": "TWD",
+    "totalRevenue": 26386063360,
+    "marketCap": 105783885824,
+    "ebitda": 4700942848
+  },
+  "7YC2.SG": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "EQUEY": {
+    "financialCurrency": "BRL",
+    "currency": "USD",
+    "totalRevenue": 54713131008,
+    "marketCap": 12211224576,
+    "ebitda": 11680036864
+  },
+  "8098.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 872290975744,
+    "marketCap": 237282590720,
+    "ebitda": 33666500608
+  },
+  "I93.SG": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "G5JA.SG": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "47VS.F": {
+    "financialCurrency": "ZAR",
+    "currency": "EUR",
+    "totalRevenue": 164887003136,
+    "marketCap": 5979573248,
+    "ebitda": 61248000000
+  },
+  "PWR": {
+    "financialCurrency": "USD",
+    "currency": "USD",
+    "totalRevenue": 32905140224,
+    "marketCap": 82152136704,
+    "ebitda": 3045004032
+  },
+  "SEA.NE": {
+    "financialCurrency": null,
+    "currency": "CAD",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "5384.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 72530001920,
+    "marketCap": 230339002368,
+    "ebitda": 17663250432
+  },
+  "SCC.BK": {
+    "financialCurrency": "THB",
+    "currency": "THB",
+    "totalRevenue": 507418804224,
+    "marketCap": 330000007168,
+    "ebitda": 37271330816
+  },
+  "GFRDL.XC": {
+    "financialCurrency": "GBP",
+    "currency": "GBp",
+    "totalRevenue": 1931100032,
+    "marketCap": 678309696,
+    "ebitda": 50900000
+  },
+  "600660.SS": {
+    "financialCurrency": "CNY",
+    "currency": "CNY",
+    "totalRevenue": 46608318464,
+    "marketCap": 137429098496,
+    "ebitda": 13052423168
+  },
+  "REPE.XD": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "IMPUY": {
+    "financialCurrency": "ZAR",
+    "currency": "USD",
+    "totalRevenue": 135145996288,
+    "marketCap": 9244940288,
+    "ebitda": 43548999680
+  },
+  "0272.HK": {
+    "financialCurrency": "CNY",
+    "currency": "HKD",
+    "totalRevenue": 3729999872,
+    "marketCap": 3243869696,
+    "ebitda": 1066000000
+  },
+  "5E2.SI": {
+    "financialCurrency": "SGD",
+    "currency": "SGD",
+    "totalRevenue": 11723240448,
+    "marketCap": 6133618688,
+    "ebitda": 804691008
+  },
+  "IWG.SG": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "SIKAZ.XC": {
+    "financialCurrency": "CHF",
+    "currency": "CHF",
+    "totalRevenue": 11114699776,
+    "marketCap": 28903129088,
+    "ebitda": 1937699968
+  },
+  "IP": {
+    "financialCurrency": "USD",
+    "currency": "USD",
+    "totalRevenue": 24202999808,
+    "marketCap": 17576423424,
+    "ebitda": 3934000128
+  },
+  "FRVIA.PA": {
+    "financialCurrency": "EUR",
+    "currency": "EUR",
+    "totalRevenue": 20869599232,
+    "marketCap": 1479451520,
+    "ebitda": 2059699968
+  },
+  "SIMEF": {
+    "financialCurrency": "MYR",
+    "currency": "USD",
+    "totalRevenue": 4210110976,
+    "marketCap": 1981084416,
+    "ebitda": 1009201024
+  },
+  "023810.KS": {
+    "financialCurrency": "KRW",
+    "currency": "KRW",
+    "totalRevenue": 642076639232,
+    "marketCap": 54499999744,
+    "ebitda": 45663899648
+  },
+  "SIMH3.SA": {
+    "financialCurrency": "BRL",
+    "currency": "BRL",
+    "totalRevenue": 45115953152,
+    "marketCap": 9719591936,
+    "ebitda": 12923643904
+  },
+  "FOJCY": {
+    "financialCurrency": "EUR",
+    "currency": "USD",
+    "totalRevenue": 5488999936,
+    "marketCap": 23059695616,
+    "ebitda": 1278000000
+  },
+  "SHNDY": {
+    "financialCurrency": "CHF",
+    "currency": "USD",
+    "totalRevenue": 10954000384,
+    "marketCap": 32692379648,
+    "ebitda": 1594499968
+  },
+  "81G.MU": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "FURA.XD": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "4ENR.TI": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "GCB.SG": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "INPSTA.XC": {
+    "financialCurrency": "PLN",
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": 7745198080,
+    "ebitda": 1931900032
+  },
+  "3PY3.SG": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "INR.SG": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "FRES.MX": {
+    "financialCurrency": "USD",
+    "currency": "MXN",
+    "totalRevenue": 6007702016,
+    "marketCap": 493718700032,
+    "ebitda": 4027734016
+  },
+  "002028.SZ": {
+    "financialCurrency": "CNY",
+    "currency": "CNY",
+    "totalRevenue": 23837360128,
+    "marketCap": 85629173760,
+    "ebitda": 4084332544
+  },
+  "P1HM34.SA": {
+    "financialCurrency": "USD",
+    "currency": "BRL",
+    "totalRevenue": 15976123392,
+    "marketCap": 115554738176,
+    "ebitda": 2609699072
+  },
+  "LIGHTA.XC": {
+    "financialCurrency": "EUR",
+    "currency": "EUR",
+    "totalRevenue": 5504999936,
+    "marketCap": 1778147584,
+    "ebitda": 495000000
+  },
+  "GESTE.XC": {
+    "financialCurrency": "EUR",
+    "currency": "EUR",
+    "totalRevenue": 11396966400,
+    "marketCap": 1638735872,
+    "ebitda": 1045577024
+  },
+  "GALPU.XD": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "1REE.MI": {
+    "financialCurrency": "EUR",
+    "currency": "EUR",
+    "totalRevenue": 1716807936,
+    "marketCap": 7991415808,
+    "ebitda": 1101735040
+  },
+  "011210.KS": {
+    "financialCurrency": "KRW",
+    "currency": "KRW",
+    "totalRevenue": 8774283165696,
+    "marketCap": 1305949241344,
+    "ebitda": 483799990272
+  },
+  "GXID.XD": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "ICAD.PA": {
+    "financialCurrency": "EUR",
+    "currency": "EUR",
+    "totalRevenue": 1318200064,
+    "marketCap": 1105821312,
+    "ebitda": 256600000
+  },
+  "GGBN.MX": {
+    "financialCurrency": "BRL",
+    "currency": "MXN",
+    "totalRevenue": 69543739392,
+    "marketCap": 189601939456,
+    "ebitda": 9993178112
+  },
+  "RNO.PA": {
+    "financialCurrency": "EUR",
+    "currency": "EUR",
+    "totalRevenue": 60534001664,
+    "marketCap": 7500558848,
+    "ebitda": 6209999872
+  },
+  "GETP.XC": {
+    "financialCurrency": "EUR",
+    "currency": "EUR",
+    "totalRevenue": 1730000000,
+    "marketCap": 10548577280,
+    "ebitda": 877000000
+  },
+  "2I5.SG": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "1IBE.MI": {
+    "financialCurrency": "EUR",
+    "currency": "EUR",
+    "totalRevenue": 46080499712,
+    "marketCap": 139112775680,
+    "ebitda": 14493949952
+  },
+  "GIVN.SW": {
+    "financialCurrency": "CHF",
+    "currency": "CHF",
+    "totalRevenue": 7407000064,
+    "marketCap": 36860649472,
+    "ebitda": 1582000000
+  },
+  "GPSC.BK": {
+    "financialCurrency": "THB",
+    "currency": "THB",
+    "totalRevenue": 79680331776,
+    "marketCap": 143806201856,
+    "ebitda": 18423410688
+  },
+  "REG1.MX": {
+    "financialCurrency": "USD",
+    "currency": "MXN",
+    "totalRevenue": 1685532032,
+    "marketCap": 241363730432,
+    "ebitda": 1071214976
+  },
+  "GEI.TO": {
+    "financialCurrency": "CAD",
+    "currency": "CAD",
+    "totalRevenue": 12770676736,
+    "marketCap": 5801085952,
+    "ebitda": 503966016
+  },
+  "SRE.MX": {
+    "financialCurrency": "USD",
+    "currency": "MXN",
+    "totalRevenue": 13552000000,
+    "marketCap": 1000467529728,
+    "ebitda": 5873999872
+  },
+  "GEBN.SW": {
+    "financialCurrency": "CHF",
+    "currency": "CHF",
+    "totalRevenue": 3208699904,
+    "marketCap": 18256609280,
+    "ebitda": 924600000
+  },
+  "THRM": {
+    "financialCurrency": "USD",
+    "currency": "USD",
+    "totalRevenue": 1597762048,
+    "marketCap": 1557984512,
+    "ebitda": 138172000
+  },
+  "GFC.PA": {
+    "financialCurrency": "EUR",
+    "currency": "EUR",
+    "totalRevenue": 883710976,
+    "marketCap": 4725276672,
+    "ebitda": 623523008
+  },
+  "ITW": {
+    "financialCurrency": "USD",
+    "currency": "USD",
+    "totalRevenue": 16469000192,
+    "marketCap": 78533599232,
+    "ebitda": 4806000128
+  },
+  "G1A.VI": {
+    "financialCurrency": "EUR",
+    "currency": "EUR",
+    "totalRevenue": 5640762880,
+    "marketCap": 11127493632,
+    "ebitda": 751827008
+  },
+  "3941.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 1034688004096,
+    "marketCap": 381678092288,
+    "ebitda": 108153004032
+  },
+  "4022.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 50964000768,
+    "marketCap": 61404434432,
+    "ebitda": 8277749760
+  },
+  "GTTP.XC": {
+    "financialCurrency": "EUR",
+    "currency": "EUR",
+    "totalRevenue": 801699968,
+    "marketCap": 7991096832,
+    "ebitda": 542300032
+  },
+  "7273.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 29657999360,
+    "marketCap": 15449924608,
+    "ebitda": 2484999936
+  },
+  "005380.KS": {
+    "financialCurrency": "KRW",
+    "currency": "KRW",
+    "totalRevenue": 188714252763136,
+    "marketCap": 77371973566464,
+    "ebitda": 13169544134656
+  },
+  "RDF.JO": {
+    "financialCurrency": "ZAR",
+    "currency": "ZAc",
+    "totalRevenue": 11208391680,
+    "marketCap": 43612348416,
+    "ebitda": 6083352064
+  },
+  "004020.KS": {
+    "financialCurrency": "KRW",
+    "currency": "KRW",
+    "totalRevenue": 23071207456768,
+    "marketCap": 3532002951168,
+    "ebitda": 1903176712192
+  },
+  "SHC.JO": {
+    "financialCurrency": "GBP",
+    "currency": "ZAc",
+    "totalRevenue": 244000000,
+    "marketCap": 58333704192,
+    "ebitda": 139600000
+  },
+  "SFSN.SW": {
+    "financialCurrency": "CHF",
+    "currency": "CHF",
+    "totalRevenue": 3099000064,
+    "marketCap": 5364811264,
+    "ebitda": 498600000
+  },
+  "SGL.F": {
+    "financialCurrency": "EUR",
+    "currency": "EUR",
+    "totalRevenue": 791200000,
+    "marketCap": 606464064,
+    "ebitda": 109100000
+  },
+  "GEGYY": {
+    "financialCurrency": "USD",
+    "currency": "USD",
+    "totalRevenue": 49700000,
+    "marketCap": 239746384,
+    "ebitda": 2200000
+  },
+  "RECT.BR": {
+    "financialCurrency": "EUR",
+    "currency": "EUR",
+    "totalRevenue": 710017984,
+    "marketCap": 636132160,
+    "ebitda": 54879000
+  },
+  "GRGTF": {
+    "financialCurrency": "GBP",
+    "currency": "USD",
+    "totalRevenue": 240000000,
+    "marketCap": 1631539840,
+    "ebitda": 122800000
+  },
+  "STN.TO": {
+    "financialCurrency": "CAD",
+    "currency": "CAD",
+    "totalRevenue": 6819999744,
+    "marketCap": 11193885696,
+    "ebitda": 1030700032
+  },
+  "SOLB.BR": {
+    "financialCurrency": "EUR",
+    "currency": "EUR",
+    "totalRevenue": 4574000128,
+    "marketCap": 2428068096,
+    "ebitda": 587000000
+  },
+  "ES.VI": {
+    "financialCurrency": "USD",
+    "currency": "EUR",
+    "totalRevenue": 13998372864,
+    "marketCap": 22788823040,
+    "ebitda": 4933026816
+  },
+  "ECMPAA.XD": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "161390.KS": {
+    "financialCurrency": "KRW",
+    "currency": "KRW",
+    "totalRevenue": 21865395388416,
+    "marketCap": 7331523854336,
+    "ebitda": 4015764013056
+  },
+  "ESNTL.XC": {
+    "financialCurrency": "GBP",
+    "currency": "GBp",
+    "totalRevenue": 315700000,
+    "marketCap": 330785600,
+    "ebitda": 35500000
+  },
+  "SONACOMS.BO": {
+    "financialCurrency": "INR",
+    "currency": "INR",
+    "totalRevenue": 48967540736,
+    "marketCap": 469875392512,
+    "ebitda": 11105942528
+  },
+  "PNLA.XD": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "0F4.MU": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "HULCF": {
+    "financialCurrency": "JPY",
+    "currency": "USD",
+    "totalRevenue": 843961991168,
+    "marketCap": 6959925248,
+    "ebitda": 222766006272
+  },
+  "003670.KS": {
+    "financialCurrency": "KRW",
+    "currency": "KRW",
+    "totalRevenue": 2869339619328,
+    "marketCap": 14302546231296,
+    "ebitda": 248577982464
+  },
+  "HTR.SG": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "HUSQBS.XD": {
+    "financialCurrency": null,
+    "currency": "SEK",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "ALSOG.PA": {
+    "financialCurrency": "EUR",
+    "currency": "EUR",
+    "totalRevenue": 157764992,
+    "marketCap": 85247472,
+    "ebitda": 12785000
+  },
+  "SGFM.XD": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "1EVK.MI": {
+    "financialCurrency": "EUR",
+    "currency": "EUR",
+    "totalRevenue": 14112000000,
+    "marketCap": 9580959744,
+    "ebitda": 1712999936
+  },
+  "HAL": {
+    "financialCurrency": "USD",
+    "currency": "USD",
+    "totalRevenue": 22475999232,
+    "marketCap": 29092911104,
+    "ebitda": 4139000064
+  },
+  "1JAM.MI": {
+    "financialCurrency": "USD",
+    "currency": "EUR",
+    "totalRevenue": 9502999552,
+    "marketCap": 1391527296,
+    "ebitda": 86000000
+  },
+  "SOLABC.XD": {
+    "financialCurrency": null,
+    "currency": "DKK",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "1301.TW": {
+    "financialCurrency": "TWD",
+    "currency": "TWD",
+    "totalRevenue": 172061179904,
+    "marketCap": 469791703040,
+    "ebitda": 7068232192
+  },
+  "ERGM.XD": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "5411.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 4585135013888,
+    "marketCap": 1103696494592,
+    "ebitda": 351507513344
+  },
+  "009830.KS": {
+    "financialCurrency": "KRW",
+    "currency": "KRW",
+    "totalRevenue": 15585921466368,
+    "marketCap": 6401240334336,
+    "ebitda": 734749982720
+  },
+  "042660.KS": {
+    "financialCurrency": "KRW",
+    "currency": "KRW",
+    "totalRevenue": 14999421452288,
+    "marketCap": 16941585530880,
+    "ebitda": 1974661021696
+  },
+  "STAG": {
+    "financialCurrency": "USD",
+    "currency": "USD",
+    "totalRevenue": 880593024,
+    "marketCap": 7169703936,
+    "ebitda": 643056000
+  },
+  "SAP.JO": {
+    "financialCurrency": "USD",
+    "currency": "ZAc",
+    "totalRevenue": 5344000000,
+    "marketCap": 6981447680,
+    "ebitda": -149000000
+  },
+  "HLM.JO": {
+    "financialCurrency": "ZAR",
+    "currency": "ZAc",
+    "totalRevenue": 13184106496,
+    "marketCap": 720400704,
+    "ebitda": 477532992
+  },
+  "SWF.SG": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "ERA.PA": {
+    "financialCurrency": "EUR",
+    "currency": "EUR",
+    "totalRevenue": 3006000128,
+    "marketCap": 966968768,
+    "ebitda": 191000000
+  },
+  "ECRE.XD": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "SPIEP.XC": {
+    "financialCurrency": "EUR",
+    "currency": "EUR",
+    "totalRevenue": 10666399744,
+    "marketCap": 7192205824,
+    "ebitda": 849800000
+  },
+  "022100.KS": {
+    "financialCurrency": "KRW",
+    "currency": "KRW",
+    "totalRevenue": 979629047808,
+    "marketCap": 2883109519360,
+    "ebitda": 47894671360
+  },
+  "RIO": {
+    "financialCurrency": "USD",
+    "currency": "USD",
+    "totalRevenue": 61793001472,
+    "marketCap": 135673421824,
+    "ebitda": 22911000576
+  },
+  "SPXSF": {
+    "financialCurrency": "GBP",
+    "currency": "USD",
+    "totalRevenue": 1744499968,
+    "marketCap": 7288635392,
+    "ebitda": 386600000
+  },
+  "9042.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 1232794943488,
+    "marketCap": 1058498740224,
+    "ebitda": 197910003712
+  },
+  "EQNR.OL": {
+    "financialCurrency": "USD",
+    "currency": "NOK",
+    "totalRevenue": 113652998144,
+    "marketCap": 1074787385344,
+    "ebitda": 41874001920
+  },
+  "012450.KS": {
+    "financialCurrency": "KRW",
+    "currency": "KRW",
+    "totalRevenue": 29951608750080,
+    "marketCap": 40747441061888,
+    "ebitda": 4630738108416
+  },
+  "EQIX.VI": {
+    "financialCurrency": "USD",
+    "currency": "EUR",
+    "totalRevenue": 9904000000,
+    "marketCap": 83634118656,
+    "ebitda": 4540000256
+  },
+  "5Y7A.F": {
+    "financialCurrency": "THB",
+    "currency": "EUR",
+    "totalRevenue": 122356948992,
+    "marketCap": 3437159168,
+    "ebitda": 18102245376
+  },
+  "SKABS.XD": {
+    "financialCurrency": null,
+    "currency": "SEK",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "298020.KS": {
+    "financialCurrency": "KRW",
+    "currency": "KRW",
+    "totalRevenue": 8363363532800,
+    "marketCap": 1077258616832,
+    "ebitda": 704564822016
+  },
+  "PWJ.F": {
+    "financialCurrency": "NZD",
+    "currency": "EUR",
+    "totalRevenue": 144352992,
+    "marketCap": 526597504,
+    "ebitda": 108611000
+  },
+  "FLNG": {
+    "financialCurrency": "USD",
+    "currency": "USD",
+    "totalRevenue": 360472992,
+    "marketCap": 1545419136,
+    "ebitda": 239064992
+  },
+  "FLSC.XC": {
+    "financialCurrency": "DKK",
+    "currency": "DKK",
+    "totalRevenue": 14748999680,
+    "marketCap": 32429809664,
+    "ebitda": 2379000064
+  },
+  "FRCEF": {
+    "financialCurrency": "NZD",
+    "currency": "USD",
+    "totalRevenue": 5993999872,
+    "marketCap": 2251511808,
+    "ebitda": 555000000
+  },
+  "CA83056P7157.SG": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "IGM.XD": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "096770.KS": {
+    "financialCurrency": "KRW",
+    "currency": "KRW",
+    "totalRevenue": 93094171115520,
+    "marketCap": 23500381224960,
+    "ebitda": 8992844677120
+  },
+  "361610.KS": {
+    "financialCurrency": "KRW",
+    "currency": "KRW",
+    "totalRevenue": 196313972736,
+    "marketCap": 1293054115840,
+    "ebitda": -126890344448
+  },
+  "PWON.JK": {
+    "financialCurrency": "IDR",
+    "currency": "IDR",
+    "totalRevenue": 7111498530816,
+    "marketCap": 13581007454208,
+    "ebitda": 3755656085504
+  },
+  "SHA1.VI": {
+    "financialCurrency": "EUR",
+    "currency": "EUR",
+    "totalRevenue": 23313999872,
+    "marketCap": 5130723840,
+    "ebitda": 1592000000
+  },
+  "IRDEF": {
+    "financialCurrency": "EUR",
+    "currency": "USD",
+    "totalRevenue": 6279331840,
+    "marketCap": 3695258112,
+    "ebitda": 1188980992
+  },
+  "GMSL.XC": {
+    "financialCurrency": "USD",
+    "currency": "GBp",
+    "totalRevenue": 180536000,
+    "marketCap": 211998528,
+    "ebitda": 80928000
+  },
+  "PSPNZ.XC": {
+    "financialCurrency": "CHF",
+    "currency": "CHF",
+    "totalRevenue": 501088992,
+    "marketCap": 6880183808,
+    "ebitda": 340132000
+  },
+  "59S.SG": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "SLG": {
+    "financialCurrency": "USD",
+    "currency": "USD",
+    "totalRevenue": 1010430016,
+    "marketCap": 3847153152,
+    "ebitda": 499063008
+  },
+  "FER.MC": {
+    "financialCurrency": "EUR",
+    "currency": "EUR",
+    "totalRevenue": 9859000320,
+    "marketCap": 31965968384,
+    "ebitda": 1548000000
+  },
+  "SRGM.XD": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "2015.TW": {
+    "financialCurrency": "TWD",
+    "currency": "TWD",
+    "totalRevenue": 27215065088,
+    "marketCap": 38269243392,
+    "ebitda": 3618599936
+  },
+  "RACEM.XC": {
+    "financialCurrency": "EUR",
+    "currency": "EUR",
+    "totalRevenue": 7353308160,
+    "marketCap": 61763117056,
+    "ebitda": 2470598912
+  },
+  "FASTA.XD": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "FPARAS.XD": {
+    "financialCurrency": null,
+    "currency": "SEK",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "7246.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 208098000896,
+    "marketCap": 91602214912,
+    "ebitda": 26872750080
+  },
+  "SAO.SG": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "8955.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 41106505728,
+    "marketCap": 369605771264,
+    "ebitda": 25712084992
+  },
+  "RHIML.XC": {
+    "financialCurrency": "EUR",
+    "currency": "GBp",
+    "totalRevenue": 3284000000,
+    "marketCap": 1204717056,
+    "ebitda": 440000000
+  },
+  "FCXXF": {
+    "financialCurrency": "CAD",
+    "currency": "USD",
+    "totalRevenue": 740019008,
+    "marketCap": 3505028352,
+    "ebitda": 271911008
+  },
+  "1PLD.MI": {
+    "financialCurrency": "USD",
+    "currency": "EUR",
+    "totalRevenue": 9893700608,
+    "marketCap": 111207260160,
+    "ebitda": 6843426816
+  },
+  "FE": {
+    "financialCurrency": "USD",
+    "currency": "USD",
+    "totalRevenue": 15635999744,
+    "marketCap": 26704234496,
+    "ebitda": 5422000128
+  },
+  "487570.KS": {
+    "financialCurrency": "KRW",
+    "currency": "KRW",
+    "totalRevenue": 1493059108864,
+    "marketCap": 173069303808,
+    "ebitda": 84003643392
+  },
+  "SVLPF": {
+    "financialCurrency": "GBP",
+    "currency": "USD",
+    "totalRevenue": 2648600064,
+    "marketCap": 2079505920,
+    "ebitda": 148400000
+  },
+  "HASI": {
+    "financialCurrency": "USD",
+    "currency": "USD",
+    "totalRevenue": 127338000,
+    "marketCap": 4666967040,
+    "ebitda": null
+  },
+  "298000.KS": {
+    "financialCurrency": "KRW",
+    "currency": "KRW",
+    "totalRevenue": 2609124737024,
+    "marketCap": 167666204672,
+    "ebitda": 264560295936
+  },
+  "IVN.TO": {
+    "financialCurrency": "USD",
+    "currency": "CAD",
+    "totalRevenue": 585977984,
+    "marketCap": 13065577472,
+    "ebitda": 91946000
+  },
+  "SBSOF": {
+    "financialCurrency": null,
+    "currency": null,
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "KOA.OL": {
+    "financialCurrency": "EUR",
+    "currency": "NOK",
+    "totalRevenue": 726000000,
+    "marketCap": 1922387456,
+    "ebitda": 52100000
+  },
+  "MCME.XD": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "ML.PA": {
+    "financialCurrency": "EUR",
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": 0,
+    "ebitda": null
+  },
+  "AVBC.VI": {
+    "financialCurrency": "USD",
+    "currency": "EUR",
+    "totalRevenue": 3083518976,
+    "marketCap": 22761994240,
+    "ebitda": 1857816064
+  },
+  "2VO.SG": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "NDAD.XD": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "NSC.MX": {
+    "financialCurrency": "USD",
+    "currency": "MXN",
+    "totalRevenue": 12963000320,
+    "marketCap": 1344330924032,
+    "ebitda": 5491999744
+  },
+  "MTX": {
+    "financialCurrency": "USD",
+    "currency": "USD",
+    "totalRevenue": 2147200000,
+    "marketCap": 1957999232,
+    "ebitda": 381100000
+  },
+  "MYBUF": {
+    "financialCurrency": "CHF",
+    "currency": "USD",
+    "totalRevenue": 86858000,
+    "marketCap": 474577,
+    "ebitda": -245355008
+  },
+  "ANGPY": {
+    "financialCurrency": "ZAR",
+    "currency": "USD",
+    "totalRevenue": 155803992064,
+    "marketCap": 17983430656,
+    "ebitda": 58929999872
+  },
+  "ATRLBS.XD": {
+    "financialCurrency": null,
+    "currency": "SEK",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "MTA.JO": {
+    "financialCurrency": "ZAR",
+    "currency": "ZAc",
+    "totalRevenue": 17950377984,
+    "marketCap": 901802368,
+    "ebitda": 1644980992
+  },
+  "NHY.OL": {
+    "financialCurrency": "NOK",
+    "currency": "NOK",
+    "totalRevenue": 204638994432,
+    "marketCap": 132459765760,
+    "ebitda": 52390998016
+  },
+  "AYV.PA": {
+    "financialCurrency": "EUR",
+    "currency": "EUR",
+    "totalRevenue": 25158600704,
+    "marketCap": 6735493120,
+    "ebitda": 3182599936
+  },
+  "AYAAF": {
+    "financialCurrency": "PHP",
+    "currency": "USD",
+    "totalRevenue": 182118711296,
+    "marketCap": 3430204928,
+    "ebitda": 81780752384
+  },
+  "AYYLF": {
+    "financialCurrency": "PHP",
+    "currency": "USD",
+    "totalRevenue": 392215461888,
+    "marketCap": 5369015296,
+    "ebitda": 111545450496
+  },
+  "NOEJ.SG": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "MSRB.SG": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "19V.SG": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "PY9.SG": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "FR.PA": {
+    "financialCurrency": "EUR",
+    "currency": "EUR",
+    "totalRevenue": 20621000704,
+    "marketCap": 2748510464,
+    "ebitda": 2182000128
+  },
+  "ARGGY": {
+    "financialCurrency": "GBP",
+    "currency": "USD",
+    "totalRevenue": 1431900032,
+    "marketCap": 471937856,
+    "ebitda": 158500000
+  },
+  "MERL.VI": {
+    "financialCurrency": "EUR",
+    "currency": "EUR",
+    "totalRevenue": 601452032,
+    "marketCap": 6897697280,
+    "ebitda": 433631008
+  },
+  "VSVSL.XC": {
+    "financialCurrency": "GBP",
+    "currency": "GBp",
+    "totalRevenue": 1824899968,
+    "marketCap": 1084532224,
+    "ebitda": 208400000
+  },
+  "ARCD.VI": {
+    "financialCurrency": "EUR",
+    "currency": "EUR",
+    "totalRevenue": 4901000192,
+    "marketCap": 3604222208,
+    "ebitda": 341000000
+  },
+  "MT.AS": {
+    "financialCurrency": "USD",
+    "currency": "EUR",
+    "totalRevenue": 62846001152,
+    "marketCap": 40078135296,
+    "ebitda": 5449999872
+  },
+  "VCT.PA": {
+    "financialCurrency": "EUR",
+    "currency": "EUR",
+    "totalRevenue": 4005736960,
+    "marketCap": 2604808960,
+    "ebitda": 708129984
+  },
+  "ARMX.AE": {
+    "financialCurrency": "AED",
+    "currency": "AED",
+    "totalRevenue": 6729404928,
+    "marketCap": 2488969984,
+    "ebitda": 388528000
+  },
+  "DG.PA": {
+    "financialCurrency": "EUR",
+    "currency": "EUR",
+    "totalRevenue": 75748999168,
+    "marketCap": 58712387584,
+    "ebitda": 12780000256
+  },
+  "VIDN.MX": {
+    "financialCurrency": "EUR",
+    "currency": "MXN",
+    "totalRevenue": 1520765056,
+    "marketCap": 60289978368,
+    "ebitda": 422476992
+  },
+  "APTV": {
+    "financialCurrency": "USD",
+    "currency": "USD",
+    "totalRevenue": 20518000640,
+    "marketCap": 8863866880,
+    "ebitda": 3232999936
+  },
+  "AKE.PA": {
+    "financialCurrency": "EUR",
+    "currency": "EUR",
+    "totalRevenue": 8901300224,
+    "marketCap": 4111077888,
+    "ebitda": 1075500032
+  },
+  "VEOEY": {
+    "financialCurrency": "EUR",
+    "currency": "USD",
+    "totalRevenue": 44541001728,
+    "marketCap": 26699536384,
+    "ebitda": 5768999936
+  },
+  "183190.KS": {
+    "financialCurrency": "KRW",
+    "currency": "KRW",
+    "totalRevenue": 1036278562816,
+    "marketCap": 333878362112,
+    "ebitda": 154652164096
+  },
+  "VEI.OL": {
+    "financialCurrency": "NOK",
+    "currency": "NOK",
+    "totalRevenue": 44770000896,
+    "marketCap": 28037011456,
+    "ebitda": 2727000064
+  },
+  "TYRES.HE": {
+    "financialCurrency": "EUR",
+    "currency": "EUR",
+    "totalRevenue": 1420000000,
+    "marketCap": 1838579584,
+    "ebitda": 168400000
+  },
+  "VRLA.PA": {
+    "financialCurrency": "EUR",
+    "currency": "EUR",
+    "totalRevenue": 3307699968,
+    "marketCap": 2319595008,
+    "ebitda": 685299968
+  },
+  "AZUL": {
+    "financialCurrency": "BRL",
+    "currency": "USD",
+    "totalRevenue": 21753645056,
+    "marketCap": 1204491904,
+    "ebitda": 1983678976
+  },
+  "BOL.PA": {
+    "financialCurrency": "EUR",
+    "currency": "EUR",
+    "totalRevenue": 3022700032,
+    "marketCap": 10323145728,
+    "ebitda": -81300000
+  },
+  "9110.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 242284003328,
+    "marketCap": 247908941824,
+    "ebitda": 39875248128
+  },
+  "AGT.SG": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "UNP.MX": {
+    "financialCurrency": "USD",
+    "currency": "MXN",
+    "totalRevenue": 26363000832,
+    "marketCap": 2941469851648,
+    "ebitda": 13230000128
+  },
+  "BLSFF": {
+    "financialCurrency": "AUD",
+    "currency": "USD",
+    "totalRevenue": 16662599680,
+    "marketCap": 9747222528,
+    "ebitda": 1654899968
+  },
+  "NVJP.SG": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "NRG.MX": {
+    "financialCurrency": "USD",
+    "currency": "MXN",
+    "totalRevenue": null,
+    "marketCap": 362613080064,
+    "ebitda": null
+  },
+  "BNTGF": {
+    "financialCurrency": "EUR",
+    "currency": "USD",
+    "totalRevenue": 15155500032,
+    "marketCap": 9357616128,
+    "ebitda": 1047500032
+  },
+  "LUGS.XC": {
+    "financialCurrency": "USD",
+    "currency": "SEK",
+    "totalRevenue": 2018786944,
+    "marketCap": 160694534144,
+    "ebitda": 1447027968
+  },
+  "EN.VI": {
+    "financialCurrency": "EUR",
+    "currency": "EUR",
+    "totalRevenue": 56328998912,
+    "marketCap": 15407157248,
+    "ebitda": 4597000192
+  },
+  "BRG.OL": {
+    "financialCurrency": "NOK",
+    "currency": "NOK",
+    "totalRevenue": 7751000064,
+    "marketCap": 14049887232,
+    "ebitda": 1618000000
+  },
+  "TUBE.XD": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "GBFD.XC": {
+    "financialCurrency": "EUR",
+    "currency": "EUR",
+    "totalRevenue": 5569500160,
+    "marketCap": 2175192576,
+    "ebitda": 352400000
+  },
+  "LUN.TO": {
+    "financialCurrency": "USD",
+    "currency": "CAD",
+    "totalRevenue": 4626899968,
+    "marketCap": 25115107328,
+    "ebitda": 2177999872
+  },
+  "CQB0.SG": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "108670.KS": {
+    "financialCurrency": "KRW",
+    "currency": "KRW",
+    "totalRevenue": 3332225892352,
+    "marketCap": 302884880384,
+    "ebitda": 229852004352
+  },
+  "2006.TW": {
+    "financialCurrency": "TWD",
+    "currency": "TWD",
+    "totalRevenue": 57546428416,
+    "marketCap": 68055924736,
+    "ebitda": 7971526144
+  },
+  "LYB": {
+    "financialCurrency": "USD",
+    "currency": "USD",
+    "totalRevenue": 31192000512,
+    "marketCap": 21465870336,
+    "ebitda": 3568000000
+  },
+  "DDCCF": {
+    "financialCurrency": "EUR",
+    "currency": "USD",
+    "totalRevenue": 224332000,
+    "marketCap": 36267432,
+    "ebitda": -22655000
+  },
+  "R1H.SG": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "BPAQF": {
+    "financialCurrency": "USD",
+    "currency": "USD",
+    "totalRevenue": 215465000960,
+    "marketCap": 130427944960,
+    "ebitda": 39197999104
+  },
+  "BPOST.BR": {
+    "financialCurrency": "EUR",
+    "currency": "EUR",
+    "totalRevenue": 4366099968,
+    "marketCap": 217201024,
+    "ebitda": 143400000
+  },
+  "NSKOG.OL": {
+    "financialCurrency": "NOK",
+    "currency": "NOK",
+    "totalRevenue": 10947999744,
+    "marketCap": 3109321216,
+    "ebitda": 389000000
+  },
+  "NZYM.VI": {
+    "financialCurrency": "EUR",
+    "currency": "EUR",
+    "totalRevenue": 4296999936,
+    "marketCap": 30130900992,
+    "ebitda": 1609500032
+  },
+  "3NO0.SG": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "NAS.OL": {
+    "financialCurrency": "NOK",
+    "currency": "NOK",
+    "totalRevenue": 38087000064,
+    "marketCap": 11357779968,
+    "ebitda": 3040000000
+  },
+  "7JR.SG": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "BAS.SW": {
+    "financialCurrency": "EUR",
+    "currency": "CHF",
+    "totalRevenue": 61586001920,
+    "marketCap": 0,
+    "ebitda": 6568000000
+  },
+  "BLDP.TO": {
+    "financialCurrency": "USD",
+    "currency": "CAD",
+    "totalRevenue": 106158000,
+    "marketCap": 726757760,
+    "ebitda": -49859000
+  },
+  "MERY.PA": {
+    "financialCurrency": "EUR",
+    "currency": "EUR",
+    "totalRevenue": 184048992,
+    "marketCap": 873837376,
+    "ebitda": 120377000
+  },
+  "27M.SG": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "BAESY": {
+    "financialCurrency": "GBP",
+    "currency": "USD",
+    "totalRevenue": 29379999744,
+    "marketCap": 75575918592,
+    "ebitda": 3752999936
+  },
+  "8960.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 59020210176,
+    "marketCap": 487039991808,
+    "ebitda": 37771468800
+  },
+  "UN02.VI": {
+    "financialCurrency": "EUR",
+    "currency": "EUR",
+    "totalRevenue": 61218000896,
+    "marketCap": 18137499648,
+    "ebitda": 1126000000
+  },
+  "GT": {
+    "financialCurrency": "USD",
+    "currency": "USD",
+    "totalRevenue": 17692999680,
+    "marketCap": 1227888128,
+    "ebitda": 982000000
+  },
+  "BPCL.NS": {
+    "financialCurrency": "INR",
+    "currency": "INR",
+    "totalRevenue": 4939535876096,
+    "marketCap": 1223241760768,
+    "ebitda": 293982961664
+  },
+  "BGC.BK": {
+    "financialCurrency": "THB",
+    "currency": "THB",
+    "totalRevenue": 13897738240,
+    "marketCap": 4101556224,
+    "ebitda": 1751750016
+  },
+  "BEWI.OL": {
+    "financialCurrency": "EUR",
+    "currency": "NOK",
+    "totalRevenue": 846499968,
+    "marketCap": 4049261824,
+    "ebitda": 73000000
+  },
+  "UR3.SG": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "5QJ1.SG": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "UPS.MX": {
+    "financialCurrency": "USD",
+    "currency": "MXN",
+    "totalRevenue": 89929998336,
+    "marketCap": 1590961504256,
+    "ebitda": 12083999744
+  },
+  "BEIABS.XD": {
+    "financialCurrency": null,
+    "currency": "SEK",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "VIRI.PA": {
+    "financialCurrency": "USD",
+    "currency": "EUR",
+    "totalRevenue": 1114599936,
+    "marketCap": 676466944,
+    "ebitda": 500800000
+  },
+  "AFRY.ST": {
+    "financialCurrency": "SEK",
+    "currency": "SEK",
+    "totalRevenue": 25276000256,
+    "marketCap": 14213093376,
+    "ebitda": 1914000000
+  },
+  "AFG.OL": {
+    "financialCurrency": "NOK",
+    "currency": "NOK",
+    "totalRevenue": 34044000256,
+    "marketCap": 21265713152,
+    "ebitda": 2120000000
+  },
+  "XYL.MX": {
+    "financialCurrency": "USD",
+    "currency": "MXN",
+    "totalRevenue": 9125999616,
+    "marketCap": 477064921088,
+    "ebitda": 1978000000
+  },
+  "GLEL.XC": {
+    "financialCurrency": "GBP",
+    "currency": "GBp",
+    "totalRevenue": 410031008,
+    "marketCap": 166257824,
+    "ebitda": 6872000
+  },
+  "2634.TW": {
+    "financialCurrency": "TWD",
+    "currency": "TWD",
+    "totalRevenue": 36556632064,
+    "marketCap": 56982953984,
+    "ebitda": 3704364032
+  },
+  "YAR.OL": {
+    "financialCurrency": "USD",
+    "currency": "NOK",
+    "totalRevenue": 17112999936,
+    "marketCap": 102605504512,
+    "ebitda": 3217999872
+  },
+  "8951.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 102312001536,
+    "marketCap": 1077193015296,
+    "ebitda": 63805001728
+  },
+  "A7Z.SG": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "1213.HK": {
+    "financialCurrency": "HKD",
+    "currency": "HKD",
+    "totalRevenue": 271116000,
+    "marketCap": 104000000,
+    "ebitda": 3908000
+  },
+  "XPPL.XC": {
+    "financialCurrency": "GBP",
+    "currency": "GBp",
+    "totalRevenue": 228300000,
+    "marketCap": 477107648,
+    "ebitda": 8200000
+  },
+  "ASIX.MX": {
+    "financialCurrency": "USD",
+    "currency": "MXN",
+    "totalRevenue": 1559888000,
+    "marketCap": 7371323904,
+    "ebitda": 96013000
+  },
+  "5201.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 2163967000576,
+    "marketCap": 1156908974080,
+    "ebitda": 343370006528
+  },
+  "0HBH.L": {
+    "financialCurrency": "USD",
+    "currency": "USD",
+    "totalRevenue": 12602200064,
+    "marketCap": null,
+    "ebitda": 4652199936
+  },
+  "NPKYF": {
+    "financialCurrency": "JPY",
+    "currency": "USD",
+    "totalRevenue": 254494998528,
+    "marketCap": 1212142336,
+    "ebitda": 41004498944
+  },
+  "L3W.F": {
+    "financialCurrency": "JPY",
+    "currency": "EUR",
+    "totalRevenue": 2659450880000,
+    "marketCap": 7558664192,
+    "ebitda": 269797998592
+  },
+  "AGLXY": {
+    "financialCurrency": "AUD",
+    "currency": "USD",
+    "totalRevenue": 13930999808,
+    "marketCap": 4238307840,
+    "ebitda": 2156999936
+  },
+  "AFLYY": {
+    "financialCurrency": "EUR",
+    "currency": "USD",
+    "totalRevenue": 34154999808,
+    "marketCap": 2834352128,
+    "ebitda": 3740000000
+  },
+  "AC.TO": {
+    "financialCurrency": "CAD",
+    "currency": "CAD",
+    "totalRevenue": 23594999808,
+    "marketCap": 5335454208,
+    "ebitda": 1896000000
+  },
+  "IGN1L.VS": {
+    "financialCurrency": "EUR",
+    "currency": "EUR",
+    "totalRevenue": 2697200128,
+    "marketCap": 1570840448,
+    "ebitda": 510600000
+  },
+  "1NESTE.MI": {
+    "financialCurrency": "EUR",
+    "currency": "EUR",
+    "totalRevenue": 20637999104,
+    "marketCap": 24984553472,
+    "ebitda": 2721999872
+  },
+  "4463.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 59533000704,
+    "marketCap": 31206211584,
+    "ebitda": 6685000192
+  },
+  "087.SG": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "MAERBC.XC": {
+    "financialCurrency": "USD",
+    "currency": "DKK",
+    "totalRevenue": 56263999488,
+    "marketCap": 349995991040,
+    "ebitda": 5903000064
+  },
+  "A2AM.XC": {
+    "financialCurrency": "EUR",
+    "currency": "EUR",
+    "totalRevenue": 15534000128,
+    "marketCap": 7499488768,
+    "ebitda": 2084999936
+  },
+  "KYC0.F": {
+    "financialCurrency": "EUR",
+    "currency": "EUR",
+    "totalRevenue": 7728999936,
+    "marketCap": 3901061120,
+    "ebitda": 412000000
+  },
+  "MCRUF": {
+    "financialCurrency": "GBP",
+    "currency": "USD",
+    "totalRevenue": 1012200000,
+    "marketCap": 1014442304,
+    "ebitda": 124500000
+  },
+  "ZTO": {
+    "financialCurrency": "CNY",
+    "currency": "USD",
+    "totalRevenue": 54207651840,
+    "marketCap": 14843942912,
+    "ebitda": 14943898624
+  },
+  "6282.TW": {
+    "financialCurrency": "TWD",
+    "currency": "TWD",
+    "totalRevenue": 35364397056,
+    "marketCap": 35702308864,
+    "ebitda": 2340648960
+  },
+  "OCI1.SG": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "5184.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 80197001216,
+    "marketCap": 54003769344,
+    "ebitda": 12757999616
+  },
+  "ACRXF": {
+    "financialCurrency": "EUR",
+    "currency": "USD",
+    "totalRevenue": 5695669760,
+    "marketCap": 4824958976,
+    "ebitda": 391358016
+  },
+  "WPK.TO": {
+    "financialCurrency": "USD",
+    "currency": "CAD",
+    "totalRevenue": 1142317056,
+    "marketCap": 2556511744,
+    "ebitda": 234500000
+  },
+  "ACEM.XD": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "1ANA.MI": {
+    "financialCurrency": "EUR",
+    "currency": "EUR",
+    "totalRevenue": 21895999488,
+    "marketCap": 11311271936,
+    "ebitda": 1424999936
+  },
+  "6409.TW": {
+    "financialCurrency": "TWD",
+    "currency": "TWD",
+    "totalRevenue": 19580633088,
+    "marketCap": 80310231040,
+    "ebitda": 4083704064
+  },
+  "AEP": {
+    "financialCurrency": "USD",
+    "currency": "USD",
+    "totalRevenue": 22791000064,
+    "marketCap": 70602899456,
+    "ebitda": 9029000192
+  },
+  "AMCR": {
+    "financialCurrency": "USD",
+    "currency": "USD",
+    "totalRevenue": 23505999872,
+    "marketCap": 21300316160,
+    "ebitda": 3536000000
+  },
+  "1WCH.MI": {
+    "financialCurrency": "EUR",
+    "currency": "EUR",
+    "totalRevenue": 5517300224,
+    "marketCap": 4381598208,
+    "ebitda": 606099968
+  },
+  "VNA.VI": {
+    "financialCurrency": "EUR",
+    "currency": "EUR",
+    "totalRevenue": 5965400064,
+    "marketCap": 14105242624,
+    "ebitda": 2450700032
+  },
+  "VKE.JO": {
+    "financialCurrency": "ZAR",
+    "currency": "ZAc",
+    "totalRevenue": 6130999808,
+    "marketCap": 37934481408,
+    "ebitda": 3640999936
+  },
+  "1AMT.MI": {
+    "financialCurrency": "USD",
+    "currency": "EUR",
+    "totalRevenue": 10941500416,
+    "marketCap": 67028357120,
+    "ebitda": 7044400128
+  },
+  "BVHMY": {
+    "financialCurrency": "GBP",
+    "currency": "USD",
+    "totalRevenue": 3396300032,
+    "marketCap": 1085136640,
+    "ebitda": 146900000
+  },
+  "1AWK.MI": {
+    "financialCurrency": "USD",
+    "currency": "EUR",
+    "totalRevenue": 5283999744,
+    "marketCap": 22853834752,
+    "ebitda": 2912999936
+  },
+  "APEMY": {
+    "financialCurrency": "EUR",
+    "currency": "USD",
+    "totalRevenue": 6032000000,
+    "marketCap": 2825362944,
+    "ebitda": 286000000
+  },
+  "VLPNY": {
+    "financialCurrency": "EUR",
+    "currency": "USD",
+    "totalRevenue": 15155999744,
+    "marketCap": 7955308032,
+    "ebitda": 1489299968
+  },
+  "FG1.SG": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "WY": {
+    "financialCurrency": "USD",
+    "currency": "USD",
+    "totalRevenue": 6851999744,
+    "marketCap": 14047144960,
+    "ebitda": 688000000
+  },
+  "9202.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 2663260880896,
+    "marketCap": 1237262794752,
+    "ebitda": 378259996672
+  },
+  "1ALB.MI": {
+    "financialCurrency": "USD",
+    "currency": "EUR",
+    "totalRevenue": 5907904000,
+    "marketCap": 10896586752,
+    "ebitda": 1482468992
+  },
+  "4612.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 1945485967360,
+    "marketCap": 2915561897984,
+    "ebitda": 361079996416
+  },
+  "WHAA.XD": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "ALTRU.XD": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "WIHL.ST": {
+    "financialCurrency": "SEK",
+    "currency": "SEK",
+    "totalRevenue": 4680000000,
+    "marketCap": 21166342144,
+    "ebitda": 3274500096
+  },
+  "WALLBS.XC": {
+    "financialCurrency": "SEK",
+    "currency": "SEK",
+    "totalRevenue": 3396999936,
+    "marketCap": 24994799616,
+    "ebitda": 2143000064
+  },
+  "HCW.SG": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "4041.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 153700007936,
+    "marketCap": 192168640512,
+    "ebitda": 23805999104
+  },
+  "1605.TW": {
+    "financialCurrency": "TWD",
+    "currency": "TWD",
+    "totalRevenue": 173686898688,
+    "marketCap": 163959308288,
+    "ebitda": 7906328064
+  },
+  "5202.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 915602997248,
+    "marketCap": 252569649152,
+    "ebitda": 71349002240
+  },
+  "ALRHF": {
+    "financialCurrency": "CHF",
+    "currency": "USD",
+    "totalRevenue": 438700000,
+    "marketCap": 3765805056,
+    "ebitda": 183400000
+  },
+  "WDP.BR": {
+    "financialCurrency": "EUR",
+    "currency": "EUR",
+    "totalRevenue": 567216000,
+    "marketCap": 5054427136,
+    "ebitda": 471824992
+  },
+  "ALOS3.SA": {
+    "financialCurrency": "BRL",
+    "currency": "BRL",
+    "totalRevenue": 2976561920,
+    "marketCap": 17574897664,
+    "ebitda": 2121271040
+  },
+  "AQN": {
+    "financialCurrency": "USD",
+    "currency": "USD",
+    "totalRevenue": 2549700096,
+    "marketCap": 4165169152,
+    "ebitda": 936099968
+  },
+  "5108.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 4634681802752,
+    "marketCap": 4919352360960,
+    "ebitda": 957665968128
+  },
+  "ALFNF": {
+    "financialCurrency": "EUR",
+    "currency": "USD",
+    "totalRevenue": 485576992,
+    "marketCap": 239233888,
+    "ebitda": 21095000
+  },
+  "WBDM.XC": {
+    "financialCurrency": "EUR",
+    "currency": "EUR",
+    "totalRevenue": 12423960576,
+    "marketCap": 1939249536,
+    "ebitda": 241355008
+  },
+  "CLNZ.XC": {
+    "financialCurrency": "CHF",
+    "currency": "CHF",
+    "totalRevenue": 3793600000,
+    "marketCap": 3288756480,
+    "ebitda": 564899968
+  },
+  "002531.SZ": {
+    "financialCurrency": "CNY",
+    "currency": "CNY",
+    "totalRevenue": 5217847296,
+    "marketCap": 12075024384,
+    "ebitda": 1180026496
+  },
+  "LDS.SG": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "4TKA.TI": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "COLE.XC": {
+    "financialCurrency": "EUR",
+    "currency": "EUR",
+    "totalRevenue": 435992992,
+    "marketCap": 3522151936,
+    "ebitda": 339243008
+  },
+  "BZB.SG": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "E7S.SG": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "9142.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 508694986752,
+    "marketCap": 526419525632,
+    "ebitda": 115615498240
+  },
+  "9531.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 2860844056576,
+    "marketCap": 2036761624576,
+    "ebitda": 450903244800
+  },
+  "4186.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 265073999872,
+    "marketCap": 928013680640,
+    "ebitda": 66508001280
+  },
+  "C52.SI": {
+    "financialCurrency": "SGD",
+    "currency": "SGD",
+    "totalRevenue": 5197499904,
+    "marketCap": 2729133056,
+    "ebitda": 638700032
+  },
+  "TY2B.SG": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "LR.PA": {
+    "financialCurrency": "EUR",
+    "currency": "EUR",
+    "totalRevenue": 10106600448,
+    "marketCap": 32528297984,
+    "ebitda": 2217900032
+  },
+  "1314.TW": {
+    "financialCurrency": "TWD",
+    "currency": "TWD",
+    "totalRevenue": 15791668224,
+    "marketCap": 31817672704,
+    "ebitda": -1510567040
+  },
+  "5959.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 71245996032,
+    "marketCap": 40677896192,
+    "ebitda": 6222000128
+  },
+  "OJIPY": {
+    "financialCurrency": "JPY",
+    "currency": "USD",
+    "totalRevenue": 1872774955008,
+    "marketCap": 4467821568,
+    "ebitda": 148028243968
+  },
+  "LMHDF": {
+    "financialCurrency": "CHF",
+    "currency": "USD",
+    "totalRevenue": 297072000,
+    "marketCap": 2901715456,
+    "ebitda": 52444000
+  },
+  "CEZ.F": {
+    "financialCurrency": "CZK",
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": 30195576832,
+    "ebitda": 122454999040
+  },
+  "CMGMF": {
+    "financialCurrency": "GBP",
+    "currency": "USD",
+    "totalRevenue": 512000000,
+    "marketCap": 1893861376,
+    "ebitda": 88500000
+  },
+  "O5G.DU": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "CNAL.XC": {
+    "financialCurrency": "GBP",
+    "currency": "GBp",
+    "totalRevenue": 19548999680,
+    "marketCap": 6815947776,
+    "ebitda": 4646000128
+  },
+  "CRH1N.MX": {
+    "financialCurrency": "USD",
+    "currency": "MXN",
+    "totalRevenue": 38632001536,
+    "marketCap": 974236090368,
+    "ebitda": 7731999744
+  },
+  "1COV.F": {
+    "financialCurrency": "EUR",
+    "currency": "EUR",
+    "totalRevenue": 12814999552,
+    "marketCap": 12499948544,
+    "ebitda": 697000000
+  },
+  "KUBTY": {
+    "financialCurrency": "JPY",
+    "currency": "USD",
+    "totalRevenue": 3254238052352,
+    "marketCap": 18747676672,
+    "ebitda": 454229000192
+  },
+  "CPFE3F.SA": {
+    "financialCurrency": null,
+    "currency": "BRL",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "OSGSF": {
+    "financialCurrency": "JPY",
+    "currency": "USD",
+    "totalRevenue": 2037316059136,
+    "marketCap": 14210226176,
+    "ebitda": 295476264960
+  },
+  "MXCHY": {
+    "financialCurrency": "USD",
+    "currency": "USD",
+    "totalRevenue": 8156000256,
+    "marketCap": 2303019008,
+    "ebitda": 1128000000
+  },
+  "BWI.SG": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "OXY1.MX": {
+    "financialCurrency": "USD",
+    "currency": "MXN",
+    "totalRevenue": 23925999616,
+    "marketCap": 1198065451008,
+    "ebitda": 13717999616
+  },
+  "004000.KS": {
+    "financialCurrency": "KRW",
+    "currency": "KRW",
+    "totalRevenue": 1979348025344,
+    "marketCap": 910552530944,
+    "ebitda": 317886005248
+  },
+  "CTY.SG": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "LIN": {
+    "financialCurrency": "USD",
+    "currency": "USD",
+    "totalRevenue": 35448999936,
+    "marketCap": 234560536576,
+    "ebitda": 13822000128
+  },
+  "TT": {
+    "financialCurrency": "USD",
+    "currency": "USD",
+    "totalRevenue": 22209900544,
+    "marketCap": 97888313344,
+    "ebitda": 4308400128
+  },
+  "8015.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 12538232176640,
+    "marketCap": 6781305618432,
+    "ebitda": 795996979200
+  },
+  "CCDBF": {
+    "financialCurrency": "CAD",
+    "currency": "USD",
+    "totalRevenue": 7891299840,
+    "marketCap": 11856100352,
+    "ebitda": 1590700032
+  },
+  "LIABS.XD": {
+    "financialCurrency": null,
+    "currency": "SEK",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "OCIA.XD": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "011170.KS": {
+    "financialCurrency": "KRW",
+    "currency": "KRW",
+    "totalRevenue": 20172893061120,
+    "marketCap": 2030348140544,
+    "ebitda": 943535030272
+  },
+  "CARM.PA": {
+    "financialCurrency": "EUR",
+    "currency": "EUR",
+    "totalRevenue": 562366976,
+    "marketCap": 2000310272,
+    "ebitda": 349238016
+  },
+  "CEMM.XD": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "CNI": {
+    "financialCurrency": "CAD",
+    "currency": "USD",
+    "totalRevenue": 17760999424,
+    "marketCap": 74394910720,
+    "ebitda": 9146000384
+  },
+  "LOGE.XD": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "TU9.MU": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "4979.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 34286000128,
+    "marketCap": 27984945152,
+    "ebitda": 6291999744
+  },
+  "CNQ": {
+    "financialCurrency": "CAD",
+    "currency": "USD",
+    "totalRevenue": 44676001792,
+    "marketCap": 113506197504,
+    "ebitda": 19132000256
+  },
+  "TA.TO": {
+    "financialCurrency": "CAD",
+    "currency": "CAD",
+    "totalRevenue": 2265999872,
+    "marketCap": 5421381632,
+    "ebitda": 849000000
+  },
+  "4ZQ.SG": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "TRMB.MX": {
+    "financialCurrency": "USD",
+    "currency": "MXN",
+    "totalRevenue": 3782899968,
+    "marketCap": 269159497728,
+    "ebitda": 880099968
+  },
+  "LFS.SG": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "CSL": {
+    "financialCurrency": "USD",
+    "currency": "USD",
+    "totalRevenue": 5096999936,
+    "marketCap": 13702964224,
+    "ebitda": 1214300032
+  },
+  "CBT.SG": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "MOBNZ.XC": {
+    "financialCurrency": "CHF",
+    "currency": "CHF",
+    "totalRevenue": 351982016,
+    "marketCap": 2530236928,
+    "ebitda": 149252000
+  },
+  "BEKB.BR": {
+    "financialCurrency": "EUR",
+    "currency": "EUR",
+    "totalRevenue": 3616006912,
+    "marketCap": 1922464768,
+    "ebitda": 413697984
+  },
+  "LYIC.F": {
+    "financialCurrency": "AUD",
+    "currency": "EUR",
+    "totalRevenue": 977945024,
+    "marketCap": 6743567360,
+    "ebitda": 278582016
+  },
+  "6101.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 140358991872,
+    "marketCap": 201141878784,
+    "ebitda": 41250000896
+  },
+  "2457.TW": {
+    "financialCurrency": "TWD",
+    "currency": "TWD",
+    "totalRevenue": 9450420224,
+    "marketCap": 8920220672,
+    "ebitda": -50315000
+  },
+  "PEG": {
+    "financialCurrency": "USD",
+    "currency": "USD",
+    "totalRevenue": 12542999552,
+    "marketCap": 35896209408,
+    "ebitda": 4463000064
+  },
+  "KYG2R55E1030.SG": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "CMSYF": {
+    "financialCurrency": "JPY",
+    "currency": "USD",
+    "totalRevenue": 641719009280,
+    "marketCap": 2861328896,
+    "ebitda": 64068001792
+  },
+  "PXT.TO": {
+    "financialCurrency": "USD",
+    "currency": "CAD",
+    "totalRevenue": 1044723008,
+    "marketCap": 2897911040,
+    "ebitda": 501280000
+  },
+  "0DPS.F": {
+    "financialCurrency": "AUD",
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": 3845232384,
+    "ebitda": null
+  },
+  "DELTA.BK": {
+    "financialCurrency": "THB",
+    "currency": "THB",
+    "totalRevenue": 238129168384,
+    "marketCap": 2918873038848,
+    "ebitda": 40718307328
+  },
+  "AY1.SG": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "BAFBF": {
+    "financialCurrency": "GBP",
+    "currency": "USD",
+    "totalRevenue": 9946999808,
+    "marketCap": 5429109248,
+    "ebitda": 189000000
+  },
+  "BL9B.SG": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "VIS.SG": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "V1L.F": {
+    "financialCurrency": "USD",
+    "currency": "EUR",
+    "totalRevenue": 146578997248,
+    "marketCap": 108519858176,
+    "ebitda": 20932999168
+  },
+  "ANSLY": {
+    "financialCurrency": "USD",
+    "currency": "USD",
+    "totalRevenue": 2140199936,
+    "marketCap": 4362365440,
+    "ebitda": 372800000
+  },
+  "AOR.SG": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "FLU.SG": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "5208.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 59667492864,
+    "marketCap": 84267827200,
+    "ebitda": 8605883392
+  },
+  "VHP.NZ": {
+    "financialCurrency": "NZD",
+    "currency": "NZD",
+    "totalRevenue": 192988000,
+    "marketCap": 1452893696,
+    "ebitda": null
+  },
+  "FPI.BK": {
+    "financialCurrency": "THB",
+    "currency": "THB",
+    "totalRevenue": 2882435072,
+    "marketCap": 2405717504,
+    "ebitda": 713969024
+  },
+  "ERO.TO": {
+    "financialCurrency": "USD",
+    "currency": "CAD",
+    "totalRevenue": 1044729024,
+    "marketCap": 4383839744,
+    "ebitda": 517025984
+  },
+  "GRWPF": {
+    "financialCurrency": "AUD",
+    "currency": "USD",
+    "totalRevenue": 333500000,
+    "marketCap": 1162097536,
+    "ebitda": 225300000
+  },
+  "PAM": {
+    "financialCurrency": "USD",
+    "currency": "USD",
+    "totalRevenue": 2416999936,
+    "marketCap": 4261499648,
+    "ebitda": 936640000
+  },
+  "6498.T": {
+    "financialCurrency": "JPY",
+    "currency": "JPY",
+    "totalRevenue": 188533997568,
+    "marketCap": 157831397376,
+    "ebitda": 23331000320
+  },
+  "CH6.SG": {
+    "financialCurrency": null,
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": null,
+    "ebitda": null
+  },
+  "1ASSA.MI": {
+    "financialCurrency": "SEK",
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": 36078014464,
+    "ebitda": 28960999424
+  },
+  "GJZ.F": {
+    "financialCurrency": "AUD",
+    "currency": "EUR",
+    "totalRevenue": null,
+    "marketCap": 1726411904,
+    "ebitda": null
+  },
+  "TYIDY": {
+    "financialCurrency": "JPY",
+    "currency": "USD",
+    "totalRevenue": 4369511874560,
+    "marketCap": 38748434432,
+    "ebitda": 480464011264
+  }
+}
