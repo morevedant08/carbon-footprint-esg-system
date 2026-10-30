@@ -37,12 +37,18 @@ DATA_PATH = "data/synthetic/logistics_emissions.csv"
 OUTPUT_PATH = "data/processed/optimized_routing_plan.csv"
 
 # ---------------------------------------------------------------------------
-# Documented cost assumption table (currency-agnostic units per km)
-# Source: typical relative operating-cost ratios cited in logistics/EV
-# transition literature. NOT real company pricing - synthetic, for
-# demonstration purposes only. Swap in real company cost data when available.
+# Documented cost assumption tables (currency-agnostic synthetic units per km)
+# 
+# Scenario A ("Eco Savings", legacy table):
+#   Assumes mass-scale EV & micro-mobility adoption with operating costs
+#   lower than conventional diesel.
+# 
+# Scenario B ("Green Premium", realistic assumption):
+#   Assumes EV, drone, cargo bike, and motorcycle operating costs per km
+#   are higher than Diesel Van Euro 6 due to capital amortization, specialized
+#   dispatch/courier handling labor, and aviation maintenance infrastructure.
 # ---------------------------------------------------------------------------
-COST_PER_KM = {
+COST_PER_KM_SCENARIO_A = {
     "Cargo Bicycle": 0.15,
     "Drone Delivery": 0.90,
     "Electric Van (EV)": 0.55,
@@ -52,7 +58,30 @@ COST_PER_KM = {
     "Heavy Truck": 1.20,
 }
 
-VEHICLE_TYPES = list(COST_PER_KM.keys())
+COST_PER_KM_SCENARIO_B = {
+    "Diesel Van (Euro 6)": 0.60,     # Reference baseline diesel operating cost
+    "Diesel Van (Euro 4)": 0.58,     # Depreciated legacy diesel fleet
+    "Heavy Truck": 1.20,             # Heavy freight transport baseline
+    "Electric Van (EV)": 0.75,       # +25% green tech infrastructure & lease premium vs Euro 6
+    "Cargo Bicycle": 0.65,           # +8% urban courier labor & handling premium vs Euro 6
+    "Motorcycle (Courier)": 0.68,    # +13% rapid-dispatch courier handling premium vs Euro 6
+    "Drone Delivery": 1.35,          # Automated aviation maintenance, battery turnover & pilot supervision
+}
+
+SCENARIO_B_ASSUMPTIONS = {
+    "Electric Van (EV)": "0.75 / km (+25% capital lease & high-power charging infrastructure premium vs Diesel Euro 6)",
+    "Cargo Bicycle": "0.65 / km (+8% specialized urban micro-courier handling cost vs Diesel Euro 6)",
+    "Motorcycle (Courier)": "0.68 / km (+13% rapid-dispatch courier labor premium vs Diesel Euro 6)",
+    "Drone Delivery": "1.35 / km (Aviation tech maintenance, battery turnover, remote operator oversight)",
+    "Diesel Van (Euro 6)": "0.60 / km (Standard baseline fleet operating benchmark)",
+    "Diesel Van (Euro 4)": "0.58 / km (Legacy depreciated fleet operating cost)",
+    "Heavy Truck": "1.20 / km (Bulk freight / inter-city transport baseline)",
+}
+
+# Default backwards-compatible alias
+COST_PER_KM = COST_PER_KM_SCENARIO_A
+
+VEHICLE_TYPES = list(COST_PER_KM_SCENARIO_A.keys())
 
 MAX_PAYLOAD_KG = {
     "Cargo Bicycle": 25,
@@ -115,17 +144,27 @@ def find_max_feasible_reduction(shipments: pd.DataFrame, emission_factors: dict)
     return float(max_reduct)
 
 
-def build_and_solve_milp(shipments: pd.DataFrame, emission_factors: dict,
-                          reduction_target: float):
+def build_and_solve_milp(
+    shipments: pd.DataFrame,
+    emission_factors: dict,
+    reduction_target: float,
+    mode: str = "minimal_disruption",
+):
     """
     For each shipment, decide which vehicle type to assign.
-    Minimize total cost subject to:
-        total_emissions <= (1 - reduction_target) * baseline_factor_emissions
-
-    Decision variable: x[i, v] = 1 if shipment i is assigned vehicle type v
-    Baseline emissions are defined on the consistent basis:
-        baseline_emissions = sum(Distance_KM * emission_factor[original_vehicle])
-    Dataset recorded total is preserved as a separate reference number.
+    
+    Modes:
+      - 'minimal_disruption' (default): Minimizes the total number of shipments whose vehicle
+        changes from baseline, breaking ties by lower synthetic cost.
+      - 'cost_minimizing': Minimizes total fleet operating cost across all shipments.
+      
+    Constraints:
+      - total_emissions <= (1 - reduction_target) * baseline_factor_emissions
+      - physical payload (MAX_PAYLOAD_KG) and range (MAX_RANGE_KM) constraints per vehicle.
+      
+    Shipments whose initial vehicle already violates physical bounds must change regardless;
+    these are classified as 'forced_changes' separately from 'optional_changes'.
+    Both Scenario A (Eco Savings) and Scenario B (Green Premium) costs are calculated.
     """
     shipment_ids = shipments.index.tolist()
 
@@ -137,6 +176,15 @@ def build_and_solve_milp(shipments: pd.DataFrame, emission_factors: dict,
     # Recorded total from dataset kept as separate reference number
     recorded_baseline_emissions = float(shipments["Carbon_Emission_kgCO2e"].sum())
 
+    # Pre-identify forced changes (shipments where original vehicle violates payload or range)
+    forced_ids = set()
+    for i in shipment_ids:
+        orig_v = shipments.loc[i, "Vehicle_Type"]
+        w = shipments.loc[i, "Package_Weight_KG"]
+        d = shipments.loc[i, "Distance_KM"]
+        if w > MAX_PAYLOAD_KG.get(orig_v, 1e9) or d > MAX_RANGE_KM.get(orig_v, 1e9):
+            forced_ids.add(i)
+
     prob = pulp.LpProblem("Logistics_Routing_Optimization", pulp.LpMinimize)
 
     # Decision variables
@@ -145,11 +193,24 @@ def build_and_solve_milp(shipments: pd.DataFrame, emission_factors: dict,
         for i in shipment_ids for v in VEHICLE_TYPES
     }
 
-    # Objective: minimize total cost
-    prob += pulp.lpSum(
-        x[i, v] * shipments.loc[i, "Distance_KM"] * COST_PER_KM[v]
-        for i in shipment_ids for v in VEHICLE_TYPES
-    )
+    # Objective Function
+    if mode == "cost_minimizing":
+        # Pure cost minimization across all routes
+        prob += pulp.lpSum(
+            x[i, v] * shipments.loc[i, "Distance_KM"] * COST_PER_KM_SCENARIO_A[v]
+            for i in shipment_ids for v in VEHICLE_TYPES
+        )
+    else:
+        # Default: Minimal disruption mode
+        # Minimize vehicle changes (weight M = 1000.0) with synthetic cost as secondary tie-breaker
+        M = 1000.0
+        prob += pulp.lpSum(
+            x[i, v] * (
+                M * (0.0 if v == shipments.loc[i, "Vehicle_Type"] else 1.0)
+                + shipments.loc[i, "Distance_KM"] * COST_PER_KM_SCENARIO_A[v]
+            )
+            for i in shipment_ids for v in VEHICLE_TYPES
+        )
 
     # Constraint 1: each shipment must be assigned exactly one vehicle type
     for i in shipment_ids:
@@ -184,19 +245,110 @@ def build_and_solve_milp(shipments: pd.DataFrame, emission_factors: dict,
     for i in shipment_ids:
         for v in VEHICLE_TYPES:
             if pulp.value(x[i, v]) == 1:
+                orig_v = shipments.loc[i, "Vehicle_Type"]
+                dist = shipments.loc[i, "Distance_KM"]
+                is_changed = (v != orig_v)
+                is_forced = is_changed and (i in forced_ids)
+                is_optional = is_changed and (not is_forced)
                 assignments.append({
-                    "shipment_id": shipments.loc[i, "Transaction_ID"],
-                    "distance_km": shipments.loc[i, "Distance_KM"],
-                    "package_weight_kg": shipments.loc[i, "Package_Weight_KG"],
-                    "original_vehicle": shipments.loc[i, "Vehicle_Type"],
+                    "shipment_id": str(shipments.loc[i, "Transaction_ID"]),
+                    "distance_km": float(dist),
+                    "package_weight_kg": float(shipments.loc[i, "Package_Weight_KG"]),
+                    "original_vehicle": orig_v,
                     "recommended_vehicle": v,
-                    "recommended_emission_kg": shipments.loc[i, "Distance_KM"] * emission_factors.get(v, 0.0),
-                    "recommended_cost": shipments.loc[i, "Distance_KM"] * COST_PER_KM[v],
+                    "recommended_emission_kg": float(dist * emission_factors.get(v, 0.0)),
+                    "recommended_cost": float(dist * COST_PER_KM_SCENARIO_A[v]),
+                    "recommended_cost_scenario_a": float(dist * COST_PER_KM_SCENARIO_A[v]),
+                    "recommended_cost_scenario_b": float(dist * COST_PER_KM_SCENARIO_B[v]),
+                    "is_changed": bool(is_changed),
+                    "is_forced": bool(is_forced),
+                    "is_optional": bool(is_optional),
                 })
                 break
 
     results_df = pd.DataFrame(assignments)
-    return results_df, baseline_emissions, status, recorded_baseline_emissions
+
+    # Compute dual-scenario baseline and optimized costs
+    base_cost_a = sum(
+        shipments.loc[i, "Distance_KM"] * COST_PER_KM_SCENARIO_A.get(shipments.loc[i, "Vehicle_Type"], 0.60)
+        for i in shipment_ids
+    )
+    base_cost_b = sum(
+        shipments.loc[i, "Distance_KM"] * COST_PER_KM_SCENARIO_B.get(shipments.loc[i, "Vehicle_Type"], 0.60)
+        for i in shipment_ids
+    )
+
+    opt_cost_a = float(results_df["recommended_cost_scenario_a"].sum()) if not results_df.empty else float(base_cost_a)
+    opt_cost_b = float(results_df["recommended_cost_scenario_b"].sum()) if not results_df.empty else float(base_cost_b)
+
+    cost_change_a = opt_cost_a - base_cost_a
+    cost_change_pct_a = ((cost_change_a) / base_cost_a * 100) if base_cost_a > 0 else 0.0
+
+    cost_change_b = opt_cost_b - base_cost_b
+    cost_change_pct_b = ((cost_change_b) / base_cost_b * 100) if base_cost_b > 0 else 0.0
+
+    number_changed = int(results_df["is_changed"].sum()) if not results_df.empty else 0
+    forced_count = int(results_df["is_forced"].sum()) if not results_df.empty else 0
+    optional_count = int(results_df["is_optional"].sum()) if not results_df.empty else 0
+
+    metrics = {
+        "mode": mode,
+        "target": reduction_target,
+        "number_changed": number_changed,
+        "forced_changes": forced_count,
+        "optional_changes": optional_count,
+        "cost_change": float(round(cost_change_a, 2)),
+        "cost_scenario_a": {
+            "name": "Scenario A: Eco Savings (synthetic)",
+            "baseline_cost": float(round(base_cost_a, 2)),
+            "optimized_cost": float(round(opt_cost_a, 2)),
+            "cost_change": float(round(cost_change_a, 2)),
+            "cost_change_pct": float(round(cost_change_pct_a, 1)),
+        },
+        "cost_scenario_b": {
+            "name": "Scenario B: Green Premium (synthetic assumption)",
+            "baseline_cost": float(round(base_cost_b, 2)),
+            "optimized_cost": float(round(opt_cost_b, 2)),
+            "cost_change": float(round(cost_change_b, 2)),
+            "cost_change_pct": float(round(cost_change_pct_b, 1)),
+        },
+        "scenario_b_assumptions": SCENARIO_B_ASSUMPTIONS,
+    }
+
+    return results_df, baseline_emissions, status, recorded_baseline_emissions, metrics
+
+
+def generate_optimization_sweep(
+    shipments: pd.DataFrame,
+    emission_factors: dict,
+    max_feasible_red: float,
+    mode: str = "minimal_disruption",
+) -> list:
+    """
+    Computes a sweep across reduction targets from 5% up to max_feasible_reduction in 1% steps,
+    evaluating reduction achieved, number of shipment vehicle changes (forced vs optional),
+    and cost impact under both Scenario A and Scenario B.
+    """
+    max_pct = int(min(24.0, max_feasible_red * 100))
+    sweep_results = []
+    for t in range(5, max_pct + 1):
+        target_val = t / 100.0
+        res_df, base_em, status, _, metrics = build_and_solve_milp(
+            shipments, emission_factors, target_val, mode=mode
+        )
+        if status == "Optimal":
+            opt_em = float(res_df["recommended_emission_kg"].sum())
+            actual_red = round((1.0 - (opt_em / base_em)) * 100, 1) if base_em > 0 else 0.0
+            sweep_results.append({
+                "target": round(target_val * 100, 1),
+                "reduction": actual_red,
+                "number_changed": metrics["number_changed"],
+                "forced_changes": metrics["forced_changes"],
+                "optional_changes": metrics["optional_changes"],
+                "cost_change_pct_scenario_a": metrics["cost_scenario_a"]["cost_change_pct"],
+                "cost_change_pct_scenario_b": metrics["cost_scenario_b"]["cost_change_pct"],
+            })
+    return sweep_results
 
 
 def main():

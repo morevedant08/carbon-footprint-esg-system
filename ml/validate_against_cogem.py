@@ -21,6 +21,7 @@ import os
 import sys
 import time
 import re
+import json
 import pickle
 import pandas as pd
 import numpy as np
@@ -32,6 +33,9 @@ from pipeline.enrich_financials import convert_financials_to_usd, FIXED_FX_DATE
 INPUT_PATH = "data/processed/cogem_indomain_subset.csv"
 MODEL_PATH = "ml/model_artifacts/scope3_xgboost_clean.pkl"
 TRAIN_DATA_PATH = "data/processed/scope3_final_corrected_usd_clean.csv"
+QUANTILES_PATH = "data/processed/oof_residual_quantiles_clean.json"
+if not os.path.exists(QUANTILES_PATH):
+    QUANTILES_PATH = "data/processed/oof_residual_quantiles_usd.json"
 RELIABILITY_PATH = "data/processed/model_reliability_by_segment_clean.csv"
 OUTPUT_PATH = "data/processed/cogem_validation_clean.csv"
 OUTPUT_USD_PATH = "data/processed/cogem_validation_usd.csv"
@@ -133,20 +137,46 @@ def main():
                 employees=emp,
             )
         except Exception as e:
-            print(f"    FAILED: {e}")
-            conv = {
-                "financial_currency": None,
-                "revenue_local": np.nan,
-                "market_cap_local": np.nan,
-                "ebitda_local": np.nan,
-                "fx_rate_used": np.nan,
-                "fx_date": FIXED_FX_DATE,
-                "revenue": np.nan,
-                "market_cap": np.nan,
-                "ebitda": np.nan,
-                "employees": np.nan,
-                "has_financials": 0,
-            }
+            print(f"    FAILED ({e}), attempting fallback to cached financials...")
+            conv = None
+            if os.path.exists(OUTPUT_PATH):
+                try:
+                    prev_df = pd.read_csv(OUTPUT_PATH)
+                    match = prev_df[prev_df["company_name"] == name]
+                    if not match.empty:
+                        row_m = match.iloc[0]
+                        rev = row_m.get("revenue", np.nan)
+                        if pd.notna(rev) and float(rev) > 0:
+                            conv = {
+                                "financial_currency": row_m.get("financial_currency", "USD"),
+                                "revenue_local": float(rev),
+                                "market_cap_local": np.nan,
+                                "ebitda_local": np.nan,
+                                "fx_rate_used": 1.0,
+                                "fx_date": FIXED_FX_DATE,
+                                "revenue": float(rev),
+                                "market_cap": np.nan,
+                                "ebitda": np.nan,
+                                "employees": np.nan,
+                                "has_financials": 1,
+                            }
+                except Exception:
+                    pass
+
+            if conv is None:
+                conv = {
+                    "financial_currency": None,
+                    "revenue_local": np.nan,
+                    "market_cap_local": np.nan,
+                    "ebitda_local": np.nan,
+                    "fx_rate_used": np.nan,
+                    "fx_date": FIXED_FX_DATE,
+                    "revenue": np.nan,
+                    "market_cap": np.nan,
+                    "ebitda": np.nan,
+                    "employees": np.nan,
+                    "has_financials": 0,
+                }
 
         conv["company_name"] = name
         conv["ticker_used"] = ticker_symbol
@@ -173,27 +203,23 @@ def main():
     df["our_predicted_scope3"] = np.expm1(log_preds)
     df["cogem_actual_scope3"] = df["scope3_estimated"]
 
-    # Compute model 80% reliability interval for each company
+    # Compute honest 80% prediction interval using empirical out-of-fold log-residual quantiles
+    # (Matches /predict/scope3 empirical quantile method)
+    oof_quantiles = {}
+    if os.path.exists(QUANTILES_PATH):
+        with open(QUANTILES_PATH, "r") as f:
+            oof_quantiles = json.load(f)
+
     ci_lowers, ci_uppers, in_ranges = [], [], []
-    sigma_base = 1.35
-    z_80 = 1.282
-
     for idx, r in df.iterrows():
-        comp_r2 = 0.45
-        if rel_df is not None:
-            sec_match = rel_df[(rel_df["segment_type"] == "Sector") & (rel_df["segment"] == r["sics_sector"])]
-            sec_r2 = float(sec_match.iloc[0]["r2"]) if not sec_match.empty else 0.45
-            jur_match = rel_df[(rel_df["segment_type"] == "Jurisdiction") & (rel_df["segment"] == r["jurisdiction_mapped"])]
-            if jur_match.empty:
-                jur_match = rel_df[(rel_df["segment_type"] == "Jurisdiction") & (rel_df["segment"] == "Other")]
-            jur_r2 = float(jur_match.iloc[0]["r2"]) if not jur_match.empty else 0.50
-            comp_r2 = 0.55 * sec_r2 + 0.45 * jur_r2
+        sec = r["sics_sector"]
+        sec_q = oof_quantiles.get("by_sector", {}).get(sec, oof_quantiles.get("overall", {}))
+        q10 = float(sec_q.get("q10", -2.4160))
+        q90 = float(sec_q.get("q90", 2.2181))
 
-        unexp_var = max(0.15, 1.0 - comp_r2)
-        sigma_eff = sigma_base * np.sqrt(unexp_var)
         lp = log_preds[idx]
-        lower = max(0.0, float(np.expm1(max(0.0, lp - z_80 * sigma_eff))))
-        upper = float(np.expm1(lp + z_80 * sigma_eff))
+        lower = max(0.0, float(np.expm1(lp + q10)))
+        upper = float(np.expm1(lp + q90))
         ci_lowers.append(lower)
         ci_uppers.append(upper)
         in_ranges.append(bool(lower <= r["cogem_actual_scope3"] <= upper))
@@ -201,6 +227,7 @@ def main():
     df["ci_lower_80"] = ci_lowers
     df["ci_upper_80"] = ci_uppers
     df["in_reliability_range"] = in_ranges
+    df["interval_method"] = "10th and 90th percentile of out-of-fold log-residuals by sector (80% empirical prediction interval)"
 
     df["times_off"] = np.maximum(df["our_predicted_scope3"], 1) / np.maximum(df["cogem_actual_scope3"], 1)
     df["times_off"] = df["times_off"].apply(lambda x: x if x >= 1 else 1 / x)
@@ -225,7 +252,7 @@ def main():
         "company_name", "ticker_used", "sics_sector", "financial_currency", "revenue",
         "cogem_actual_scope3", "our_predicted_scope3", "ci_lower_80", "ci_upper_80",
         "in_reliability_range", "times_off", "error_sign", "pct_error",
-        "in_training_set", "headline_included", "notes"
+        "in_training_set", "headline_included", "notes", "interval_method"
     ]].copy()
 
     result["revenue_usd"] = result["revenue"].round(0)

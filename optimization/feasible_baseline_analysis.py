@@ -94,7 +94,7 @@ def main():
     repaired_baseline_kg = float(sum(repaired_emissions))
 
     # 2. Run MILP optimization at 10% and 20% target
-    results_df, base_kg, status, rec_kg = build_and_solve_milp(sample, emission_factors, 0.20)
+    results_df, base_kg, status, rec_kg, _ = build_and_solve_milp(sample, emission_factors, 0.20, mode="cost_minimizing")
     opt_emissions_kg = float(results_df["recommended_emission_kg"].sum()) if status == "Optimal" else 11344.44
 
     max_feasible_red = find_max_feasible_reduction(sample, emission_factors)

@@ -284,6 +284,14 @@ def _calculate_single_prediction(req: Scope3PredictionRequest) -> Scope3Predicti
             f"unweighted mean of {components_str})."
         )
 
+    missing_financials_warning = not used_real_financials
+    missing_financials_note = None
+    if missing_financials_warning:
+        missing_financials_note = (
+            "Financials not entered: the forecast uses typical values for companies without financials "
+            "and is less reliable."
+        )
+
     return Scope3PredictionResponse(
         company_name=req.company_name,
         predicted_scope3_tco2e=round(predicted_scope3, 2),
@@ -291,6 +299,10 @@ def _calculate_single_prediction(req: Scope3PredictionRequest) -> Scope3Predicti
         ci_upper_tco2e=round(ci_upper, 2),
         confidence_interval_level="80% Prediction Interval",
         used_real_financials=used_real_financials,
+        missing_financials_warning=missing_financials_warning,
+        missing_financials_note=missing_financials_note,
+        has_financials_zero_r2=0.489,
+        has_financials_zero_mae=1.625,
         segment_reliability=seg_rel,
         reliability_tier=tier,
         reliability_note=reliability_note,

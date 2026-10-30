@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useMutation } from "@tanstack/react-query";
 import { api } from "@/lib/api";
 import { Scope3PredictionRequest } from "@/lib/types";
@@ -15,6 +15,7 @@ import {
   RefreshCw,
   Compass,
   AlertTriangle,
+  CheckCircle,
 } from "lucide-react";
 
 function roundToSigFigs(num: number, sigFigs: number = 3): number {
@@ -29,17 +30,30 @@ function formatSigFigs(num: number, sigFigs: number = 3): string {
   return rounded.toLocaleString();
 }
 
+interface FormStringState {
+  company_name: string;
+  scope_1: string;
+  scope_2: string;
+  sics_sector: string;
+  jurisdiction: string;
+  revenue: string;
+  employees: string;
+  market_cap: string;
+  ebitda: string;
+}
+
 export default function PredictionsPage() {
-  const [formData, setFormData] = useState<Scope3PredictionRequest>({
+  // Requirement 5: Form fields as strings in state so empty stays empty, never snaps to 0 on backspace
+  const [formState, setFormState] = useState<FormStringState>({
     company_name: "Aarti Industries Ltd",
-    scope_1: 45000,
-    scope_2: 12000,
+    scope_1: "45000",
+    scope_2: "12000",
     sics_sector: "Resource Transformation",
     jurisdiction: "India",
-    revenue: 500000000,
-    employees: 1500,
-    market_cap: 800000000,
-    ebitda: 60000000,
+    revenue: "500000000",
+    employees: "1500",
+    market_cap: "800000000",
+    ebitda: "60000000",
   });
 
   const [expandedWhy, setExpandedWhy] = useState(true);
@@ -48,70 +62,114 @@ export default function PredictionsPage() {
     mutationFn: (req: Scope3PredictionRequest) => api.predictScope3(req),
   });
 
+  const isRequiredValid = (state: FormStringState): boolean => {
+    const s1 = parseFloat(state.scope_1);
+    const s2 = parseFloat(state.scope_2);
+    return (
+      state.company_name.trim().length > 0 &&
+      state.sics_sector.trim().length > 0 &&
+      state.jurisdiction.trim().length > 0 &&
+      !isNaN(s1) &&
+      s1 >= 0 &&
+      !isNaN(s2) &&
+      s2 >= 0
+    );
+  };
+
+  const buildPayload = (state: FormStringState): Scope3PredictionRequest => {
+    return {
+      company_name: state.company_name.trim() || "Company",
+      scope_1: parseFloat(state.scope_1) || 0,
+      scope_2: parseFloat(state.scope_2) || 0,
+      sics_sector: state.sics_sector,
+      jurisdiction: state.jurisdiction.trim(),
+      revenue: state.revenue.trim() ? parseFloat(state.revenue) : null,
+      employees: state.employees.trim() ? parseFloat(state.employees) : null,
+      market_cap: state.market_cap.trim() ? parseFloat(state.market_cap) : null,
+      ebitda: state.ebitda.trim() ? parseFloat(state.ebitda) : null,
+    };
+  };
+
+  // Requirement 6: Auto-predict with 500ms debounce once required fields are valid
+  useEffect(() => {
+    if (!isRequiredValid(formState)) return;
+
+    const timer = setTimeout(() => {
+      mutation.mutate(buildPayload(formState));
+    }, 500);
+
+    return () => clearTimeout(timer);
+  }, [formState]);
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    mutation.mutate(formData);
+    if (isRequiredValid(formState)) {
+      mutation.mutate(buildPayload(formState));
+    }
   };
 
-  const handleTemplateSelect = (template: Scope3PredictionRequest) => {
-    setFormData(template);
-    mutation.mutate(template);
+  const handleTemplateSelect = (template: FormStringState) => {
+    setFormState(template);
+    if (isRequiredValid(template)) {
+      mutation.mutate(buildPayload(template));
+    }
   };
 
-  React.useEffect(() => {
-    mutation.mutate(formData);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  const templates: { name: string; desc: string; data: Scope3PredictionRequest }[] = [
+  // Requirement 8: Use mid-size company as default demo, keep separate large company example
+  const templates: { name: string; desc: string; data: FormStringState }[] = [
     {
-      name: "Toyota Motor Corp (Mega-Cap)",
+      name: "Aarti Industries Ltd (Default Mid-Size)",
+      desc: "Resource Transformation (Rev $500M, Scope 1 = 45k, Scope 2 = 12k)",
+      data: {
+        company_name: "Aarti Industries Ltd",
+        scope_1: "45000",
+        scope_2: "12000",
+        sics_sector: "Resource Transformation",
+        jurisdiction: "India",
+        revenue: "500000000",
+        employees: "1500",
+        market_cap: "800000000",
+        ebitda: "60000000",
+      },
+    },
+    {
+      name: "Derichebourg SA (Mid-Market EU)",
+      desc: "Infrastructure / Recycling (France R² = 0.699, Rev $3.47B)",
+      data: {
+        company_name: "Derichebourg SA",
+        scope_1: "106987",
+        scope_2: "15656",
+        sics_sector: "Infrastructure",
+        jurisdiction: "France",
+        revenue: "3468900000",
+        employees: "5256",
+        market_cap: "1456314000",
+        ebitda: "239100000",
+      },
+    },
+    {
+      name: "Toyota Motor Corp (Large Emitter Example)",
       desc: "Triggers large-company extrapolation warning (Rev $331B USD)",
       data: {
         company_name: "Toyota Motor Corporation",
-        scope_1: 2970000,
-        scope_2: 2470000,
+        scope_1: "2970000",
+        scope_2: "2470000",
         sics_sector: "Transportation",
         jurisdiction: "Japan",
-        revenue: 331000000000,
-        employees: 375000,
-        market_cap: 250000000000,
-        ebitda: 35000000000,
-      },
-    },
-    {
-      name: "Mid-Market French Industrial",
-      desc: "High reliability segment (France R² = 0.699)",
-      data: {
-        company_name: "Derichebourg SA",
-        scope_1: 106987,
-        scope_2: 15656,
-        sics_sector: "Infrastructure",
-        jurisdiction: "France",
-        revenue: 3468900000,
-        employees: 5256,
-        market_cap: 1456314000,
-        ebitda: 239100000,
-      },
-    },
-    {
-      name: "Indian Chemical Producer",
-      desc: "Moderate reliability (Resource Transformation R² = 0.444, India R² = 0.380)",
-      data: {
-        company_name: "Aarti Industries Ltd",
-        scope_1: 45000,
-        scope_2: 12000,
-        sics_sector: "Resource Transformation",
-        jurisdiction: "India",
-        revenue: 500000000,
-        employees: 1500,
-        market_cap: 800000000,
-        ebitda: 60000000,
+        revenue: "331000000000",
+        employees: "375000",
+        market_cap: "250000000000",
+        ebitda: "35000000000",
       },
     },
   ];
 
   const result = mutation.data;
+  const isAnyFinancialBlank =
+    formState.revenue.trim() === "" ||
+    formState.employees.trim() === "" ||
+    formState.market_cap.trim() === "" ||
+    formState.ebitda.trim() === "";
 
   return (
     <div className="space-y-6">
@@ -130,21 +188,21 @@ export default function PredictionsPage() {
         </div>
 
         <div className="flex items-center gap-2">
-          <Pill variant="real-disclosure" label="NZDPU Trained" />
-          <Pill variant="deterministic" label="80% Interval" />
+          <Pill variant="real-disclosure" label="NZDPU Trained (n=1,069)" />
+          <Pill variant="deterministic" label="80% Empirical Interval" />
         </div>
       </div>
 
       <BackendBanner
         forcedError={Boolean(mutation.error)}
         errorMessage={mutation.error?.message}
-        onRetry={() => mutation.mutate(formData)}
+        onRetry={() => handleSubmit({ preventDefault: () => {} } as React.FormEvent)}
       />
 
       {/* Demonstration Profiles */}
       <div className="data-table-container p-4">
-        <span className="text-xs font-medium text-slate-300 block mb-2">
-          In-Domain Demonstration Profiles
+        <span className="text-xs font-semibold text-slate-300 block mb-2">
+          Demonstration Profiles (Click to Load)
         </span>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
           {templates.map((t, idx) => (
@@ -180,29 +238,29 @@ export default function PredictionsPage() {
           <form onSubmit={handleSubmit} className="space-y-3.5 text-xs">
             <div>
               <label className="block text-slate-300 font-medium mb-1">
-                Company Name
+                Company Name <span className="text-[#38bdf8]">*</span>
               </label>
               <input
                 type="text"
                 required
-                value={formData.company_name}
+                value={formState.company_name}
                 onChange={(e) =>
-                  setFormData({ ...formData, company_name: e.target.value })
+                  setFormState({ ...formState, company_name: e.target.value })
                 }
                 className="w-full px-3 py-1.5 rounded bg-[#0c121b] border border-[#1f2939] text-slate-100 focus:outline-none focus:border-[#0284c7] font-medium"
-                placeholder="e.g. Acme Industrial Corp"
+                placeholder="e.g. Aarti Industries Ltd"
               />
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <div>
                 <label className="block text-slate-300 font-medium mb-1">
-                  SICS Sector
+                  SICS Sector <span className="text-[#38bdf8]">*</span>
                 </label>
                 <select
-                  value={formData.sics_sector}
+                  value={formState.sics_sector}
                   onChange={(e) =>
-                    setFormData({ ...formData, sics_sector: e.target.value })
+                    setFormState({ ...formState, sics_sector: e.target.value })
                   }
                   className="w-full px-2.5 py-1.5 rounded bg-[#0c121b] border border-[#1f2939] text-slate-100 focus:outline-none focus:border-[#0284c7]"
                 >
@@ -220,14 +278,14 @@ export default function PredictionsPage() {
 
               <div>
                 <label className="block text-slate-300 font-medium mb-1">
-                  Jurisdiction (Country)
+                  Jurisdiction (Country) <span className="text-[#38bdf8]">*</span>
                 </label>
                 <input
                   type="text"
                   required
-                  value={formData.jurisdiction}
+                  value={formState.jurisdiction}
                   onChange={(e) =>
-                    setFormData({ ...formData, jurisdiction: e.target.value })
+                    setFormState({ ...formState, jurisdiction: e.target.value })
                   }
                   className="w-full px-3 py-1.5 rounded bg-[#0c121b] border border-[#1f2939] text-slate-100 focus:outline-none focus:border-[#0284c7]"
                   placeholder="e.g. France, India, Japan"
@@ -238,35 +296,35 @@ export default function PredictionsPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <div>
                 <label className="block text-slate-300 font-medium mb-1">
-                  Scope 1 (Direct tCO₂e)
+                  Scope 1 (Direct tCO₂e) <span className="text-[#38bdf8]">*</span>
                 </label>
                 <input
-                  type="number"
-                  min="0"
-                  step="any"
+                  type="text"
+                  inputMode="decimal"
                   required
-                  value={formData.scope_1}
+                  value={formState.scope_1}
                   onChange={(e) =>
-                    setFormData({ ...formData, scope_1: parseFloat(e.target.value) || 0 })
+                    setFormState({ ...formState, scope_1: e.target.value })
                   }
                   className="w-full px-3 py-1.5 rounded bg-[#0c121b] border border-[#1f2939] text-slate-100 focus:outline-none focus:border-[#0284c7] num-tabular"
+                  placeholder="e.g. 45000"
                 />
               </div>
 
               <div>
                 <label className="block text-slate-300 font-medium mb-1">
-                  Scope 2 (Electricity tCO₂e)
+                  Scope 2 (Electricity tCO₂e) <span className="text-[#38bdf8]">*</span>
                 </label>
                 <input
-                  type="number"
-                  min="0"
-                  step="any"
+                  type="text"
+                  inputMode="decimal"
                   required
-                  value={formData.scope_2}
+                  value={formState.scope_2}
                   onChange={(e) =>
-                    setFormData({ ...formData, scope_2: parseFloat(e.target.value) || 0 })
+                    setFormState({ ...formState, scope_2: e.target.value })
                   }
                   className="w-full px-3 py-1.5 rounded bg-[#0c121b] border border-[#1f2939] text-slate-100 focus:outline-none focus:border-[#0284c7] num-tabular"
+                  placeholder="e.g. 12000"
                 />
               </div>
             </div>
@@ -285,15 +343,11 @@ export default function PredictionsPage() {
                     Annual Revenue (USD)
                   </label>
                   <input
-                    type="number"
-                    min="0"
-                    step="any"
-                    value={formData.revenue || ""}
+                    type="text"
+                    inputMode="decimal"
+                    value={formState.revenue}
                     onChange={(e) =>
-                      setFormData({
-                        ...formData,
-                        revenue: e.target.value ? parseFloat(e.target.value) : null,
-                      })
+                      setFormState({ ...formState, revenue: e.target.value })
                     }
                     className="w-full px-2.5 py-1.5 rounded bg-[#0c121b] border border-[#1f2939] text-slate-100 focus:outline-none focus:border-[#0284c7] num-tabular text-xs"
                     placeholder="e.g. 500000000"
@@ -303,17 +357,14 @@ export default function PredictionsPage() {
                 <div>
                   <label className="block text-slate-400 mb-1 text-[11px]">Employees</label>
                   <input
-                    type="number"
-                    min="0"
-                    value={formData.employees || ""}
+                    type="text"
+                    inputMode="numeric"
+                    value={formState.employees}
                     onChange={(e) =>
-                      setFormData({
-                        ...formData,
-                        employees: e.target.value ? parseFloat(e.target.value) : null,
-                      })
+                      setFormState({ ...formState, employees: e.target.value })
                     }
                     className="w-full px-2.5 py-1.5 rounded bg-[#0c121b] border border-[#1f2939] text-slate-100 focus:outline-none focus:border-[#0284c7] num-tabular text-xs"
-                    placeholder="e.g. 2500"
+                    placeholder="e.g. 1500"
                   />
                 </div>
 
@@ -322,54 +373,67 @@ export default function PredictionsPage() {
                     Market Cap (USD)
                   </label>
                   <input
-                    type="number"
-                    min="0"
-                    step="any"
-                    value={formData.market_cap || ""}
+                    type="text"
+                    inputMode="decimal"
+                    value={formState.market_cap}
                     onChange={(e) =>
-                      setFormData({
-                        ...formData,
-                        market_cap: e.target.value ? parseFloat(e.target.value) : null,
-                      })
+                      setFormState({ ...formState, market_cap: e.target.value })
                     }
                     className="w-full px-2.5 py-1.5 rounded bg-[#0c121b] border border-[#1f2939] text-slate-100 focus:outline-none focus:border-[#0284c7] num-tabular text-xs"
-                    placeholder="e.g. 1200000000"
+                    placeholder="e.g. 800000000"
                   />
                 </div>
 
                 <div>
                   <label className="block text-slate-400 mb-1 text-[11px]">EBITDA (USD)</label>
                   <input
-                    type="number"
-                    step="any"
-                    value={formData.ebitda || ""}
+                    type="text"
+                    inputMode="decimal"
+                    value={formState.ebitda}
                     onChange={(e) =>
-                      setFormData({
-                        ...formData,
-                        ebitda: e.target.value ? parseFloat(e.target.value) : null,
-                      })
+                      setFormState({ ...formState, ebitda: e.target.value })
                     }
                     className="w-full px-2.5 py-1.5 rounded bg-[#0c121b] border border-[#1f2939] text-slate-100 focus:outline-none focus:border-[#0284c7] num-tabular text-xs"
-                    placeholder="e.g. 80000000"
+                    placeholder="e.g. 60000000"
                   />
                 </div>
               </div>
             </div>
 
-            <button
-              type="submit"
-              disabled={mutation.isPending}
-              className="cursor-pointer w-full py-2 px-4 rounded bg-[#0369a1] hover:bg-[#0284c7] text-white font-medium text-xs flex items-center justify-center gap-2 transition-colors disabled:opacity-50"
-            >
-              {mutation.isPending ? (
-                <>
-                  <RefreshCw className="w-3.5 h-3.5 animate-spin" />
-                  <span>Computing inference...</span>
-                </>
-              ) : (
-                <span>Predict Scope 3 Value Chain Emissions</span>
-              )}
-            </button>
+            {/* Requirement 7: Prominent warning when any financial field is blank */}
+            {isAnyFinancialBlank && (
+              <div className="p-3 rounded bg-[#251b08] border border-[#d97706]/70 text-amber-200 space-y-1 text-xs">
+                <div className="flex items-center gap-1.5 font-semibold text-amber-300 text-[11px]">
+                  <AlertTriangle className="w-3.5 h-3.5 text-amber-400 shrink-0" />
+                  <span>Financials not entered: the forecast uses typical values for companies without financials and is less reliable.</span>
+                </div>
+                <p className="text-[10px] text-amber-200/90 leading-relaxed">
+                  Companies missing financials are median-imputed (median training revenue: <strong>USD 3.54B</strong>).
+                  Out-of-fold accuracy for this group is <strong>R² = 0.489</strong> (MAE = 1.63 vs 1.38 with verified financials).
+                </p>
+              </div>
+            )}
+
+            {/* Requirement 6: Visible Update Forecast Button */}
+            <div className="pt-1">
+              <button
+                type="submit"
+                disabled={mutation.isPending || !isRequiredValid(formState)}
+                className="cursor-pointer w-full py-2 px-4 rounded bg-[#0369a1] hover:bg-[#0284c7] text-white font-medium text-xs flex items-center justify-center gap-2 transition-colors disabled:opacity-50"
+              >
+                {mutation.isPending ? (
+                  <>
+                    <RefreshCw className="w-3.5 h-3.5 animate-spin" />
+                    <span>Computing inference (auto-updating)...</span>
+                  </>
+                ) : (
+                  <>
+                    <RefreshCw className="w-3.5 h-3.5" />
+                    <span>Update Forecast</span>
+                  </>
+                )}
+              </button>
+            </div>
           </form>
         </div>
 
@@ -424,7 +488,7 @@ export default function PredictionsPage() {
                 </div>
               )}
 
-              {/* Confidence Interval Display (Never a Bare Point Number) */}
+              {/* Confidence Interval Display (Consistent 80% Empirical Interval) */}
               <div className="py-5 border-b border-[#1f2838]">
                 <div className="flex items-center justify-between mb-1">
                   <span className="text-xs text-slate-400 block">
@@ -500,7 +564,7 @@ export default function PredictionsPage() {
                         </div>
                       </div>
 
-                      {/* True Location Range Visualizer */}
+                      {/* Range Visualizer Bar */}
                       <div className="relative w-full h-3 bg-[#1e2736] rounded-full overflow-hidden mt-1.5">
                         <div className="absolute inset-y-0 inset-x-0 bg-gradient-to-r from-[#0369a1] via-[#0284c7] to-[#38bdf8] rounded-full opacity-60" />
                         <div
@@ -525,7 +589,7 @@ export default function PredictionsPage() {
                         Large-Company Extrapolation Warning
                       </h4>
                       <p className="text-xs text-amber-100/90 leading-relaxed">
-                        This company is larger than most companies the model was trained on. Predictions for the largest emitters are systematically too low (see validation).
+                        This company is larger than 95% of companies in the training data. Decision trees cannot extrapolate above historical upper bounds; predictions for mega-emitters are systematically under-predicted.
                       </p>
                       {result.extrapolation_note && (
                         <p className="text-[11px] text-amber-300/80 font-mono mt-0.5">
@@ -546,7 +610,7 @@ export default function PredictionsPage() {
                 >
                   <span className="flex items-center gap-1.5">
                     <Info className="w-3.5 h-3.5 text-[#38bdf8]" />
-                    <span>Why these numbers? (Segment Reliability Audit)</span>
+                    <span>Why these numbers? (Segment Reliability & Methodology)</span>
                   </span>
                   {expandedWhy ? (
                     <ChevronUp className="w-3.5 h-3.5 text-slate-400" />
@@ -596,19 +660,23 @@ export default function PredictionsPage() {
                         <span className="text-[#2dd4bf] font-medium text-xs mt-0.5 block num-tabular">
                           {result.segment_reliability.revenue_quartile_r2 != null
                             ? `R² = ${result.segment_reliability.revenue_quartile_r2.toFixed(3)}`
-                            : "Imputed / NA"}
+                            : "Imputed (n=592)"}
                         </span>
                       </div>
                     </div>
 
-                    <div className="p-2.5 rounded bg-[#0d131c] border border-[#1e2736] text-[11px] text-slate-400 leading-relaxed">
-                      <strong>Composite Reliability:</strong> R² ={" "}
-                      <span className="text-slate-200 font-semibold num-tabular">
-                        {result.segment_reliability.composite_r2.toFixed(3)}
-                      </span>
-                      {" "}(unweighted mean of sector R² = {result.segment_reliability.sector_r2.toFixed(3)}, jurisdiction R² = {result.segment_reliability.jurisdiction_r2.toFixed(3)}
-                      {result.segment_reliability.revenue_quartile_r2 != null ? `, revenue quartile R² = ${result.segment_reliability.revenue_quartile_r2.toFixed(3)}` : ""}).
-                      {" "}{result.note}
+                    <div className="p-2.5 rounded bg-[#0d131c] border border-[#1e2736] text-[11px] text-slate-400 leading-relaxed space-y-1">
+                      <div>
+                        <strong>Composite Reliability:</strong> R² ={" "}
+                        <span className="text-slate-200 font-semibold num-tabular">
+                          {result.segment_reliability.composite_r2.toFixed(3)}
+                        </span>
+                        {" "}(unweighted mean of sector R² = {result.segment_reliability.sector_r2.toFixed(3)}, jurisdiction R² = {result.segment_reliability.jurisdiction_r2.toFixed(3)}
+                        {result.segment_reliability.revenue_quartile_r2 != null ? `, revenue quartile R² = ${result.segment_reliability.revenue_quartile_r2.toFixed(3)}` : ""}).
+                      </div>
+                      <div className="text-slate-400">
+                        <strong>Financials Sensitivity:</strong> {result.used_real_financials ? "Verified corporate financials entered (has_financials = 1)." : "Financials blank (has_financials = 0, R² = 0.489, MAE = 1.63). Prediction falls back to training median revenue ($3.54B USD)."}
+                      </div>
                     </div>
                   </div>
                 )}

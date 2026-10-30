@@ -53,6 +53,10 @@ class Scope3PredictionResponse(BaseModel):
     no_better_than_average_note: Optional[str] = None
     extrapolation_warning: bool = False
     extrapolation_note: Optional[str] = None
+    missing_financials_warning: bool = False
+    missing_financials_note: Optional[str] = None
+    has_financials_zero_r2: float = 0.489
+    has_financials_zero_mae: float = 1.625
     interval_method: str = "10th and 90th percentile of out-of-fold log-residuals in matching segment"
     note: str = (
         "Prediction based on an XGBoost model trained on 1,069 companies with self-reported disclosures "

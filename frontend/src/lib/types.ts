@@ -42,6 +42,10 @@ export interface Scope3PredictionResponse {
   no_better_than_average_note?: string | null;
   extrapolation_warning: boolean;
   extrapolation_note?: string | null;
+  missing_financials_warning?: boolean;
+  missing_financials_note?: string | null;
+  has_financials_zero_r2?: number;
+  has_financials_zero_mae?: number;
   interval_method?: string;
   note: string;
 }
@@ -221,32 +225,69 @@ export interface ShipmentAssignment {
   recommended_vehicle: string;
   recommended_emission_kg: number;
   recommended_cost: number;
+  recommended_cost_scenario_a?: number;
+  recommended_cost_scenario_b?: number;
+  is_changed?: boolean;
+  is_forced?: boolean;
+  is_optional?: boolean;
 }
 
 export interface OptimizeRequest {
   sample_size: number;
   reduction_target: number;
+  mode?: "minimal_disruption" | "cost_minimizing" | string;
+  include_sweep?: boolean;
 }
 
 export interface OptimizeConstraintsResponse {
   max_payload_kg: Record<string, number>;
   max_range_km: Record<string, number>;
   cost_per_km: Record<string, number>;
+  cost_per_km_scenario_a?: Record<string, number>;
+  cost_per_km_scenario_b?: Record<string, number>;
+  scenario_b_assumptions?: Record<string, string>;
   vehicle_types: string[];
+}
+
+export interface CostScenarioDetail {
+  name: string;
+  baseline_cost: number;
+  optimized_cost: number;
+  cost_change: number;
+  cost_change_pct: number;
+}
+
+export interface OptimizationSweepPoint {
+  target: number;
+  reduction: number;
+  number_changed: number;
+  forced_changes: number;
+  optional_changes: number;
+  cost_change_pct_scenario_a: number;
+  cost_change_pct_scenario_b: number;
 }
 
 export interface OptimizeResponse {
   status: "Optimal" | "Infeasible" | string;
   solver_status?: "Optimal" | "Infeasible" | string;
+  mode?: "minimal_disruption" | "cost_minimizing" | string;
+  target?: number;
   baseline_emissions_kg: number;
   optimized_emissions_kg: number;
   actual_reduction_pct: number;
   actual_reduction?: number;
+  number_changed?: number;
+  forced_changes?: number;
+  optional_changes?: number;
   baseline_emissions?: number;
   optimized_emissions?: number;
   baseline_cost: number;
   optimized_cost: number;
+  cost_change?: number;
   cost_change_pct: number;
+  cost_scenario_a?: CostScenarioDetail;
+  cost_scenario_b?: CostScenarioDetail;
+  scenario_b_assumptions?: Record<string, string>;
   baseline_basis?: string;
   max_feasible_reduction?: number;
   max_feasible_reduction_pct?: number | null;
@@ -254,5 +295,6 @@ export interface OptimizeResponse {
   baseline_emissions_recorded_kg?: number;
   infeasibility_reason?: string | null;
   assignments: ShipmentAssignment[];
+  sweep?: OptimizationSweepPoint[];
   note: string;
 }
