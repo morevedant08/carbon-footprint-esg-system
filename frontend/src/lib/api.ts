@@ -20,9 +20,15 @@ import {
   ValidationResponse,
 } from "./types";
 
+const isBrowser = typeof window !== "undefined";
+const isLocalhost =
+  isBrowser && (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1");
+
+export const IS_MISSING_API_URL = isBrowser && !process.env.NEXT_PUBLIC_API_URL && !isLocalhost;
+
 const rawBaseUrl =
   process.env.NEXT_PUBLIC_API_URL ||
-  (typeof window !== "undefined"
+  (isBrowser
     ? `${window.location.protocol}//${window.location.hostname}:8000`
     : "http://127.0.0.1:8000");
 

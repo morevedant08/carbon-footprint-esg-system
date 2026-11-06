@@ -13,6 +13,7 @@ import pickle
 import os
 import io
 import json
+import logging
 from typing import List, Optional
 
 from backend.schemas.scope3_schema import (
@@ -22,31 +23,42 @@ from backend.schemas.scope3_schema import (
     BatchScope3PredictionResponse,
 )
 
+logger = logging.getLogger("carbon_api.predict")
 router = APIRouter()
 
-MODEL_PATHS = [
-    "ml/model_artifacts/scope3_xgboost_clean.pkl",
-    "ml/model_artifacts/best_model_clean.pkl",
-    "ml/model_artifacts/scope3_xgboost_usd.pkl",
-    "ml/model_artifacts/scope3_model_usd.pkl",
-    "ml/model_artifacts/best_model_usd.pkl",
-    "ml/model_artifacts/scope3_xgboost.pkl",
-    "ml/model_artifacts/scope3_model.pkl",
-    "ml/model_artifacts/best_model.pkl",
-]
+CLEAN_MODEL_PATH = "ml/model_artifacts/scope3_xgboost_clean.pkl"
+MODEL_CARD_PATH = "ml/model_artifacts/model_card.json"
 
 _model = None
-_model_path_used = None
+_model_error = None
+_model_path_used = CLEAN_MODEL_PATH
 
-for path in MODEL_PATHS:
-    if os.path.exists(path):
-        try:
-            with open(path, "rb") as f:
-                _model = pickle.load(f)
-            _model_path_used = path
-            break
-        except Exception:
-            continue
+try:
+    if not os.path.exists(CLEAN_MODEL_PATH):
+        raise FileNotFoundError(f"Clean Scope 3 model file not found at {CLEAN_MODEL_PATH}")
+    with open(CLEAN_MODEL_PATH, "rb") as f:
+        _model = pickle.load(f)
+    print(f"Loaded Scope 3 model successfully from {CLEAN_MODEL_PATH}")
+except Exception as e:
+    _model_error = str(e)
+    print(f"FATAL: Failed to load Scope 3 model from {CLEAN_MODEL_PATH}: {e}")
+
+# Version check against model card
+if os.path.exists(MODEL_CARD_PATH):
+    try:
+        import importlib.metadata
+        with open(MODEL_CARD_PATH, "r") as f:
+            _card = json.load(f)
+        _cur_xgb = importlib.metadata.version("xgboost")
+        _cur_skl = importlib.metadata.version("scikit-learn")
+        _card_xgb = _card.get("xgboost_version")
+        _card_skl = _card.get("scikit_learn_version")
+        if _card_xgb and _cur_xgb != _card_xgb:
+            print(f"WARNING: Installed xgboost version ({_cur_xgb}) differs from training version ({_card_xgb})")
+        if _card_skl and _cur_skl != _card_skl:
+            print(f"WARNING: Installed scikit-learn version ({_cur_skl}) differs from training version ({_card_skl})")
+    except Exception as _card_err:
+        print(f"Note: Could not verify package versions against model card: {_card_err}")
 
 TOP_JURISDICTIONS = [
     "Japan",
@@ -82,34 +94,61 @@ if os.path.exists(OOF_QUANTILES_PATH):
     except Exception:
         pass
 
-# 95th percentiles derived from scope3_final_corrected_usd.csv training dataset
-REVENUE_95TH_PERCENTILE_USD = 3.906e10  # ~$39.06B USD
-SCOPE12_95TH_PERCENTILE_TCO2E = 2.250e7  # 22.5M tCO2e
+# Compute percentiles and revenue quartiles dynamically from training dataset
+DATA_CLEAN_PATH = "data/processed/scope3_final_corrected_usd_clean.csv"
+
+# Fallback defaults in case data file is unreadable
+REVENUE_95TH_PERCENTILE_USD = 3.9229e+10
+SCOPE12_95TH_PERCENTILE_TCO2E = 2.2503e+07
+REV_Q1 = 8.5468e+8
+REV_Q2 = 3.5422e+9
+REV_Q3 = 1.0934e+10
+
+if os.path.exists(DATA_CLEAN_PATH):
+    try:
+        _train_df = pd.read_csv(DATA_CLEAN_PATH)
+        _valid_rev = _train_df["revenue"].dropna()
+        _valid_rev = _valid_rev[_valid_rev > 0]
+        if not _valid_rev.empty:
+            REVENUE_95TH_PERCENTILE_USD = float(_valid_rev.quantile(0.95))
+            REV_Q1 = float(_valid_rev.quantile(0.25))
+            REV_Q2 = float(_valid_rev.quantile(0.50))
+            REV_Q3 = float(_valid_rev.quantile(0.75))
+
+        _s12 = (_train_df["scope_1"] + _train_df["scope_2"]).dropna()
+        if not _s12.empty:
+            SCOPE12_95TH_PERCENTILE_TCO2E = float(_s12.quantile(0.95))
+
+        print(f"Dynamic startup thresholds computed from {DATA_CLEAN_PATH}:")
+        print(f"  Revenue 95th Percentile: ${REVENUE_95TH_PERCENTILE_USD:,.2f} USD")
+        print(f"  Scope 1+2 95th Percentile: {SCOPE12_95TH_PERCENTILE_TCO2E:,.2f} tCO2e")
+        print(f"  Revenue Quartile cutoffs: Q1=${REV_Q1:,.2f}, Q2=${REV_Q2:,.2f}, Q3=${REV_Q3:,.2f} USD")
+    except Exception as _th_err:
+        print(f"Warning: Failed to compute dynamic percentiles from {DATA_CLEAN_PATH}: {_th_err}")
 
 
 def _get_revenue_quartile(revenue: Optional[float]) -> str:
     if revenue is None or revenue <= 0:
         return "Unknown / Not Disclosed"
-    # Quartile cutoffs derived from USD training data (scope3_final_corrected_usd.csv)
-    if revenue < 8.24e8:
+    if revenue < REV_Q1:
         return "Small"
-    elif revenue < 3.50e9:
+    elif revenue < REV_Q2:
         return "Mid-Small"
-    elif revenue < 1.075e10:
+    elif revenue < REV_Q3:
         return "Mid-Large"
     else:
         return "Large"
 
 
 def _lookup_segment_reliability(
-    sector: str, jurisdiction: str, revenue: Optional[float]
+    sector: str, jurisdiction: str, revenue: Optional[float], has_financials: bool
 ) -> SegmentReliability:
     sector_r2 = 0.449  # default sector median (USD model)
     jurisdiction_r2 = 0.531  # default Other (USD model)
     rev_r2 = None
     historical_samples = 142
 
-    rev_quartile = _get_revenue_quartile(revenue)
+    rev_quartile = _get_revenue_quartile(revenue) if has_financials else "Unknown / Not Disclosed"
 
     if _reliability_df is not None:
         # Sector R2
@@ -136,8 +175,8 @@ def _lookup_segment_reliability(
             if not other_match.empty:
                 jurisdiction_r2 = float(other_match.iloc[0]["r2"])
 
-        # Revenue quartile R2
-        if rev_quartile in ["Small", "Mid-Small", "Mid-Large", "Large"]:
+        # Revenue quartile R2 (only when full financials are used)
+        if has_financials and rev_quartile in ["Small", "Mid-Small", "Mid-Large", "Large"]:
             rev_match = _reliability_df[
                 (_reliability_df["segment_type"] == "Company Size (Revenue Quartile)")
                 & (_reliability_df["segment"] == rev_quartile)
@@ -171,23 +210,32 @@ def _lookup_segment_reliability(
     )
 
 
-def _build_feature_row(req: Scope3PredictionRequest) -> pd.DataFrame:
-    has_financials = all(
-        v is not None for v in [req.revenue, req.employees, req.market_cap, req.ebitda]
-    )
-
+def _build_feature_row(req: Scope3PredictionRequest, used_real_financials: bool) -> pd.DataFrame:
     jurisdiction_simplified = (
         req.jurisdiction if req.jurisdiction in TOP_JURISDICTIONS else "Other"
     )
 
+    if used_real_financials:
+        log_rev = np.log1p(req.revenue)
+        log_emp = np.log1p(req.employees)
+        log_mc = np.log1p(req.market_cap)
+        log_eb = np.log1p(max(req.ebitda, 0))
+        has_fin = 1
+    else:
+        log_rev = np.nan
+        log_emp = np.nan
+        log_mc = np.nan
+        log_eb = np.nan
+        has_fin = 0
+
     row = {
         "log_scope1": np.log1p(req.scope_1),
         "log_scope2": np.log1p(req.scope_2),
-        "log_revenue": np.log1p(req.revenue) if req.revenue is not None else np.nan,
-        "log_employees": np.log1p(req.employees) if req.employees is not None else np.nan,
-        "log_market_cap": np.log1p(req.market_cap) if req.market_cap is not None else np.nan,
-        "log_ebitda": np.log1p(max(req.ebitda, 0)) if req.ebitda is not None else np.nan,
-        "has_financials": int(has_financials),
+        "log_revenue": log_rev,
+        "log_employees": log_emp,
+        "log_market_cap": log_mc,
+        "log_ebitda": log_eb,
+        "has_financials": has_fin,
         "sics_sector": req.sics_sector,
         "jurisdiction_simplified": jurisdiction_simplified,
     }
@@ -198,10 +246,41 @@ def _calculate_single_prediction(req: Scope3PredictionRequest) -> Scope3Predicti
     if _model is None:
         raise HTTPException(
             status_code=503,
-            detail="No trained model found. Check ml/model_artifacts/.",
+            detail=f"No trained model found or model failed to load. {_model_error or 'Check ml/model_artifacts/.'}",
         )
 
-    X = _build_feature_row(req)
+    # Check financials completeness
+    fin_fields = {
+        "revenue": req.revenue,
+        "employees": req.employees,
+        "market_cap": req.market_cap,
+        "ebitda": req.ebitda,
+    }
+    provided_financials = [k for k, v in fin_fields.items() if v is not None]
+    missing_financial_fields = [k for k, v in fin_fields.items() if v is None]
+
+    used_real_financials = (len(provided_financials) == 4)
+    partial_financials_warning = (0 < len(provided_financials) < 4)
+    missing_financials_warning = (len(provided_financials) == 0)
+
+    partial_financials_note = None
+    if partial_financials_warning:
+        missing_names = ", ".join(missing_financial_fields)
+        provided_names = ", ".join(provided_financials)
+        partial_financials_note = (
+            f"Partial financials entered: missing {missing_names}. "
+            f"The model only uses financials when all four fields (revenue, employees, market cap, EBITDA) are present, "
+            f"so the supplied fields ({provided_names}) were not used and the forecast uses typical values for companies without financials."
+        )
+
+    missing_financials_note = None
+    if missing_financials_warning:
+        missing_financials_note = (
+            "Financials not entered: the forecast uses typical values for companies without financials "
+            "and is less reliable."
+        )
+
+    X = _build_feature_row(req, used_real_financials)
 
     try:
         log_pred = float(_model.predict(X)[0])
@@ -210,11 +289,12 @@ def _calculate_single_prediction(req: Scope3PredictionRequest) -> Scope3Predicti
 
     predicted_scope3 = float(np.expm1(log_pred))
 
-    # Segment reliability lookup
-    seg_rel = _lookup_segment_reliability(req.sics_sector, req.jurisdiction, req.revenue)
+    # Segment reliability lookup: do not show revenue quartile reliability if financials were not used
+    seg_rel = _lookup_segment_reliability(
+        req.sics_sector, req.jurisdiction, req.revenue, has_financials=used_real_financials
+    )
 
     # Compute honest 80% prediction interval using empirical out-of-fold log-residual quantiles
-    # (10th and 90th percentiles derived from 5-fold cross-validation on scope3_final_corrected_usd.csv)
     q10 = -2.4160
     q90 = 2.2181
     interval_cohort = "overall sample"
@@ -232,12 +312,9 @@ def _calculate_single_prediction(req: Scope3PredictionRequest) -> Scope3Predicti
     ci_lower = max(0.0, float(np.expm1(log_pred + q10)))
     ci_upper = float(np.expm1(log_pred + q90))
     interval_method = f"10th and 90th percentile of out-of-fold log-residuals in {interval_cohort} (80% empirical prediction interval)"
+    interval_ratio = round(float(ci_upper / ci_lower), 1) if ci_lower > 0 else None
 
-    used_real_financials = all(
-        v is not None for v in [req.revenue, req.employees, req.market_cap, req.ebitda]
-    )
-
-    # Large-company extrapolation check against 95th percentiles of training data
+    # Large-company extrapolation check against dynamic 95th percentiles of training data
     s12_sum = (req.scope_1 or 0.0) + (req.scope_2 or 0.0)
     is_large_revenue = (req.revenue is not None and req.revenue > REVENUE_95TH_PERCENTILE_USD)
     is_large_emissions = (s12_sum > SCOPE12_95TH_PERCENTILE_TCO2E)
@@ -246,8 +323,9 @@ def _calculate_single_prediction(req: Scope3PredictionRequest) -> Scope3Predicti
     extrapolation_note = None
     if extrapolation_warning:
         extrapolation_note = (
-            "This company exceeds the 95th percentile of training data (revenue > $39.1B or Scope 1+2 > 22.5M tCO2e). "
-            "Very large emitters (revenue above about USD 100 billion) are systematically under-predicted (see independent validation)."
+            f"This company exceeds the 95th percentile of training data (revenue > ${REVENUE_95TH_PERCENTILE_USD/1e9:.1f}B "
+            f"or Scope 1+2 > {SCOPE12_95TH_PERCENTILE_TCO2E/1e6:.1f}M tCO2e). "
+            f"Validation shows these companies are under-predicted by roughly 20 to 900 times."
         )
 
     # Check if any matched segment R2 is below 0.1
@@ -268,12 +346,22 @@ def _calculate_single_prediction(req: Scope3PredictionRequest) -> Scope3Predicti
             f"Predictions for this group are statistically no better than using the group average."
         )
 
+    # Section 3.5: If company is above 95th percentile, force reliability tier to 'low'
     tier = seg_rel.reliability_tier
+    if extrapolation_warning:
+        tier = "low"
+        seg_rel.reliability_tier = "low"
+
     components_str = f"sector R² = {seg_rel.sector_r2:.3f}, jurisdiction R² = {seg_rel.jurisdiction_r2:.3f}"
     if seg_rel.revenue_quartile_r2 is not None:
         components_str += f", revenue quartile R² = {seg_rel.revenue_quartile_r2:.3f}"
 
-    if no_better_than_average:
+    if extrapolation_warning:
+        reliability_note = (
+            f"Low segment reliability due to large-company extrapolation (composite R² = {seg_rel.composite_r2:.3f}; "
+            f"{extrapolation_note})"
+        )
+    elif no_better_than_average:
         reliability_note = (
             f"No better than the average for this group (composite R² = {seg_rel.composite_r2:.3f}; "
             f"{no_better_than_average_note})."
@@ -282,14 +370,6 @@ def _calculate_single_prediction(req: Scope3PredictionRequest) -> Scope3Predicti
         reliability_note = (
             f"{tier.capitalize()} segment reliability (composite R² = {seg_rel.composite_r2:.3f}, "
             f"unweighted mean of {components_str})."
-        )
-
-    missing_financials_warning = not used_real_financials
-    missing_financials_note = None
-    if missing_financials_warning:
-        missing_financials_note = (
-            "Financials not entered: the forecast uses typical values for companies without financials "
-            "and is less reliable."
         )
 
     return Scope3PredictionResponse(
@@ -301,6 +381,8 @@ def _calculate_single_prediction(req: Scope3PredictionRequest) -> Scope3Predicti
         used_real_financials=used_real_financials,
         missing_financials_warning=missing_financials_warning,
         missing_financials_note=missing_financials_note,
+        partial_financials_warning=partial_financials_warning,
+        partial_financials_note=partial_financials_note,
         has_financials_zero_r2=0.489,
         has_financials_zero_mae=1.625,
         segment_reliability=seg_rel,
@@ -310,6 +392,7 @@ def _calculate_single_prediction(req: Scope3PredictionRequest) -> Scope3Predicti
         no_better_than_average_note=no_better_than_average_note,
         extrapolation_warning=extrapolation_warning,
         extrapolation_note=extrapolation_note,
+        interval_ratio=interval_ratio,
         interval_method=interval_method,
     )
 

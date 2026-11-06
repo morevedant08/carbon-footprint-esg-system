@@ -358,6 +358,9 @@ def main():
                               "start small, e.g. 200, for a demo-able runtime)")
     parser.add_argument("--reduction_target", type=float, default=0.20,
                          help="Target fractional reduction in total emissions vs baseline (0.20 = 20%%)")
+    parser.add_argument("--mode", type=str, default="minimal_disruption",
+                         choices=["minimal_disruption", "cost_minimizing"],
+                         help="Optimization mode: minimal_disruption (default) or cost_minimizing")
     parser.add_argument("--test_targets", action="store_true",
                          help="Run evaluation at targets 10%%, 15%%, 20%%, 25%%, 30%% and print comparison table")
     args = parser.parse_args()
@@ -376,29 +379,31 @@ def main():
 
     if args.test_targets:
         targets = [0.10, 0.15, 0.20, 0.25, 0.30]
-        print(f"\n=== Evaluating Targets { [f'{int(t*100)}%' for t in targets] } on {len(sample)} Shipments ===")
+        print(f"\n=== Evaluating Targets { [f'{int(t*100)}%' for t in targets] } on {len(sample)} Shipments (Mode: {args.mode}) ===")
         print(f"Baseline Basis: emission_factor x distance")
         print(f"{'Target':<10} {'Solver Status':<16} {'Optimized kg':<16} {'Actual Reduct (Factor)':<24} {'Actual Reduct (Recorded)':<26}")
         print("-" * 92)
 
         for t in targets:
-            res_df, base_kg, stat, rec_kg = build_and_solve_milp(sample, emission_factors, t)
+            res_df, base_kg, stat, rec_kg, metrics = build_and_solve_milp(sample, emission_factors, t, mode=args.mode)
             if stat == "Optimal":
                 opt_kg = res_df["recommended_emission_kg"].sum()
                 red_factor = (1.0 - opt_kg / base_kg) * 100
                 red_rec = (1.0 - opt_kg / rec_kg) * 100
-                print(f"{int(t*100)}%{'':<7} {stat:<16} {opt_kg:<16.2f} {red_factor:<24.2f}% {red_rec:<26.2f}%")
+                rf_str = f"{red_factor:.2f}%"
+                rr_str = f"{red_rec:.2f}%"
+                print(f"{int(t*100)}%{'':<7} {stat:<16} {opt_kg:<16.2f} {rf_str:<24} {rr_str:<26}")
             else:
                 print(f"{int(t*100)}%{'':<7} {stat:<16} {'N/A':<16} {'N/A':<24} {'N/A':<26}")
 
         print(f"\nMaximum Physically Feasible Reduction: {max_feasible_red*100:.1f}%")
         return
 
-    print(f"\nOptimizing a batch of {len(sample)} shipments, "
+    print(f"\nOptimizing a batch of {len(sample)} shipments (mode: {args.mode}), "
           f"target reduction: {args.reduction_target*100:.0f}%...")
 
-    results_df, baseline_emissions, status, recorded_emissions = build_and_solve_milp(
-        sample, emission_factors, args.reduction_target
+    results_df, baseline_emissions, status, recorded_emissions, metrics = build_and_solve_milp(
+        sample, emission_factors, args.reduction_target, mode=args.mode
     )
 
     print(f"\nBaseline basis: emission_factor x distance (consistent with optimized plan)")

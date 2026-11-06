@@ -168,6 +168,25 @@ def main():
             pickle.dump(xgb_pipe, f)
         print(f"Saved XGBoost model to {XGB_MODEL_PATH}")
 
+        # Write model card with exact library versions
+        import importlib.metadata
+        import json
+        model_card = {
+            "model_name": "scope3_xgboost_clean",
+            "artifact_file": XGB_MODEL_PATH,
+            "xgboost_version": importlib.metadata.version("xgboost"),
+            "scikit_learn_version": importlib.metadata.version("scikit-learn"),
+            "training_dataset": INPUT_PATH,
+            "training_samples": len(df),
+            "features": numeric_feats + ["has_financials"] + cat_feats,
+            "target": "log_scope3",
+            "description": "Production XGBoost regressor for corporate Scope 3 emissions prediction, trained on self-reported disclosures (CDP / ADEME via NZDPU)."
+        }
+        card_path = "ml/model_artifacts/model_card.json"
+        with open(card_path, "w") as f:
+            json.dump(model_card, f, indent=2)
+        print(f"Saved model card to {card_path}")
+
     # ------------------------------------------------------------------
     # Segment Reliability (Out-of-fold evaluation on full dataset)
     # ------------------------------------------------------------------

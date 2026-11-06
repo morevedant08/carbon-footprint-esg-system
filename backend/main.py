@@ -5,6 +5,7 @@ FastAPI entry point for the AI-Driven Industrial Carbon Footprint &
 ESG Intelligence System backend.
 """
 
+import os
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from backend.routes import predict, optimize, analytics, reports
@@ -20,11 +21,19 @@ app = FastAPI(
     version="2.0.0",
 )
 
-# Enable CORS for the Next.js frontend with full private network access support
+# Configure CORS: allow_credentials cannot be True with wildcard allow_origins=["*"]
+cors_origins_env = os.getenv("CORS_ORIGINS", "")
+if cors_origins_env.strip():
+    allowed_origins = [o.strip() for o in cors_origins_env.split(",") if o.strip()]
+    allow_creds = True
+else:
+    allowed_origins = ["*"]
+    allow_creds = False
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
-    allow_credentials=True,
+    allow_origins=allowed_origins,
+    allow_credentials=allow_creds,
     allow_methods=["*"],
     allow_headers=["*"],
     allow_private_network=True,
@@ -59,4 +68,17 @@ def root():
 
 @app.get("/health")
 def health():
-    return {"status": "ok", "service": "carbon-footprint-esg-api"}
+    if predict._model is not None:
+        return {
+            "status": "ok",
+            "service": "carbon-footprint-esg-api",
+            "model_loaded": True,
+            "model_path": predict._model_path_used,
+        }
+    else:
+        return {
+            "status": "error",
+            "service": "carbon-footprint-esg-api",
+            "model_loaded": False,
+            "error": predict._model_error or "Model failed to load",
+        }

@@ -20,7 +20,7 @@ A working, end-to-end AI/ML system that predicts industrial Scope 3 greenhouse g
 
 ## Overview
 
-This project predicts Scope 3 (value chain) greenhouse gas emissions for companies using machine learning trained on real, verified corporate disclosures, and recommends cost/emissions-optimal logistics routing using mixed-integer linear programming (MILP). It includes a live API, an interactive dashboard, and automated PDF report generation.
+This project predicts Scope 3 (value chain) greenhouse gas emissions for companies using machine learning trained on real corporate disclosures, and recommends cost/emissions-optimal logistics routing using mixed-integer linear programming (MILP). It includes a live API, an interactive Next.js web application, a Streamlit dashboard, and automated PDF report generation.
 
 Unlike many student ML projects, every component here has been built, run, and validated end-to-end — not just designed. Data quality issues were found and fixed during development, model performance was validated against real disclosed figures (not just cross-validation scores), and every limitation below reflects an actual finding, not a hypothetical caveat.
 
@@ -86,9 +86,9 @@ Unlike many student ML projects, every component here has been built, run, and v
 
 ## Data Sources
 
-### 1. Scope 3 Training Data — Real, Verified Disclosures
+### 1. Scope 3 Training Data — Authentic Corporate Disclosures
 
-**Source:** NZDPU / Climate Data Utility (climatedatautility.org) — CDP and ADEME disclosure providers.
+**Source:** NZDPU / Climate Data Utility (climatedatautility.org) — CDP and ADEME disclosure providers (self-reported, not audited).
 
 **Collection:** Queried via the Data Explorer, filtered to industrial-relevant sectors (Extractives & Minerals Processing, Infrastructure, Renewable Resources & Alternative Energy, Resource Transformation, Transportation), 2022-2024 reporting years. CDP-sourced data is limited to 50 companies/day by the provider; ADEME data has no such limit.
 
@@ -96,9 +96,9 @@ Unlike many student ML projects, every component here has been built, run, and v
 
 **Enrichment & Ticker-Matching:** Company financials (revenue, employee count, market cap, EBITDA) were added via `yfinance`, matched by company name using RapidFuzz string matching with a match threshold of **fuzzy score ≥ 60** (65.8% initial match rate).
 - **Manual Audit:** An audit of 40 randomly sampled matches found 39 correct and 1 mismatch (~2.5% error rate).
-- **5 Verified Mismatches Blanked:** In Round 3, 5 companies with incorrect Yahoo Finance matches were identified and set to `NaN` with `has_financials = 0` via `pipeline/blank_bad_matches.py` (Horizon Global Corporation, MOBICO GROUP PLC, CKD Corp, Asia Cement Corporation, Titan). No replacement values were invented or imputed. Output: `data/processed/scope3_final_corrected_usd_clean.csv` and `blanked_matches_log.csv`. 563 companies retain verified USD financials.
+- **5 Confirmed Mismatches Blanked:** 5 companies with incorrect Yahoo Finance matches were identified and set to `NaN` with `has_financials = 0` via `pipeline/blank_bad_matches.py` (Horizon Global Corporation, MOBICO GROUP PLC, CKD Corp, Asia Cement Corporation, Titan). No replacement values were invented or imputed. Output: `data/processed/scope3_final_corrected_usd_clean.csv` and `blanked_matches_log.csv`. 477 companies retain reported USD financials.
 
-**Currency Normalization (Date: 2026-10-23):** Financial metrics previously mixed local reporting currencies (JPY, EUR, KRW) with USD. All financials are normalized to USD using fixed-date historical FX rates (2026-10-23) in `pipeline/enrich_financials.py`, with persistent columns `fx_rate` and `fx_date` stored in the clean dataset. Key rates: EUR: 1.120448 (verified), GBP: 1.337489, CHF: 1.219795, JPY: 0.006377, KRW: 0.000754, CNY: 0.149748, HKD: 0.127530.
+**Currency Normalization (Date: 2026-10-23):** Financial metrics previously mixed local reporting currencies (JPY, EUR, KRW) with USD. All financials are normalized to USD using fixed-date historical FX rates (2026-10-23) in `pipeline/enrich_financials.py`, with persistent columns `fx_rate` and `fx_date` stored in the clean dataset. Key rates: EUR: 1.120448 (confirmed), GBP: 1.337489, CHF: 1.219795, JPY: 0.006377, KRW: 0.000754, CNY: 0.149748, HKD: 0.127530, INR: 0.010558, BRL: 0.201402, NOK: 0.107234, CAD: 0.714153.
 
 **Data quality correction:** Initial analysis found 172 of 1,206 companies (14.3%) with Scope 3-to-(Scope 1+2) ratios more than 15x their sector median. Investigation found:
 - 35 companies had values consistent with a kilogram-vs-tonne unit reporting error — corrected by dividing by 1000.
@@ -235,24 +235,52 @@ python -m uvicorn backend.main:app --reload --port 8000
 python -m streamlit run dashboard\app.py
 ```
 
-### Running the full system (3 terminals)
+### Running the full system
 
-**Terminal 1 — Backend:**
+**Terminal 1 — FastAPI Backend:**
 ```bash
 python -m uvicorn backend.main:app --reload --port 8000
 ```
 API docs available at `http://localhost:8000/docs`
 
-**Terminal 2 — Dashboard:**
+**Terminal 2 — Next.js Web Application (Recommended Modern UI):**
 ```bash
-python -m streamlit run dashboard\app.py
+cd frontend
+npm install
+npm run dev
 ```
-Opens at `http://localhost:8501`
+Opens at `http://localhost:3000`.
 
-**Terminal 3 — Reports (run as needed, doesn't need to stay running):**
+#### Frontend Environment Configuration (`NEXT_PUBLIC_API_URL`)
+- For **local development**, copy `frontend/.env.example` to `frontend/.env.local`:
+  ```bash
+  cp frontend/.env.example frontend/.env.local
+  ```
+  Default is `NEXT_PUBLIC_API_URL=http://localhost:8000`.
+- For **production deployment** (e.g. Vercel or Render):
+  - In your hosted dashboard (Vercel project settings or Render environment variables), set:
+    ```env
+    NEXT_PUBLIC_API_URL=https://your-backend-api.onrender.com
+    ```
+  - **Cold-Start Handling:** On free-tier services like Render, the backend may sleep when inactive. The web application detects this and displays a friendly notice: *"Waking the server, this can take up to a minute..."* rather than failing immediately.
+  - If `NEXT_PUBLIC_API_URL` is omitted on a hosted domain, the web application renders a clear setup banner directing the administrator to configure the missing environment variable instead of silently failing or attempting to reach `localhost`.
+
+**Terminal 3 — Streamlit Dashboard (Alternative UI):**
 ```bash
-python reports\report_generator.py
-python reports\report_generator.py --company "Company Name"
+python -m streamlit run dashboard/app.py
+```
+Opens at `http://localhost:8501`.
+
+**Terminal 4 — Reports & Pipeline Tools:**
+```bash
+# Generate PDF report:
+python reports/report_generator.py
+
+# Regenerate RESULTS_SUMMARY.md from raw/processed data artifacts:
+python pipeline/make_results_summary.py
+
+# Run test suite:
+python -m unittest discover tests
 ```
 
 ## Usage

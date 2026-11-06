@@ -44,8 +44,11 @@ export interface Scope3PredictionResponse {
   extrapolation_note?: string | null;
   missing_financials_warning?: boolean;
   missing_financials_note?: string | null;
+  partial_financials_warning?: boolean;
+  partial_financials_note?: string | null;
   has_financials_zero_r2?: number;
   has_financials_zero_mae?: number;
+  interval_ratio?: number | null;
   interval_method?: string;
   note: string;
 }

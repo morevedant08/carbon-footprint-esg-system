@@ -1,31 +1,29 @@
 # Core data handling
-pandas
-numpy
+pandas==3.0.6
+numpy==2.5.4
 
 # Machine learning
-scikit-learn
-xgboost
-lightgbm
+scikit-learn==1.9.1
+xgboost==3.4.1
+lightgbm==4.7.0
 
 # Backend API
-fastapi
-uvicorn
+fastapi==0.146.0
+uvicorn==0.54.0
 
 # Dashboard
 streamlit
 plotly
-requests
+requests==2.34.2
 
 # Reports
-reportlab
-matplotlib
+reportlab==5.0.1
+matplotlib==3.11.2
 
 # Optimization
-pulp
+pulp==2.9.0
 
 # Scope 3 financial enrichment
-yfinance
+yfinance==1.7.0
 rapidfuzz
-
-# Excel/data file support
 openpyxl

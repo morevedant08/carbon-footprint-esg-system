@@ -400,8 +400,18 @@ export default function PredictionsPage() {
               </div>
             </div>
 
-            {/* Requirement 7: Prominent warning when any financial field is blank */}
-            {isAnyFinancialBlank && (
+            {/* Requirement 7 & 3.1: Warning when any financial field is blank or partial */}
+            {result?.partial_financials_warning && result?.partial_financials_note ? (
+              <div className="p-3 rounded bg-[#2c1a08] border border-amber-500 text-amber-200 space-y-1 text-xs">
+                <div className="flex items-center gap-1.5 font-semibold text-amber-300 text-[11px]">
+                  <AlertTriangle className="w-3.5 h-3.5 text-amber-400 shrink-0" />
+                  <span>Partial Financials Provided (Supplied Fields Unused)</span>
+                </div>
+                <p className="text-[11px] text-amber-200/90 leading-relaxed">
+                  {result.partial_financials_note}
+                </p>
+              </div>
+            ) : isAnyFinancialBlank ? (
               <div className="p-3 rounded bg-[#251b08] border border-[#d97706]/70 text-amber-200 space-y-1 text-xs">
                 <div className="flex items-center gap-1.5 font-semibold text-amber-300 text-[11px]">
                   <AlertTriangle className="w-3.5 h-3.5 text-amber-400 shrink-0" />
@@ -412,7 +422,7 @@ export default function PredictionsPage() {
                   Out-of-fold accuracy for this group is <strong>R² = 0.489</strong> (MAE = 1.63 vs 1.38 with verified financials).
                 </p>
               </div>
-            )}
+            ) : null}
 
             {/* Requirement 6: Visible Update Forecast Button */}
             <div className="pt-1">
@@ -488,6 +498,13 @@ export default function PredictionsPage() {
                 </div>
               )}
 
+              {result.partial_financials_warning && result.partial_financials_note && (
+                <div className="mt-3 p-2.5 rounded bg-[#2c1a08] border border-amber-500/80 text-xs text-amber-200 flex items-start gap-2">
+                  <AlertTriangle className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
+                  <span>{result.partial_financials_note}</span>
+                </div>
+              )}
+
               {/* Confidence Interval Display (Consistent 80% Empirical Interval) */}
               <div className="py-5 border-b border-[#1f2838]">
                 <div className="flex items-center justify-between mb-1">
@@ -509,6 +526,11 @@ export default function PredictionsPage() {
                   <span className="text-xs text-slate-400 font-medium">
                     tCO₂e (80% empirical interval)
                   </span>
+                  {result.interval_ratio && (
+                    <span className="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-semibold bg-sky-950/70 text-sky-300 border border-sky-800">
+                      range spans about {Math.round(result.interval_ratio)} times
+                    </span>
+                  )}
                 </div>
                 <div className="text-xs text-slate-300 font-medium mt-1">
                   Point estimate: <span className="font-semibold text-[#38bdf8] num-tabular">{formatSigFigs(result.predicted_scope3_tco2e, 3)} tCO₂e</span>

@@ -1,0 +1,21 @@
+{
+  "model_name": "scope3_xgboost_clean",
+  "artifact_file": "ml/model_artifacts/scope3_xgboost_clean.pkl",
+  "xgboost_version": "3.4.1",
+  "scikit_learn_version": "1.9.1",
+  "training_dataset": "data/processed/scope3_final_corrected_usd_clean.csv",
+  "training_samples": 1069,
+  "features": [
+    "log_scope1",
+    "log_scope2",
+    "log_revenue",
+    "log_employees",
+    "log_market_cap",
+    "log_ebitda",
+    "has_financials",
+    "sics_sector",
+    "jurisdiction_simplified"
+  ],
+  "target": "log_scope3",
+  "description": "Production XGBoost regressor for corporate Scope 3 emissions prediction, trained on self-reported disclosures (CDP / ADEME via NZDPU)."
+}
